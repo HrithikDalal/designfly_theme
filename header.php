@@ -18,8 +18,8 @@
 </head>
 
 <body <?php body_class(); ?>>
-
-<div id="page" class="hfeed site">
+<div class="wrapper">
+<div id="page" class="hfeed site ">
 
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'designfly' ); ?></a>
 
@@ -40,15 +40,21 @@
 		<nav id="site-navigation" class="designfly-main-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Primary Menu', 'designfly' ); ?>">
 			<?php
 			wp_nav_menu(
-				[
+				array(
 					'theme_location' => 'primary',
 					'menu_id'        => 'primary-menu',
 					'menu_class'     => 'primary-menu menu',
 					'depth'          => 3,
-				]
+				)
 			);
 			?>
+			<form class="form-inline" role="search" method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ), 'designfly' ); ?>">
+			<div><label class="screen-reader-text" for="s">Search Box</label>
+				<input class="form-control" type="text" value="" name="s" id="s" />
+				<input class="button" type="submit" id="searchsubmit" value="Search" />
+			</div>
+			</form>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
-	<div id="content" class="site-content">
+	<div id="content" class="site-content ">

@@ -8,6 +8,51 @@
  */
 
 /**
+ * Gets the thumbnail with Lazy Load.
+ * Should be called in the WordPress Loop.
+ *
+ * @param int|null $post_id               Post ID.
+ * @param string   $size                  The registered image size.
+ * @param array    $additional_attributes Additional attributes.
+ *
+ * @return string
+ */
+function designfly_get_the_post_custom_thumbnail( $post_id, $size = 'featured-thumbnail', $additional_attributes = [] ) {
+	$custom_thumbnail = '';
+
+	if ( null === $post_id ) {
+		$post_id = get_the_ID();
+	}
+
+	if ( has_post_thumbnail( $post_id ) ) {
+		$default_attributes = [
+			'loading' => 'lazy',
+		];
+
+		$attributes = array_merge( $additional_attributes, $default_attributes );
+
+		$custom_thumbnail = wp_get_attachment_image(
+			get_post_thumbnail_id( $post_id ),
+			$size,
+			false,
+			$attributes
+		);
+	}
+
+	return $custom_thumbnail;
+}
+
+/**
+ * Renders Custom Thumbnail with Lazy Load.
+ *
+ * @param int    $post_id               Post ID.
+ * @param string $size                  The registered image size.
+ * @param array  $additional_attributes Additional attributes.
+ */
+function designfly_the_post_custom_thumbnail( $post_id, $size = 'featured-thumbnail', $additional_attributes = [] ) {
+	printf( designfly_get_the_post_custom_thumbnail( $post_id, $size, $additional_attributes ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+}
+/**
  * Display post posted date.
  *
  * @return void
@@ -23,14 +68,14 @@ function designfly_posted_on() {
 	$time_string = sprintf(
 		$time_string,
 		esc_attr( get_the_date( DATE_W3C ) ),
-		esc_html( get_the_date() ),
+		esc_html( get_the_date( 'j M Y' ) ),
 		esc_attr( get_the_modified_date( DATE_W3C ) ),
-		esc_html( get_the_modified_date() )
+		esc_html( get_the_modified_date( 'j M Y' ) )
 	);
 
 	$posted_on = sprintf(
 		/* translators: %s: post date. */
-		esc_html_x( 'Posted on %s', 'post date', 'designfly' ),
+		esc_html_x( ' on %s', 'post date', 'designfly' ),
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 
@@ -149,6 +194,51 @@ function designfly_site_description() {
 			$description // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		);
 	}
+}
+
+/**
+ * Get the trimmed version of post excerpt.
+ *
+ * This is for modifing manually entered excerpts,
+ * NOT automatic ones WordPress will grab from the content.
+ *
+ * It will display the first given characters ( e.g. 100 ) characters of a manually entered excerpt,
+ * but instead of ending on the nth( e.g. 100th ) character,
+ * it will truncate after the closest word.
+ *
+ * @param int $trim_character_count Charter count to be trimmed.
+ *
+ * @return bool|string
+ */
+function designfly_the_excerpt( $trim_character_count = 0 ) {
+	if ( ! has_excerpt() || 0 === $trim_character_count ) {
+		the_excerpt();
+		return;
+	}
+
+	$excerpt = wp_strip_all_tags( get_the_excerpt() );
+	$excerpt = substr( $excerpt, 0, $trim_character_count );
+	$excerpt = substr( $excerpt, 0, strrpos( $excerpt, ' ' ) );
+
+	printf( '<span class="excerpt"> %s</span>', $excerpt . '.' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+}
+
+/**
+ * Filter the "read more" excerpt string link to the post.
+ *
+ * @param string $more "Read more" excerpt string.
+ */
+function designfly_excerpt_more( $more = '' ) {
+
+	if ( ! is_single() ) {
+		$more = sprintf(
+			'<a class="designfly-read-more " href="%1$s">%2$s</a>',
+			get_permalink( get_the_ID() ),
+			__( 'Read more', 'designfly' )
+		);
+	}
+
+	printf( '<span class="excerpt__more"> %s</span>', $more ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 }
 
 /**

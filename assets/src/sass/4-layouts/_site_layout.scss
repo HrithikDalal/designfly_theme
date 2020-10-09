@@ -1,4 +1,22 @@
-.container{
-	max-width: 70%;
-	margin: auto;
+.wrapper{
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-gap: 30px;
+}
+
+.site{
+	grid-column: 3/11;
+}
+.site-content{
+	display: grid;
+	grid-template-columns: repeat(8, 1fr);
+	grid-gap: 30px;
+}
+
+.site-primary{
+	grid-column: 1/6;
+}
+
+.site-secondary{
+	grid-column: 6/9;
 }
