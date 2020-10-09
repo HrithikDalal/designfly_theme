@@ -450,7 +450,7 @@ a {
     color: #424242;
     text-decoration: none; }
   a:hover {
-    color: #d32f2f; }
+    color: #ef4634; }
 
 /*---------------------------
 		Lists & Tables
@@ -1088,9 +1088,15 @@ object {
   100% {
     transform: rotate(360deg); } }
 
+.container {
+  max-width: 70%;
+  margin: auto; }
+
 .site-header {
   padding-top: 1.25rem;
-  padding-bottom: 1.25rem; }
+  padding-bottom: 1.25rem;
+  display: flex;
+  justify-content: space-between; }
 
 .site-title {
   margin-bottom: 0.625rem; }
@@ -1104,7 +1110,6 @@ object {
 .hentry {
   margin: 0 0 1.5rem; }
 
-.byline,
 .updated:not(.published) {
   display: none; }
 
@@ -1128,14 +1133,17 @@ object {
 .designfly-pagination {
   text-align: center; }
 
+.blog__attachment {
+  float: left;
+  margin-right: 1.25rem; }
+
 /*==============================
           Main Menu
 ===============================*/
 .designfly-main-navigation {
   clear: both;
-  display: block;
-  float: left;
-  width: 100%; }
+  display: flex;
+  float: left; }
   .designfly-main-navigation ul {
     list-style: none;
     margin: 0;
@@ -1157,16 +1165,13 @@ object {
         width: 12.5rem; }
       .designfly-main-navigation ul ul:hover > a,
       .designfly-main-navigation ul ul.focus > a {
-        color: #d32f2f; }
+        color: #ef4634; }
     .designfly-main-navigation ul li:hover > ul,
     .designfly-main-navigation ul li.focus > ul {
       left: auto; }
   .designfly-main-navigation li {
     float: left;
     position: relative; }
-    .designfly-main-navigation li:hover > a,
-    .designfly-main-navigation li.focus > a {
-      color: #d32f2f; }
   .designfly-main-navigation a {
     display: block;
     text-decoration: none;
@@ -1174,7 +1179,8 @@ object {
   .designfly-main-navigation .current_page_item > a,
   .designfly-main-navigation .current-menu-item > a,
   .designfly-main-navigation .current_page_ancestor > a {
-    color: #d32f2f; }
+    color: #ffffff;
+    background-color: #ef4634; }
 
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main

@@ -4,9 +4,8 @@
 
 .designfly-main-navigation {
 	clear: both;
-	display: block;
+	display: flex;
 	float: left;
-	width: 100%;
 
 	ul {
 		list-style: none;
@@ -53,10 +52,10 @@
 		float: left;
 		position: relative;
 
-		&:hover > a,
-		&.focus > a {
-			color: $color__link-hover;
-		}
+		// &:hover > a,
+		// &.focus > a {
+		// 	color: $color__link-hover;
+		// }
 	}
 
 	a {
@@ -68,7 +67,8 @@
 	.current_page_item > a,
 	.current-menu-item > a,
 	.current_page_ancestor > a {
-		color: $color__link-hover;
+		color: $white;
+		background-color: $red-100;
 	}
 }
 

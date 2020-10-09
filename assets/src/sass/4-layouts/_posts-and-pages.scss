@@ -6,7 +6,6 @@
 	margin: 0 0 24px;
 }
 
-.byline,
 .updated:not(.published) {
 	display: none;
 }
@@ -34,4 +33,9 @@
 
 .designfly-pagination {
 	text-align: center;
+}
+
+.blog__attachment {
+	float: left;
+	margin-right: 20px;
 }
