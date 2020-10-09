@@ -18,6 +18,9 @@
 		</aside>
 	<?php } ?>
 
+	<p class="contact__title"><?php esc_html_e( 'Contact Us', 'designfly' ); ?></p>
+	<p class="contact__address"> <?php echo get_theme_mod( 'designfly-footer-contact' ); ?>
+
 	<div class="site-info text-center">
 		<span><?php designfly_copyright_text(); ?></span>
 	</div><!-- .site-info -->

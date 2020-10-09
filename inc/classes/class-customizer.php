@@ -70,6 +70,41 @@ class Customizer {
 
 		}
 
+
+		/**
+			 * Theme Options
+			 */
+
+			$wp_customize->add_section(
+				'designfly-footer-section',
+				array(
+					'title'      => __( 'Footer settings', 'designfly' ),
+					'priority'   => 140,
+					'capability' => 'edit_theme_options',
+				)
+			);
+
+			/* Enable Header Search --------- */
+
+			$wp_customize->add_setting(
+				'designfly-footer-contact',
+				array(
+					'capability'        => 'edit_theme_options',
+					'default'           => 'Street 21 Planet, A-11, california Tel: 91234 42354',
+					'sanitize_callback' => array( __CLASS__, 'sanitize_textarea' ),
+				)
+			);
+
+			$wp_customize->add_control(
+				'designfly-footer-contact',
+				array(
+					'type'     => 'textarea',
+					'section'  => 'designfly-footer-section',
+					'priority' => 10,
+					'label'    => __( 'Contact Information', 'designfly' ),
+				)
+			);
+
 	}
 
 	/**
@@ -101,5 +136,9 @@ class Customizer {
 
 		wp_enqueue_script( 'designfly-customizer' );
 	}
+
+	public function sanitize_textarea($input) {
+        return filter_var( $input, FILTER_SANITIZE_STRING );
+    }
 
 }
