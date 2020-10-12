@@ -67,6 +67,7 @@ class Widgets {
 				'after_title'   => '</h4>',
 			]
 		);
+		register_widget( 'DESIGNFLY\Inc\Custom_Recent_Post_Widget' );
 
 	}
 
