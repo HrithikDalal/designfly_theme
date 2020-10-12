@@ -71,6 +71,7 @@ function designfly_custom_post_type() {
 		'menu_position'       => 5,
 		'exclude_from_search' => false,
 		'rewrite'             => array( 'slug' => 'portfolio' ),
+		// 'show_in_rest'        => true,
 	);
 
 	register_post_type( 'portfolio-item', $args );

@@ -1151,6 +1151,117 @@ object {
   float: left;
   margin-right: 1.25rem; }
 
+/* Blog Page */
+.blog__post__date {
+  float: left;
+  background-color: #222222;
+  border-radius: 0.1875rem;
+  color: #ffffff;
+  padding-left: 1.25rem;
+  padding-right: 1rem;
+  border-right: 1px solid #ffffff; }
+
+.blog-page-heading {
+  font-family: sans-serif;
+  font-size: 2.8125rem;
+  color: #62585f;
+  text-shadow: 0.125rem 0.125rem #ffffff; }
+
+.entry-title {
+  padding-left: 1.25rem;
+  padding-top: 0.5rem;
+  background-color: #222222;
+  height: 3.125rem;
+  border-radius: 0.1875rem;
+  color: #ffffff; }
+
+.entry-title:hover {
+  background-color: #ef4634; }
+
+.entry-title a {
+  color: #ffffff;
+  font-size: 1.25rem; }
+
+.entry-title a:hover {
+  text-decoration: none; }
+
+.entry-image img {
+  float: left;
+  margin-right: 1.25rem; }
+
+/* Portfolio page*/
+.portfolio-content {
+  margin: 3.125rem auto;
+  display: -ms-grid;
+  display: -moz-grid;
+  display: grid;
+  -ms-grid-columns: 18.75rem 18.75rem 18.75rem;
+  grid-template-columns: 18.75rem 18.75rem 18.75rem;
+  -moz-column-gap: 0.9375rem;
+       column-gap: 0.9375rem;
+  row-gap: 0.9375rem;
+  justify-content: center; }
+
+.portfolio-content .portfolio-content-top {
+  grid-column: 1/4;
+  margin: 0.3125rem 0; }
+
+.portfolio-content .portfolio-content-top hr {
+  margin: 0.625rem 0 1.25rem 0;
+  background: #62585f;
+  height: 1px; }
+
+.portfolio-content .portfolio-content-top .title {
+  display: inline-block;
+  font-family: 'Open Sans', sans-serif;
+  color: #63585f;
+  font-size: 3rem;
+  text-shadow: 0.125rem 0 #ffffff;
+  margin-bottom: 0;
+  text-transform: uppercase; }
+
+.portfolio-content > div[class^="post-"] {
+  cursor: pointer;
+  position: relative;
+  height: 13.125rem;
+  width: 18.75rem;
+  border-radius: 0.625rem;
+  overflow: hidden; }
+
+.portfolio-content .post-thumbnail img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  transition: 0.3s transform ease-out; }
+
+.portfolio-content .view-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.8);
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  z-index: 1;
+  transition: 0.3s opacity linear; }
+
+.portfolio-content .post-title {
+  display: none; }
+
+.portfolio-content .view-image span {
+  margin-bottom: 0.3125rem;
+  color: #FFF; }
+
+/** Hover effect **/
+.portfolio-content > div[class^="post-"]:hover .post-thumbnail img {
+  transform: scale(1.1); }
+
+.portfolio-content > div[class^="post-"]:hover .view-image {
+  opacity: 1; }
+
 /*==============================
           Main Menu
 ===============================*/
