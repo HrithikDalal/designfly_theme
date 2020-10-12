@@ -16,7 +16,6 @@ get_header();
 
 <div id="primary" class="site-primary">
 	<main id="main" class="site-main" role="main">
-
 		<?php
 		if ( have_posts() ) :
 
