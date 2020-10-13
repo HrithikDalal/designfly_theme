@@ -1,6 +1,6 @@
 <?php
 /**
- * Custom Recent Post Widget
+ * Portfolio Widget
  *
  * @package Designfly
  */
@@ -11,7 +11,7 @@ use WP_Widget;
 
 use DESIGNFLY\Inc\Traits\Singleton;
 
-class Custom_Recent_Post_Widget extends WP_Widget {
+class Portfolio_Widget extends WP_Widget {
 
 	use Singleton;
 
@@ -20,13 +20,13 @@ class Custom_Recent_Post_Widget extends WP_Widget {
 	 */
 	public function __construct() {
 		$designfly_widget_ops = array(
-			'classname'                   => 'widget_recent_entries__custom',
-			'description'                 => __( 'Your site&#8217;s most recent Posts customized.' ),
+			'classname'                   => 'widget_portfolio',
+			'description'                 => __( 'Your site&#8217;s Portfolio Posts.' ),
 			'customize_selective_refresh' => true,
 		);
 		parent::__construct(
-			'custom-recent-posts',
-			__( 'Custom Recent Posts', 'designfly' ),
+			'portfolio-posts',
+			__( 'Portfolio Posts', 'designfly' ),
 			$designfly_widget_ops,
 		);
 		$this->alt_option_name = 'widget_custom_recent_entries';
@@ -46,22 +46,22 @@ class Custom_Recent_Post_Widget extends WP_Widget {
 			$args['widget_id'] = $this->id;
 		}
 
-		$default_title = __( 'Recent Posts', 'designfly' );
+		$default_title = __( 'Portfolio', 'designfly' );
 		$title         = ( ! empty( $instance['title'] ) ) ? $instance['title'] : $default_title;
 
 		/** This filter is documented in wp-includes/widgets/class-wp-widget-pages.php */
 		$title = apply_filters( 'widget_title', $title, $instance, $this->id_base );
 
-		$number = ( ! empty( $instance['number'] ) ) ? absint( $instance['number'] ) : 5;
+		$number = ( ! empty( $instance['number'] ) ) ? absint( $instance['number'] ) : 8;
 		if ( ! $number ) {
-			$number = 5;
+			$number = 8;
 		}
-		$show_date = isset( $instance['show_date'] ) ? $instance['show_date'] : false;
 		if ( $title ) {
 			echo $args['before_title'] . $title . $args['after_title'];
 		}
 
 		$recent_posts = wp_get_recent_posts(array(
+			'post_type'   => 'portfolio',
 			'numberposts' => $number, // Number of recent posts thumbnails to display.
 			'post_status' => 'publish', // Show only the published posts.
 		));
@@ -69,17 +69,10 @@ class Custom_Recent_Post_Widget extends WP_Widget {
 		echo $args['before_widget'];
 		// This is where you run the code and display the output.
 		foreach ( $recent_posts as $post ) : ?>
-		<div class = " recent-post__custom">
-			<?php echo get_the_post_thumbnail( $post['ID'], array( 45, 45), array( 'class' => 'recent-post__custom--img' ) ); ?>
-			<a href="<?php echo get_permalink( $post['ID'] ) ?>">
-				<p class="recent-post__custom--title"><?php echo $post['post_title'] ?></p>
-			</a>
-			<?php designfly_posted_by(); ?>
-			<?php
-			if ( $show_date ) :
-					designfly_posted_on();
-			endif;
-			?>
+		<div class = " portfolio--widget">
+		<a href="<?php echo get_permalink( get_page_by_path( 'portfollio' ) ) ?>">
+			<?php echo get_the_post_thumbnail( $post['ID'], array( 45, 45), array( 'class' => 'portfolio__img' ) ); ?>
+		</a>
 		</div>
 		<?php
 		endforeach; wp_reset_postdata();
@@ -100,7 +93,6 @@ class Custom_Recent_Post_Widget extends WP_Widget {
 		$instance              = $old_instance;
 		$instance['title']     = sanitize_text_field( $new_instance['title'] );
 		$instance['number']    = (int) $new_instance['number'];
-		$instance['show_date'] = isset( $new_instance['show_date'] ) ? (bool) $new_instance['show_date'] : false;
 		return $instance;
 	}
 
@@ -112,9 +104,8 @@ class Custom_Recent_Post_Widget extends WP_Widget {
 	 * @param array $instance Current settings.
 	 */
 	public function form( $instance ) {
-		$title     = isset( $instance['title'] ) ? esc_attr( $instance['title'] ) : '';
-		$number    = isset( $instance['number'] ) ? absint( $instance['number'] ) : 5;
-		$show_date = isset( $instance['show_date'] ) ? (bool) $instance['show_date'] : false;
+		$title     = isset( $instance['title'] ) ? esc_attr( $instance['title'] ) : 'Portfolio';
+		$number    = isset( $instance['number'] ) ? absint( $instance['number'] ) : 8;
 		?>
 		<p>
 			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
@@ -126,10 +117,6 @@ class Custom_Recent_Post_Widget extends WP_Widget {
 			<input class="tiny-text" id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="number" step="1" min="1" value="<?php echo $number; ?>" size="3" />
 		</p>
 
-		<p>
-			<input class="checkbox" type="checkbox"<?php checked( $show_date ); ?> id="<?php echo $this->get_field_id( 'show_date' ); ?>" name="<?php echo $this->get_field_name( 'show_date' ); ?>" />
-			<label for="<?php echo $this->get_field_id( 'show_date' ); ?>"><?php _e( 'Display post date?' ); ?></label>
-		</p>
 		<?php
 	}
 }
