@@ -74,7 +74,7 @@ function designfly_custom_post_type() {
 		// 'show_in_rest'        => true,
 	);
 
-	register_post_type( 'portfolio-item', $args );
+	register_post_type( 'portfolio', $args );
 }
 
 add_action( 'init', 'designfly_custom_post_type' );
