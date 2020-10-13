@@ -70,7 +70,6 @@ class Customizer {
 
 		}
 
-
 		/**
 			 * Theme Options
 			 */
@@ -83,8 +82,6 @@ class Customizer {
 					'capability' => 'edit_theme_options',
 				)
 			);
-
-			/* Enable Header Search --------- */
 
 			$wp_customize->add_setting(
 				'designfly-footer-contact',
@@ -137,8 +134,15 @@ class Customizer {
 		wp_enqueue_script( 'designfly-customizer' );
 	}
 
-	public function sanitize_textarea($input) {
-        return filter_var( $input, FILTER_SANITIZE_STRING );
-    }
+	/**
+	 * Sanitizes Textarea Input
+	 *
+	 * @param string $input Input.
+	 *
+	 * @return String
+	 */
+	public function sanitize_textarea( $input ){
+		return filter_var( $input, FILTER_SANITIZE_STRING );
+	}
 
 }

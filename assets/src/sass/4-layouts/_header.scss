@@ -1,6 +1,7 @@
 .site-header {
 	padding-top: 20px;
 	padding-bottom: 20px;
+	grid-column: 3/11;
 	display: flex;
 	justify-content: space-between;
 }
@@ -11,4 +12,53 @@
 
 .site-description {
 	margin-bottom: 0;
+}
+
+.service-nav{
+	grid-column: 1/13;
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-gap: 30px;
+
+	.service__advertising{
+		grid-column: 3/5;
+
+		h3{
+			font-size: 20px;
+			color: $red-100;
+		}
+
+		p{
+			font-size: 13px;
+			line-height: 19.5px;
+		}
+	}
+
+	.service__multimedia{
+		grid-column: 6/8;
+
+		h3{
+			font-size: 20px;
+			color: $red-100;
+		}
+
+		p{
+			font-size: 13px;
+			line-height: 19.5px;
+		}
+	}
+
+	.service__photography{
+		grid-column: 9/11;
+
+		h3{
+			font-size: 20px;
+			color: $red-100;
+		}
+
+		p{
+			font-size: 13px;
+			line-height: 19.5px;
+		}
+	}
 }

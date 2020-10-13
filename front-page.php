@@ -1,17 +1,37 @@
 <?php
 /**
- * Template Name: Portfolio Page
- *
- * Portfolio page template file.
+ * Front page template
  *
  * @package Designfly
  */
 
 get_header();
-get_template_part( 'template-parts/components/service-nav/nav' );
 ?>
+
+<div class="home-page-wrap">
+	<?php
+	if ( have_posts() ) :
+		while ( have_posts() ) : the_post();
+
+			get_template_part( 'template-parts/content', 'page' );
+
+		endwhile;
+	else :
+
+		get_template_part( 'template-parts/content-none' );
+
+	endif;
+
+	?>
+</div>
+<?php
+	get_template_part( 'template-parts/components/service-nav/nav' );
+?>
+
+
 <div id="primary" class="site-primary">
 	<main id="main" class="site-main" role="main">
+
 		<?php
 		$designfly_paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 		$designfly_query = new WP_Query(
@@ -53,7 +73,8 @@ get_template_part( 'template-parts/components/service-nav/nav' );
 			<?php
 		endif;
 		?>
-	</main><!-- #main -->
-</div><!-- #primary -->
+	</main>
+</div>
+
 <?php
 get_footer();

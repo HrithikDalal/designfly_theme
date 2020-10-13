@@ -1088,7 +1088,7 @@ object {
   100% {
     transform: rotate(360deg); } }
 
-.wrapper {
+.grid-wrapper {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-gap: 1.875rem; }
@@ -1097,19 +1097,21 @@ object {
   grid-column: 3/11; }
 
 .site-content {
+  grid-column: 1/13;
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
+  grid-template-columns: repeat(12, 1fr);
   grid-gap: 1.875rem; }
 
 .site-primary {
-  grid-column: 1/6; }
+  grid-column: 3/8; }
 
 .site-secondary {
-  grid-column: 6/9; }
+  grid-column: 8/11; }
 
 .site-header {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
+  grid-column: 3/11;
   display: flex;
   justify-content: space-between; }
 
@@ -1118,6 +1120,39 @@ object {
 
 .site-description {
   margin-bottom: 0; }
+
+.service-nav {
+  grid-column: 1/13;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 1.875rem; }
+  .service-nav .service__advertising {
+    grid-column: 3/5; }
+    .service-nav .service__advertising h3 {
+      font-size: 1.25rem;
+      color: #ef4634; }
+    .service-nav .service__advertising p {
+      font-size: 0.8125rem;
+      line-height: 1.21875rem; }
+  .service-nav .service__multimedia {
+    grid-column: 6/8; }
+    .service-nav .service__multimedia h3 {
+      font-size: 1.25rem;
+      color: #ef4634; }
+    .service-nav .service__multimedia p {
+      font-size: 0.8125rem;
+      line-height: 1.21875rem; }
+  .service-nav .service__photography {
+    grid-column: 9/11; }
+    .service-nav .service__photography h3 {
+      font-size: 1.25rem;
+      color: #ef4634; }
+    .service-nav .service__photography p {
+      font-size: 0.8125rem;
+      line-height: 1.21875rem; }
+
+.site-footer {
+  grid-column: 3/11; }
 
 .sticky {
   display: block; }
@@ -1150,6 +1185,10 @@ object {
 .blog__attachment {
   float: left;
   margin-right: 1.25rem; }
+
+/*Home Page*/
+.home-page-wrap {
+  grid-column: 1/13; }
 
 /* Blog Page */
 .blog__post__date {
@@ -1191,6 +1230,7 @@ object {
 
 /* Portfolio page*/
 .portfolio-content {
+  grid-column: 3/11;
   margin: 3.125rem auto;
   display: -ms-grid;
   display: -moz-grid;
@@ -1253,7 +1293,7 @@ object {
 
 .portfolio-content .view-image span {
   margin-bottom: 0.3125rem;
-  color: #FFF; }
+  color: #ffffff; }
 
 /** Hover effect **/
 .portfolio-content > div[class^="post-"]:hover .post-thumbnail img {

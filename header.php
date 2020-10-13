@@ -18,8 +18,8 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div class="wrapper">
-<div id="page" class="hfeed site ">
+
+<div id="page" class="hfeed site grid-wrapper">
 
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'designfly' ); ?></a>
 

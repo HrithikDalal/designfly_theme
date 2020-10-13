@@ -12,3 +12,6 @@ window.$ = window.$ || jQuery;
 // Initialize common scripts.
 components.WebFont.init();
 components.common.init();
+
+// Images.
+import '../img/features-repeatable-bg.png';

@@ -13,10 +13,11 @@
  */
 
 get_header();
+get_template_part( 'template-parts/components/service-nav/nav' );
 ?>
 
-	<div id="primary" class="site-primary">
-		<main id="main" class="site-main" role="main">
+<div id="primary" class="site-primary">
+	<main id="main" class="site-main" role="main">
 
 			<?php
 			while ( have_posts() ) :
@@ -33,8 +34,8 @@ get_header();
 			endwhile; // End of the loop.
 			?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+	</main><!-- #main -->
+</div><!-- #primary -->
 
 <?php
 get_sidebar();
