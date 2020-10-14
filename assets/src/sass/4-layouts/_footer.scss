@@ -1,3 +1,13 @@
 .site-footer{
 	grid-column: 3/11;
 }
+
+.footer-content{
+	display: flex;
+}
+
+.site-footer hr{
+	margin: 10px 0 20px 0;
+	background: #62585f;
+	height: 1px;
+}

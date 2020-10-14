@@ -15,50 +15,88 @@
 }
 
 .service-nav{
+	min-height: 101px;
+    background-image: url('../img/features-repeatable-bg.png');
+    background-repeat: repeat;
 	grid-column: 1/13;
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
 	grid-gap: 30px;
 
-	.service__advertising{
-		grid-column: 3/5;
+	.service-nav-container{
+		grid-column: 3/11;
+		display: grid;
+		grid-template-columns: repeat(9, 1fr);
 
-		h3{
-			font-size: 20px;
-			color: $red-100;
+
+		.service__advertising{
+			grid-column: 1/4;
+			display: flex;
+
+			.service__advertising__icon{
+				align-self: center;
+			}
+
+			.service__advertising__content{
+				align-self: center;
+
+				h3{
+					font-size: 20px;
+					color: $red-100;
+				}
+
+				p{
+					font-size: 13px;
+					line-height: 19.5px;
+				}
+			}
 		}
 
-		p{
-			font-size: 13px;
-			line-height: 19.5px;
+		.service__multimedia{
+			grid-column: 4/7;
+			display: flex;
+
+			.service__multimedia__icon{
+				align-self: center;
+			}
+
+			.service__multimedia__content{
+				align-self: center;
+
+				h3{
+					font-size: 20px;
+					color: $red-100;
+				}
+
+				p{
+					font-size: 13px;
+					line-height: 19.5px;
+				}
+			}
+		}
+
+		.service__photography{
+			grid-column: 7/10;
+			display: flex;
+
+			.service__photography__icon{
+				align-self: center;
+			}
+
+			.service__photography__content{
+				align-self: center;
+
+				h3{
+					font-size: 20px;
+					color: $red-100;
+				}
+
+				p{
+					font-size: 13px;
+					line-height: 19.5px;
+				}
+			}
 		}
 	}
 
-	.service__multimedia{
-		grid-column: 6/8;
-
-		h3{
-			font-size: 20px;
-			color: $red-100;
-		}
-
-		p{
-			font-size: 13px;
-			line-height: 19.5px;
-		}
-	}
-
-	.service__photography{
-		grid-column: 9/11;
-
-		h3{
-			font-size: 20px;
-			color: $red-100;
-		}
-
-		p{
-			font-size: 13px;
-			line-height: 19.5px;
-		}
-	}
 }

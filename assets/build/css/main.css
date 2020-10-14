@@ -1122,37 +1122,67 @@ object {
   margin-bottom: 0; }
 
 .service-nav {
+  min-height: 6.3125rem;
+  background-image: url(../../src/img/features-repeatable-bg.png);
+  background-repeat: repeat;
   grid-column: 1/13;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-gap: 1.875rem; }
-  .service-nav .service__advertising {
-    grid-column: 3/5; }
-    .service-nav .service__advertising h3 {
-      font-size: 1.25rem;
-      color: #ef4634; }
-    .service-nav .service__advertising p {
-      font-size: 0.8125rem;
-      line-height: 1.21875rem; }
-  .service-nav .service__multimedia {
-    grid-column: 6/8; }
-    .service-nav .service__multimedia h3 {
-      font-size: 1.25rem;
-      color: #ef4634; }
-    .service-nav .service__multimedia p {
-      font-size: 0.8125rem;
-      line-height: 1.21875rem; }
-  .service-nav .service__photography {
-    grid-column: 9/11; }
-    .service-nav .service__photography h3 {
-      font-size: 1.25rem;
-      color: #ef4634; }
-    .service-nav .service__photography p {
-      font-size: 0.8125rem;
-      line-height: 1.21875rem; }
+  .service-nav .service-nav-container {
+    grid-column: 3/11;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr); }
+    .service-nav .service-nav-container .service__advertising {
+      grid-column: 1/4;
+      display: flex; }
+      .service-nav .service-nav-container .service__advertising .service__advertising__icon {
+        align-self: center; }
+      .service-nav .service-nav-container .service__advertising .service__advertising__content {
+        align-self: center; }
+        .service-nav .service-nav-container .service__advertising .service__advertising__content h3 {
+          font-size: 1.25rem;
+          color: #ef4634; }
+        .service-nav .service-nav-container .service__advertising .service__advertising__content p {
+          font-size: 0.8125rem;
+          line-height: 1.21875rem; }
+    .service-nav .service-nav-container .service__multimedia {
+      grid-column: 4/7;
+      display: flex; }
+      .service-nav .service-nav-container .service__multimedia .service__multimedia__icon {
+        align-self: center; }
+      .service-nav .service-nav-container .service__multimedia .service__multimedia__content {
+        align-self: center; }
+        .service-nav .service-nav-container .service__multimedia .service__multimedia__content h3 {
+          font-size: 1.25rem;
+          color: #ef4634; }
+        .service-nav .service-nav-container .service__multimedia .service__multimedia__content p {
+          font-size: 0.8125rem;
+          line-height: 1.21875rem; }
+    .service-nav .service-nav-container .service__photography {
+      grid-column: 7/10;
+      display: flex; }
+      .service-nav .service-nav-container .service__photography .service__photography__icon {
+        align-self: center; }
+      .service-nav .service-nav-container .service__photography .service__photography__content {
+        align-self: center; }
+        .service-nav .service-nav-container .service__photography .service__photography__content h3 {
+          font-size: 1.25rem;
+          color: #ef4634; }
+        .service-nav .service-nav-container .service__photography .service__photography__content p {
+          font-size: 0.8125rem;
+          line-height: 1.21875rem; }
 
 .site-footer {
   grid-column: 3/11; }
+
+.footer-content {
+  display: flex; }
+
+.site-footer hr {
+  margin: 0.625rem 0 1.25rem 0;
+  background: #62585f;
+  height: 1px; }
 
 .sticky {
   display: block; }
@@ -1340,12 +1370,15 @@ object {
   .designfly-main-navigation a {
     display: block;
     text-decoration: none;
-    padding: 0.625rem; }
+    padding: 0.625rem;
+    font-family: Open Sans;
+    font-weight: bold; }
   .designfly-main-navigation .current_page_item > a,
   .designfly-main-navigation .current-menu-item > a,
   .designfly-main-navigation .current_page_ancestor > a {
     color: #ffffff;
-    background-color: #ef4634; }
+    background-color: #ef4634;
+    border-radius: 0.1875rem; }
 
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main

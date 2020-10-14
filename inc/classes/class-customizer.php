@@ -71,37 +71,150 @@ class Customizer {
 		}
 
 		/**
-			 * Theme Options
-			 */
+		 * Theme options for Service navbar Images
+		 */
+		$wp_customize->add_section(
+			'designfly-service-section',
+			array(
+				'title'      => __( 'Service Navbar', 'designfly' ),
+				'priority'   => 130,
+				'capability' => 'edit_theme_options',
+			)
+		);
 
-			$wp_customize->add_section(
-				'designfly-footer-section',
+		$wp_customize->add_setting(
+			'designfly-service-advertising',
+			array(
+				'default'           => '',
+				'transport'         => 'refresh',
+				'sanitize_callback' => 'absint',
+			)
+		);
+
+		$wp_customize->add_control(
+			new \WP_Customize_Cropped_Image_Control(
+				$wp_customize,
+				'designfly-service-advertising',
 				array(
-					'title'      => __( 'Footer settings', 'designfly' ),
-					'priority'   => 140,
-					'capability' => 'edit_theme_options',
+					'label'         => __( 'Add Advertising service icon', 'designfly' ),
+					'description'   => esc_html__( 'Advertising Service Cropped Image Control', 'designfly' ),
+					'section'       => 'designfly-service-section',
+					'flex_width'    => false, // Optional. Default: false.
+					'flex_height'   => true, // Optional. Default: false.
+					'width'         => 50, // Optional. Default: 150.
+					'height'        => 50, // Optional. Default: 150.
+					'button_labels' => array( // Optional.
+						'select'       => __( 'Select Image', 'designfly' ),
+						'change'       => __( 'Change Image', 'designfly' ),
+						'remove'       => __( 'Remove', 'designfly' ),
+						'default'      => __( 'Default', 'designfly' ),
+						'placeholder'  => __( 'No image selected', 'designfly' ),
+						'frame_title'  => __( 'Select Image', 'designfly' ),
+						'frame_button' => __( 'Choose Image', 'designfly' ),
+					),
 				)
-			);
+			)
+		);
 
-			$wp_customize->add_setting(
-				'designfly-footer-contact',
+		$wp_customize->add_setting(
+			'designfly-service-multimedia',
+			array(
+				'default'           => '',
+				'transport'         => 'refresh',
+				'sanitize_callback' => 'absint',
+			)
+		);
+
+		$wp_customize->add_control(
+			new \WP_Customize_Cropped_Image_Control(
+				$wp_customize,
+				'designfly-service-multimedia',
 				array(
-					'capability'        => 'edit_theme_options',
-					'default'           => 'Street 21 Planet, A-11, california Tel: 91234 42354',
-					'sanitize_callback' => array( __CLASS__, 'sanitize_textarea' ),
+					'label'         => __( 'Add Multimedia service icon', 'designfly' ),
+					'description'   => esc_html__( 'Multimedia Service Cropped Image Control', 'designfly' ),
+					'section'       => 'designfly-service-section',
+					'flex_width'    => false, // Optional. Default: false.
+					'flex_height'   => true, // Optional. Default: false.
+					'width'         => 50, // Optional. Default: 150.
+					'height'        => 50, // Optional. Default: 150.
+					'button_labels' => array( // Optional.
+						'select'       => __( 'Select Image', 'designfly' ),
+						'change'       => __( 'Change Image', 'designfly' ),
+						'remove'       => __( 'Remove', 'designfly' ),
+						'default'      => __( 'Default', 'designfly' ),
+						'placeholder'  => __( 'No image selected', 'designfly' ),
+						'frame_title'  => __( 'Select Image', 'designfly' ),
+						'frame_button' => __( 'Choose Image', 'designfly' ),
+					),
 				)
-			);
+			)
+		);
 
-			$wp_customize->add_control(
-				'designfly-footer-contact',
+		$wp_customize->add_setting(
+			'designfly-service-photography',
+			array(
+				'default'           => '',
+				'transport'         => 'refresh',
+				'sanitize_callback' => 'absint',
+			)
+		);
+
+		$wp_customize->add_control(
+			new \WP_Customize_Cropped_Image_Control(
+				$wp_customize,
+				'designfly-service-photography',
 				array(
-					'type'     => 'textarea',
-					'section'  => 'designfly-footer-section',
-					'priority' => 10,
-					'label'    => __( 'Contact Information', 'designfly' ),
+					'label'         => __( 'Add Photography service icon', 'designfly' ),
+					'description'   => esc_html__( 'Photography Service Cropped Image Control', 'designfly' ),
+					'section'       => 'designfly-service-section',
+					'flex_width'    => false, // Optional. Default: false.
+					'flex_height'   => true, // Optional. Default: false.
+					'width'         => 50, // Optional. Default: 150.
+					'height'        => 50, // Optional. Default: 150.
+					'button_labels' => array( // Optional.
+						'select'       => __( 'Select Image', 'designfly' ),
+						'change'       => __( 'Change Image', 'designfly' ),
+						'remove'       => __( 'Remove', 'designfly' ),
+						'default'      => __( 'Default', 'designfly' ),
+						'placeholder'  => __( 'No image selected', 'designfly' ),
+						'frame_title'  => __( 'Select Image', 'designfly' ),
+						'frame_button' => __( 'Choose Image', 'designfly' ),
+					),
 				)
-			);
+			)
+		);
 
+		/**
+		 * Theme options for Footer Contact Area.
+		 */
+
+		$wp_customize->add_section(
+			'designfly-footer-section',
+			array(
+				'title'      => __( 'Footer settings', 'designfly' ),
+				'priority'   => 140,
+				'capability' => 'edit_theme_options',
+			)
+		);
+
+		$wp_customize->add_setting(
+			'designfly-footer-contact',
+			array(
+				'capability'        => 'edit_theme_options',
+				'default'           => 'Street 21 Planet, A-11, california Tel: 91234 42354',
+				'sanitize_callback' => array( __CLASS__, 'sanitize_textarea' ),
+			)
+		);
+
+		$wp_customize->add_control(
+			'designfly-footer-contact',
+			array(
+				'type'     => 'textarea',
+				'section'  => 'designfly-footer-section',
+				'priority' => 10,
+				'label'    => __( 'Contact Information', 'designfly' ),
+			)
+		);
 	}
 
 	/**
