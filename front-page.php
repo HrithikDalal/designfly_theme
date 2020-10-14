@@ -8,22 +8,8 @@
 get_header();
 ?>
 
-<div class="home-page-wrap">
-	<?php
-	if ( have_posts() ) :
-		while ( have_posts() ) : the_post();
 
-			get_template_part( 'template-parts/content', 'page' );
-
-		endwhile;
-	else :
-
-		get_template_part( 'template-parts/content-none' );
-
-	endif;
-
-	?>
-</div>
+<div class="header-img" ></div>
 <?php
 	get_template_part( 'template-parts/components/service-nav/nav' );
 ?>

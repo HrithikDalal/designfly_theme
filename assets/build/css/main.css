@@ -1121,6 +1121,14 @@ object {
 .site-description {
   margin-bottom: 0; }
 
+.header-img {
+  height: 34rem;
+  grid-column: 1/13;
+  background-image: url(../../src/img/slider-image.png);
+  width: 100%;
+  background-size: cover;
+  background-position: center; }
+
 .service-nav {
   min-height: 6.3125rem;
   background-image: url(../../src/img/features-repeatable-bg.png);
