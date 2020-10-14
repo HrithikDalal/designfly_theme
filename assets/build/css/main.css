@@ -1177,7 +1177,19 @@ object {
   grid-column: 3/11; }
 
 .footer-content {
-  display: flex; }
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-gap: 1.875rem; }
+  .footer-content .footer__post {
+    grid-column: 1/5; }
+    .footer-content .footer__post .title {
+      font-family: Open Sans;
+      font-size: 1.5625rem; }
+  .footer-content .footer__contact {
+    grid-column: 5/9; }
+    .footer-content .footer__contact .contact__title {
+      font-family: Open Sans;
+      font-size: 1.5625rem; }
 
 .site-footer hr {
   margin: 0.625rem 0 1.25rem 0;

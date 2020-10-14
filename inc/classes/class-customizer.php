@@ -197,22 +197,113 @@ class Customizer {
 			)
 		);
 
+		/* Settings for Address */
 		$wp_customize->add_setting(
-			'designfly-footer-contact',
+			'designfly-footer-address',
 			array(
 				'capability'        => 'edit_theme_options',
-				'default'           => 'Street 21 Planet, A-11, california Tel: 91234 42354',
-				'sanitize_callback' => array( __CLASS__, 'sanitize_textarea' ),
+				'default'           => 'Street 21 Planet, A-11, dapibus tristique, 123551',
+				'sanitize_callback' => array( __CLASS__, 'sanitize_custom_text' ),
 			)
 		);
 
 		$wp_customize->add_control(
-			'designfly-footer-contact',
+			'designfly-footer-address',
 			array(
-				'type'     => 'textarea',
 				'section'  => 'designfly-footer-section',
 				'priority' => 10,
-				'label'    => __( 'Contact Information', 'designfly' ),
+				'label'    => __( 'Address', 'designfly' ),
+			)
+		);
+
+		/* Settings for Telephone */
+		$wp_customize->add_setting(
+			'designfly-footer-telephone',
+			array(
+				'capability'        => 'edit_theme_options',
+				'default'           => '123 4567890',
+				'sanitize_callback' => array( __CLASS__, 'sanitize_custom_text' ),
+			)
+		);
+
+		$wp_customize->add_control(
+			'designfly-footer-telephone',
+			array(
+				'section'  => 'designfly-footer-section',
+				'priority' => 11,
+				'label'    => __( 'Telephone Number', 'designfly' ),
+			)
+		);
+		/* Settings for Fax */
+		$wp_customize->add_setting(
+			'designfly-footer-fax',
+			array(
+				'capability'        => 'edit_theme_options',
+				'default'           => '123 456789',
+				'sanitize_callback' => array( __CLASS__, 'sanitize_custom_text' ),
+			)
+		);
+
+		$wp_customize->add_control(
+			'designfly-footer-fax',
+			array(
+				'section'  => 'designfly-footer-section',
+				'priority' => 12,
+				'label'    => __( 'Fax Number', 'designfly' ),
+			)
+		);
+
+		/* Settings for email */
+		$wp_customize->add_setting(
+			'designfly-footer-email',
+			array(
+				'capability'        => 'edit_theme_options',
+				'default'           => 'contactus@dsignfly.com',
+				'sanitize_callback' => array( __CLASS__, 'sanitize_custom_text' ),
+			)
+		);
+
+		$wp_customize->add_control(
+			'designfly-footer-email',
+			array(
+				'section'  => 'designfly-footer-section',
+				'priority' => 13,
+				'label'    => __( 'E-mail Address', 'designfly' ),
+			)
+		);
+		/* Settings for Social Icon Images */
+		$wp_customize->add_setting(
+			'designfly-footer-social',
+			array(
+				'default'           => '',
+				'transport'         => 'refresh',
+				'sanitize_callback' => 'absint',
+			)
+		);
+
+		$wp_customize->add_control(
+			new \WP_Customize_Cropped_Image_Control(
+				$wp_customize,
+				'designfly-footer-social',
+				array(
+					'label'         => __( 'Add Social Media Icon Images', 'designfly' ),
+					'description'   => esc_html__( 'Social Media Image Control', 'designfly' ),
+					'section'       => 'designfly-footer-section',
+					'priority'      => 14,
+					'flex_width'    => false, // Optional. Default: false.
+					'flex_height'   => true, // Optional. Default: false.
+					'width'         => 250, // Optional. Default: 150.
+					'height'        => 50, // Optional. Default: 150.
+					'button_labels' => array( // Optional.
+						'select'       => __( 'Select Image', 'designfly' ),
+						'change'       => __( 'Change Image', 'designfly' ),
+						'remove'       => __( 'Remove', 'designfly' ),
+						'default'      => __( 'Default', 'designfly' ),
+						'placeholder'  => __( 'No image selected', 'designfly' ),
+						'frame_title'  => __( 'Select Image', 'designfly' ),
+						'frame_button' => __( 'Choose Image', 'designfly' ),
+					),
+				)
 			)
 		);
 	}
@@ -254,7 +345,7 @@ class Customizer {
 	 *
 	 * @return String
 	 */
-	public function sanitize_textarea( $input ){
+	public function sanitize_custom_text( $input ) {
 		return filter_var( $input, FILTER_SANITIZE_STRING );
 	}
 

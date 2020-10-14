@@ -49,10 +49,10 @@
 			);
 			?>
 			<form class="form-inline" role="search" method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ), 'designfly' ); ?>">
-			<div><label class="screen-reader-text" for="s">Search Box</label>
-				<input class="form-control" type="text" value="" name="s" id="s" />
-				<input class="search-button" type="submit" id="searchsubmit" value="Search" />
-			</div>
+				<div><label class="screen-reader-text" for="s">Search Box</label>
+					<input class="form-control" type="text" value="" name="s" id="s" />
+					<input class="search-button" type="submit" id="searchsubmit" value="Search" />
+				</div>
 			</form>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->

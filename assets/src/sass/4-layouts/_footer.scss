@@ -3,7 +3,27 @@
 }
 
 .footer-content{
-	display: flex;
+	display: grid;
+	grid-template-columns: repeat(8, 1fr);
+	grid-gap: 30px;
+
+	.footer__post{
+		grid-column: 1/5;
+
+		.title{
+			font-family: Open Sans;
+			font-size: 25px;
+		}
+	}
+
+	.footer__contact{
+		grid-column: 5/9;
+
+		.contact__title{
+			font-family: Open Sans;
+			font-size: 25px;
+		}
+	}
 }
 
 .site-footer hr{
