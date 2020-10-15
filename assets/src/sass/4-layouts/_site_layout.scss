@@ -1,23 +1,27 @@
 .grid-wrapper{
 	display: grid;
-	grid-template-columns: repeat(12, 1fr);
+	grid-template-columns: repeat(13, 1fr);
 	grid-column-gap: 30px;
 }
 
 .site{
 	grid-column: 3/11;
 }
+
+.site-main {
+	margin-right: 30px;
+}
+
 .site-content{
-	grid-column: 1/13;
+	grid-column: 1/14;
 	display: grid;
 	grid-template-columns: repeat(13, 1fr);
-	grid-column-gap: 30px;
 }
 
 .site-primary{
-	grid-column: 3/9;
+	grid-column: 4/9;
 }
 
 .site-secondary{
-	grid-column: 9/12;
+	grid-column: 9/11;
 }

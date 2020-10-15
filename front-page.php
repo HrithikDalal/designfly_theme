@@ -7,8 +7,6 @@
 
 get_header();
 ?>
-<div id="primary" class="site-primary">
-	<main id="main" class="site-main" role="main">
 
 		<?php
 		$designfly_paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
@@ -51,8 +49,6 @@ get_header();
 			<?php
 		endif;
 		?>
-	</main>
-</div>
 
 <?php
 get_footer();

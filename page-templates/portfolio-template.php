@@ -8,7 +8,6 @@
  */
 
 get_header();
-get_template_part( 'template-parts/components/service-nav/nav' );
 ?>
 		<?php
 		$designfly_paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;

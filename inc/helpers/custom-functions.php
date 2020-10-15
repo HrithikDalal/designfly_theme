@@ -60,7 +60,7 @@ function designfly_custom_post_type() {
 		'rewrite'             => true,
 		'capability_type'     => 'post',
 		'hierarchical'        => false,
-		'menu_icon'           => 'dashicons-instagram',
+		'menu_icon'           => 'dashicons-format-image',
 		'supports'            => array(
 			'title',
 			'editor',

@@ -647,9 +647,8 @@ samp {
   font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace; }
 
 hr {
-  background-color: #eff3f6;
-  border: 0;
-  box-sizing: content-box;
+  margin: 0.625rem 0 1.25rem 0;
+  background: #62585f;
   height: 1px; }
 
 /* Aside */
@@ -1093,28 +1092,30 @@ object {
 
 .grid-wrapper {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(13, 1fr);
   grid-column-gap: 1.875rem; }
 
 .site {
   grid-column: 3/11; }
 
+.site-main {
+  margin-right: 1.875rem; }
+
 .site-content {
-  grid-column: 1/13;
+  grid-column: 1/14;
   display: grid;
-  grid-template-columns: repeat(13, 1fr);
-  grid-column-gap: 1.875rem; }
+  grid-template-columns: repeat(13, 1fr); }
 
 .site-primary {
-  grid-column: 3/9; }
+  grid-column: 4/9; }
 
 .site-secondary {
-  grid-column: 9/12; }
+  grid-column: 9/11; }
 
 .site-header {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
-  grid-column: 3/11;
+  grid-column: 4/11;
   display: flex;
   justify-content: space-between;
   height: 6.5625rem; }
@@ -1139,7 +1140,7 @@ object {
 
 .header-img {
   height: 34rem;
-  grid-column: 1/13;
+  grid-column: 1/14;
   background-image: url(../../src/img/slider-image.png);
   width: 100%;
   background-position: center; }
@@ -1149,21 +1150,22 @@ object {
   height: 6.3125rem;
   background-image: url(../../src/img/features-repeatable-bg.png);
   background-repeat: repeat;
-  grid-column: 1/13;
+  grid-column: 1/14;
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(13, 1fr);
   grid-column-gap: 1.875rem; }
   .service-nav .service-nav-container {
-    grid-column: 3/11;
+    grid-column: 4/11;
     display: grid;
-    grid-column-gap: 1.875rem;
+    grid-column-gap: 1.25rem;
     grid-template-columns: repeat(9, 1fr); }
     .service-nav .service-nav-container .service__advertising {
       grid-column: 1/4;
       display: flex;
       align-items: center; }
       .service-nav .service-nav-container .service__advertising .service__advertising__icon {
-        margin-right: 0.625rem; }
+        margin-right: 0.625rem;
+        min-width: 3.125rem; }
       .service-nav .service-nav-container .service__advertising .service__advertising__content h3 {
         margin: 0.3125rem;
         font-size: 1.25rem;
@@ -1177,7 +1179,8 @@ object {
       display: flex;
       align-items: center; }
       .service-nav .service-nav-container .service__multimedia .service__multimedia__icon {
-        margin-right: 0.625rem; }
+        margin-right: 0.625rem;
+        min-width: 3.125rem; }
       .service-nav .service-nav-container .service__multimedia .service__multimedia__content h3 {
         margin: 0.3125rem;
         font-size: 1.25rem;
@@ -1191,7 +1194,8 @@ object {
       display: flex;
       align-items: center; }
       .service-nav .service-nav-container .service__photography .service__photography__icon {
-        margin-right: 0.625rem; }
+        margin-right: 0.625rem;
+        min-width: 3.125rem; }
       .service-nav .service-nav-container .service__photography .service__photography__content h3 {
         margin: 0.3125rem;
         font-size: 1.25rem;
@@ -1202,7 +1206,7 @@ object {
         line-height: 1.21875rem; }
 
 .site-footer {
-  grid-column: 3/11; }
+  grid-column: 4/11; }
 
 .footer-content {
   display: grid;
@@ -1223,6 +1227,9 @@ object {
   margin: 0.625rem 0 1.25rem 0;
   background: #62585f;
   height: 1px; }
+
+.site-info.text-center {
+  margin-bottom: 0.9375rem; }
 
 .sticky {
   display: block; }
@@ -1299,13 +1306,13 @@ object {
 
 /* Portfolio page*/
 .portfolio-content {
-  grid-column: 3/11;
+  grid-column: 4/11;
   margin: 3.125rem auto;
   display: -ms-grid;
   display: -moz-grid;
   display: grid;
-  -ms-grid-columns: 18.75rem 18.75rem 18.75rem;
-  grid-template-columns: 18.75rem 18.75rem 18.75rem;
+  -ms-grid-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   -moz-column-gap: 0.9375rem;
        column-gap: 0.9375rem;
   row-gap: 0.9375rem;
@@ -1500,6 +1507,30 @@ object {
 .widget-title {
   font-size: 1.375rem;
   line-height: 1.875rem; }
+
+/* Portfolio Widget */
+.widget-sidebar {
+  padding: 0; }
+
+.widget-title {
+  font-weight: 400;
+  font-size: 1.5625rem;
+  color: #62585f;
+  text-shadow: 0.125rem #ffffff;
+  margin-bottom: 0; }
+
+#portfolio-posts-4 {
+  display: flex;
+  flex-wrap: wrap; }
+
+.portfolio--widget {
+  width: 3.75rem;
+  height: 3.75rem;
+  margin: 0.3125rem; }
+
+.portfolio__img.wp-post-image {
+  width: 100%;
+  border-radius: 0.3125rem; }
 
 @media print, screen and (min-width: 48em) {
     body {

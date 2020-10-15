@@ -90,13 +90,13 @@
 /* Portfolio page*/
 
 .portfolio-content {
-	grid-column: 3/11;
+	grid-column: 4/11;
 	margin: 50px auto;
 	display: -ms-grid;
 	display: -moz-grid;
 	display: grid;
-	-ms-grid-columns: 300px 300px 300px;
-	grid-template-columns: 300px 300px 300px;
+	-ms-grid-columns: repeat(3,1fr);
+	grid-template-columns: repeat(3,1fr);
 	column-gap: 15px;
 	row-gap: 15px;
 	justify-content: center;

@@ -7,11 +7,8 @@
 
 ?>
 
-	<div id="portfolio-item-<?php the_ID(); ?>" <?php post_class(); ?>>
+<div id="portfolio-item-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php
-	if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
-		return;
-	}
 
 	if ( is_singular( 'portfolio-item' ) ) :
 		?>
@@ -25,10 +22,9 @@
 				designfly_posted_by();
 				designfly_posted_on();
 			?>
-		</div><!-- .entry-meta -->
+			</div><!-- .entry-meta -->
 
-		<hr class="bar"/>
-
+			<hr class="bar"/>
 		</header>
 
 		<div class="post-thumbnail">
@@ -62,7 +58,7 @@
 			</div>
 
 			<?php
-			endif; // End is_singular().
+		endif; // End is_singular().
 		?>
 
 </div><!-- #post-<?php the_ID(); ?> -->

@@ -1,7 +1,7 @@
 .site-header {
 	padding-top: 20px;
 	padding-bottom: 20px;
-	grid-column: 3/11;
+	grid-column: 4/11;
 	display: flex;
 	justify-content: space-between;
 	height: 105px;
@@ -32,7 +32,7 @@
 
 .header-img{
 	height: 544px;
-	grid-column: 1/13;
+	grid-column: 1/14;
 	background-image: url('../img/slider-image.png');
 	width: 100%;
 	background-position: center;
@@ -42,15 +42,15 @@
 	height: 101px;
     background-image: url('../img/features-repeatable-bg.png');
     background-repeat: repeat;
-	grid-column: 1/13;
+	grid-column: 1/14;
 	display: grid;
-	grid-template-columns: repeat(12, 1fr);
+	grid-template-columns: repeat(13, 1fr);
 	grid-column-gap: 30px;
 
 	.service-nav-container{
-		grid-column: 3/11;
+		grid-column: 4/11;
 		display: grid;
-		grid-column-gap: 30px;
+		grid-column-gap: 20px;
 		grid-template-columns: repeat(9, 1fr);
 
 
@@ -61,6 +61,7 @@
 
 			.service__advertising__icon{
 				margin-right: 10px;
+				min-width: 50px;
 			}
 
 			.service__advertising__content{
@@ -86,6 +87,7 @@
 
 			.service__multimedia__icon{
 				margin-right: 10px;
+				min-width: 50px;
 			}
 
 			.service__multimedia__content{
@@ -111,6 +113,7 @@
 
 			.service__photography__icon{
 				margin-right: 10px;
+				min-width: 50px;
 			}
 
 			.service__photography__content{

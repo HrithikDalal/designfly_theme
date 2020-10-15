@@ -315,8 +315,7 @@ samp {
 }
 
 hr {
-	background-color: $color__background-hr;
-	border: 0;
-	box-sizing: content-box;
-	height: 1px; // Address differences between Firefox and other browsers.
+	margin: 0.625rem 0 1.25rem 0;
+	background: #62585f;
+	height: 1px;
 }
