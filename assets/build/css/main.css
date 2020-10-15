@@ -1110,7 +1110,8 @@ object {
   grid-column: 4/9; }
 
 .site-secondary {
-  grid-column: 9/11; }
+  grid-column: 9/11;
+  padding-top: 1.25rem; }
 
 .site-header {
   padding-top: 1.25rem;
@@ -1259,23 +1260,37 @@ object {
 .designfly-pagination {
   text-align: center; }
 
-.blog__attachment {
-  float: left;
-  margin-right: 1.25rem; }
-
 /*Home Page*/
 .home-page-wrap {
   grid-column: 1/13; }
 
 /* Blog Page */
+.blog-content-top .title {
+  display: inline-block;
+  color: #62585f;
+  font-weight: 300;
+  font-size: 2.8125rem;
+  text-shadow: 0.125rem 0 #ffffff;
+  margin-bottom: 0;
+  margin-top: 2.1875rem; }
+
 .blog__post__date {
   float: left;
   background-color: #222222;
   border-radius: 0.1875rem;
   color: #ffffff;
-  padding-left: 1.25rem;
+  padding-left: 1rem;
   padding-right: 1rem;
   border-right: 1px solid #ffffff; }
+  .blog__post__date .blog__post__day {
+    font-size: 1.5625rem;
+    max-height: 1.5625rem;
+    margin-top: -0.1875rem; }
+  .blog__post__date .blog__post__month {
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    margin-left: 1px;
+    text-transform: uppercase; }
 
 .blog-page-heading {
   font-size: 2.8125rem;
@@ -1290,19 +1305,34 @@ object {
   border-radius: 0.1875rem;
   color: #ffffff; }
 
+.blog__post__date:hover {
+  background-color: #ef4634; }
+
 .entry-title:hover {
   background-color: #ef4634; }
 
 .entry-title a {
   color: #ffffff;
-  font-size: 1.25rem; }
+  font-size: 1.25rem;
+  font-weight: 400;
+  padding-left: 0.625rem; }
 
 .entry-title a:hover {
   text-decoration: none; }
 
-.entry-image img {
+.blog__attachment {
   float: left;
   margin-right: 1.25rem; }
+
+.entry-content {
+  margin-bottom: 3.75rem; }
+
+.excerpt,
+.entry-content p {
+  font-size: 0.875rem;
+  line-height: 1.3125rem;
+  color: #62585f;
+  font-weight: 400; }
 
 /* Portfolio page*/
 .portfolio-content {
@@ -1329,11 +1359,11 @@ object {
 
 .portfolio-content .portfolio-content-top .title {
   display: inline-block;
-  color: #63585f;
-  font-size: 3rem;
+  color: #62585f;
+  font-weight: 300;
+  font-size: 2.8125rem;
   text-shadow: 0.125rem 0 #ffffff;
-  margin-bottom: 0;
-  text-transform: uppercase; }
+  margin-bottom: 0; }
 
 .portfolio-content > div[class^="post-"] {
   cursor: pointer;
@@ -1516,7 +1546,7 @@ object {
   font-weight: 400;
   font-size: 1.5625rem;
   color: #62585f;
-  text-shadow: 0.125rem #ffffff;
+  text-shadow: 0.125rem 0 #ffffff;
   margin-bottom: 0; }
 
 #portfolio-posts-4 {

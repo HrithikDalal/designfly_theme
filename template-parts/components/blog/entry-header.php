@@ -25,8 +25,8 @@ $designfly_has_post_thumbnail = get_the_post_thumbnail( $designfly_the_post_id )
 	} else {
 		?>
 		<div class="blog__post__date">
-			<div><?php echo get_the_date( 'd' ); ?></div>
-			<div><?php echo get_the_date( 'M' ); ?></div>
+			<div class="blog__post__day"><?php echo get_the_date( 'd' ); ?></div>
+			<div class="blog__post__month"><?php echo get_the_date( 'M' ); ?></div>
 		</div>
 		<?php
 		printf(

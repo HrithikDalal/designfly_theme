@@ -16,6 +16,10 @@ get_header();
 
 <div id="primary" class="site-primary">
 	<main id="main" class="site-main" role="main">
+		<div class="blog-content-top">
+					<p class="title"> LET'S BLOG </p>
+					<hr />
+				</div>
 		<?php
 		if ( have_posts() ) :
 

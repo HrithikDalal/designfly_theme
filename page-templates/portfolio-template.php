@@ -24,7 +24,7 @@ get_header();
 
 				<!-- top bar -->
 				<div class="portfolio-content-top">
-					<p class="title"> <?php echo esc_html( get_theme_mod( 'designfly-home-portfolio-title', 'd\'sign is the soul' ) ); ?> </p>
+					<p class="title"> D'SIGN IS THE SOUL </p>
 					<hr />
 				</div>
 
