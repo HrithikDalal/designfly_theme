@@ -1,7 +1,7 @@
 .grid-wrapper{
 	display: grid;
 	grid-template-columns: repeat(12, 1fr);
-	grid-gap: 30px;
+	grid-column-gap: 30px;
 }
 
 .site{
@@ -10,14 +10,14 @@
 .site-content{
 	grid-column: 1/13;
 	display: grid;
-	grid-template-columns: repeat(12, 1fr);
-	grid-gap: 30px;
+	grid-template-columns: repeat(13, 1fr);
+	grid-column-gap: 30px;
 }
 
 .site-primary{
-	grid-column: 3/8;
+	grid-column: 3/9;
 }
 
 .site-secondary{
-	grid-column: 8/11;
+	grid-column: 9/12;
 }

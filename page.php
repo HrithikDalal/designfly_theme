@@ -13,7 +13,6 @@
  */
 
 get_header();
-get_template_part( 'template-parts/components/service-nav/nav' );
 ?>
 
 <div id="primary" class="site-primary">
