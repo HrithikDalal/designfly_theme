@@ -71,6 +71,52 @@ class Customizer {
 		}
 
 		/**
+		 * Theme options for Site Navigation
+		 */
+		$wp_customize->add_section(
+			'designfly-navigation-section',
+			array(
+				'title'      => __( 'Site Navigation', 'designfly' ),
+				'priority'   => 120,
+				'capability' => 'edit_theme_options',
+			)
+		);
+
+		$wp_customize->add_setting(
+			'designfly-site-navigation',
+			array(
+				'default'           => '',
+				'transport'         => 'refresh',
+				'sanitize_callback' => 'absint',
+			)
+		);
+
+		$wp_customize->add_control(
+			new \WP_Customize_Cropped_Image_Control(
+				$wp_customize,
+				'designfly-site-navigation',
+				array(
+					'label'         => __( 'Add search icon', 'designfly' ),
+					'description'   => esc_html__( 'Site Navigation Search Box Image Control', 'designfly' ),
+					'section'       => 'designfly-navigation-section',
+					'flex_width'    => false, // Optional. Default: false.
+					'flex_height'   => true, // Optional. Default: false.
+					'width'         => 20, // Optional. Default: 150.
+					'height'        => 20, // Optional. Default: 150.
+					'button_labels' => array( // Optional.
+						'select'       => __( 'Select Image', 'designfly' ),
+						'change'       => __( 'Change Image', 'designfly' ),
+						'remove'       => __( 'Remove', 'designfly' ),
+						'default'      => __( 'Default', 'designfly' ),
+						'placeholder'  => __( 'No image selected', 'designfly' ),
+						'frame_title'  => __( 'Select Image', 'designfly' ),
+						'frame_button' => __( 'Choose Image', 'designfly' ),
+					),
+				)
+			)
+		);
+
+		/**
 		 * Theme options for Service navbar Images
 		 */
 		$wp_customize->add_section(

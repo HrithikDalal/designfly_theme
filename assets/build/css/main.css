@@ -19,6 +19,9 @@
 /*---------------------------------
 		Body Text Font Sizes
 -----------------------------------*/
+body {
+  font-family: "Open Sans", sans-serif; }
+
 /**
  * Add font scale with media query as per configuration on $body-text
  * Ex: @include body-text( h1 );
@@ -1113,7 +1116,21 @@ object {
   padding-bottom: 1.25rem;
   grid-column: 3/11;
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  height: 6.5625rem;
+  margin-bottom: -1.5625rem; }
+
+.designfly-main-navigation {
+  align-self: end; }
+
+.navigation__form {
+  padding-top: 0.375rem; }
+
+#search-box {
+  border: 1px solid #62585f;
+  border-radius: 0.1875rem;
+  height: 1.25rem;
+  width: 9.375rem; }
 
 .site-title {
   margin-bottom: 0.625rem; }
@@ -1130,7 +1147,7 @@ object {
   background-position: center; }
 
 .service-nav {
-  min-height: 6.3125rem;
+  height: 6.3125rem;
   background-image: url(../../src/img/features-repeatable-bg.png);
   background-repeat: repeat;
   grid-column: 1/13;
@@ -1191,12 +1208,12 @@ object {
   .footer-content .footer__post {
     grid-column: 1/5; }
     .footer-content .footer__post .title {
-      font-family: Open Sans;
+      font-weight: 400;
       font-size: 1.5625rem; }
   .footer-content .footer__contact {
     grid-column: 5/9; }
     .footer-content .footer__contact .contact__title {
-      font-family: Open Sans;
+      font-weight: 400;
       font-size: 1.5625rem; }
 
 .site-footer hr {
@@ -1251,7 +1268,6 @@ object {
   border-right: 1px solid #ffffff; }
 
 .blog-page-heading {
-  font-family: sans-serif;
   font-size: 2.8125rem;
   color: #62585f;
   text-shadow: 0.125rem 0.125rem #ffffff; }
@@ -1303,7 +1319,6 @@ object {
 
 .portfolio-content .portfolio-content-top .title {
   display: inline-block;
-  font-family: 'Open Sans', sans-serif;
   color: #63585f;
   font-size: 3rem;
   text-shadow: 0.125rem 0 #ffffff;
@@ -1390,9 +1405,9 @@ object {
   .designfly-main-navigation a {
     display: block;
     text-decoration: none;
+    font-size: 0.875rem;
     padding: 0.625rem;
-    font-family: Open Sans;
-    font-weight: bold; }
+    font-weight: 700; }
   .designfly-main-navigation .current_page_item > a,
   .designfly-main-navigation .current-menu-item > a,
   .designfly-main-navigation .current_page_ancestor > a {
