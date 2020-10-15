@@ -7,11 +7,6 @@
 
 get_header();
 ?>
-
-
-<div class="header-img" ></div>
-
-
 <div id="primary" class="site-primary">
 	<main id="main" class="site-main" role="main">
 

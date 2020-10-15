@@ -56,6 +56,16 @@
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
+	<!-- Home Page Carasoul -->
+	<?php
+	if ( is_front_page() ) :
+		?>
+		<div class="header-img" ></div>
+		<?php else : ?>
+		<?php ?>
+	<?php endif; ?>
+
+
 	<!-- #Services Header -->
 	<div class = "service-nav">
 		<div class="service-nav-container">
