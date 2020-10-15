@@ -1549,7 +1549,7 @@ object {
   text-shadow: 0.125rem 0 #ffffff;
   margin-bottom: 0; }
 
-#portfolio-posts-4 {
+.widget_portfolio {
   display: flex;
   flex-wrap: wrap; }
 
