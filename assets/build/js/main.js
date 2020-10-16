@@ -128,6 +128,53 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/js/components/carousel.js":
+/*!***************************************!*\
+  !*** ./src/js/components/carousel.js ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/**
+ * CarouselJS.
+ *
+ */
+var slideIndex = 1;
+document.getElementById('button-left').addEventListener('click', function () {
+  slideIndex += 1;
+  showDivs(slideIndex);
+});
+document.getElementById('button-right').addEventListener('click', function () {
+  slideIndex -= 1;
+  showDivs(slideIndex);
+});
+
+function showDivs(n) {
+  var i;
+  var posts = document.getElementsByClassName('carousel__slides');
+
+  if (n > posts.length) {
+    slideIndex = 1;
+  }
+
+  ;
+
+  if (n < 1) {
+    slideIndex = posts.length;
+  }
+
+  for (i = 0; i < posts.length; i++) {
+    posts[i].style.display = 'none';
+  }
+
+  posts[slideIndex - 1].style.display = 'block';
+}
+
+;
+showDivs(slideIndex);
+
+/***/ }),
+
 /***/ "./src/js/components/common.js":
 /*!*************************************!*\
   !*** ./src/js/components/common.js ***!
@@ -227,10 +274,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/js/components/lighthouse.js":
-/*!*****************************************!*\
-  !*** ./src/js/components/lighthouse.js ***!
-  \*****************************************/
+/***/ "./src/js/components/lightbox.js":
+/*!***************************************!*\
+  !*** ./src/js/components/lightbox.js ***!
+  \***************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -276,10 +323,12 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _sass_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../sass/main.scss */ "./src/sass/main.scss");
 /* harmony import */ var _sass_main_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_sass_main_scss__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_lighthouse__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/lighthouse */ "./src/js/components/lighthouse.js");
-/* harmony import */ var _components_lighthouse__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_lighthouse__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components */ "./src/js/components/index.js");
-/* harmony import */ var _img_features_repeatable_bg_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../img/features-repeatable-bg.png */ "./src/img/features-repeatable-bg.png");
+/* harmony import */ var _components_lightbox__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/lightbox */ "./src/js/components/lightbox.js");
+/* harmony import */ var _components_lightbox__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_lightbox__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components_carousel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/carousel */ "./src/js/components/carousel.js");
+/* harmony import */ var _components_carousel__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_carousel__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components */ "./src/js/components/index.js");
+/* harmony import */ var _img_features_repeatable_bg_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../img/features-repeatable-bg.png */ "./src/img/features-repeatable-bg.png");
 /**
  * Main scripts, loaded on all pages.
  *
@@ -288,10 +337,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 window.$ = window.$ || jQuery; // Initialize common scripts.
 
-_components__WEBPACK_IMPORTED_MODULE_2__["WebFont"].init();
-_components__WEBPACK_IMPORTED_MODULE_2__["common"].init(); // Images.
+_components__WEBPACK_IMPORTED_MODULE_3__["WebFont"].init();
+_components__WEBPACK_IMPORTED_MODULE_3__["common"].init(); // Images.
 
 
 

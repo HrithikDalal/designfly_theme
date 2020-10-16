@@ -60,7 +60,41 @@
 	<?php
 	if ( is_front_page() ) :
 		?>
-		<div class="header-img" ></div>
+		<div class="header-img" >
+		<!-- Carousel Posts -->
+			<?php
+			$designfly_carousel_query = new WP_Query(
+				array(
+					'post_type'      => 'carousel',
+				)
+			);
+			if ( $designfly_carousel_query->have_posts() ) :
+				?>
+				<div id="carousel__container" class="carousel__content">
+				<?php
+				while ( $designfly_carousel_query->have_posts() ) :
+					$designfly_carousel_query->the_post();
+					?>
+						<div class="carousel__slides">
+							<?php the_title(); ?>
+							<?php the_content(); ?>
+						</div>
+					<?php
+				endwhile;
+				?>
+				<button id="button-left">&#10094;</button>
+				<button id="button-right">&#10095;</button>
+				</div>
+				<?php
+			else :
+				?>
+				<p>
+					<?php esc_html_e( 'No items found.', 'designfly' ); ?>
+				</p>
+				<?php
+			endif;
+			?>
+		</div>
 		<?php else : ?>
 		<?php ?>
 	<?php endif; ?>

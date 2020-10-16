@@ -8,6 +8,7 @@
 get_header();
 ?>
 		<?php
+		// Portfolio Items.
 		$designfly_paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 		$designfly_query = new WP_Query(
 			array(

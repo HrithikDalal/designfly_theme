@@ -5,7 +5,8 @@
  */
 
 import '../sass/main.scss';
-import './components/lighthouse';
+import './components/lightbox';
+import './components/carousel';
 import * as components from './components';
 
 window.$ = window.$ || jQuery;
