@@ -7,7 +7,6 @@
 
 get_header();
 ?>
-
 		<?php
 		$designfly_paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 		$designfly_query = new WP_Query(
@@ -19,11 +18,17 @@ get_header();
 		);
 		if ( $designfly_query->have_posts() ) :
 			?>
-			<div class="portfolio-content">
+				<div id="lightbox" class="lightbox">
+					<div class="lightbox__content">
+						<img src="" />
+						<span class="close"><span class="dashicons dashicons-no-alt"></span></span>
+					</div>
+				</div>
+			<div id="portfolio-wrapper" class="portfolio-content">
 
 				<!-- top bar -->
 				<div class="portfolio-content-top">
-					<p class="title"> <?php echo esc_html( get_theme_mod( 'designfly-home-portfolio-title', 'd\'sign is the soul' ) ); ?> </p>
+					<p class="title"> D'SIGN IS THE SOUL </p>
 					<hr />
 				</div>
 
@@ -49,6 +54,5 @@ get_header();
 			<?php
 		endif;
 		?>
-
 <?php
 get_footer();

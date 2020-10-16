@@ -20,7 +20,13 @@ get_header();
 		);
 		if ( $designfly_query->have_posts() ) :
 			?>
-			<div class="portfolio-content">
+				<div id="lightbox" class="lightbox">
+					<div class="lightbox__content">
+						<img src="" />
+						<span class="close"><span class="dashicons dashicons-no-alt"></span></span>
+					</div>
+				</div>
+			<div id="portfolio-wrapper" class="portfolio-content">
 
 				<!-- top bar -->
 				<div class="portfolio-content-top">

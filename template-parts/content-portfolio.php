@@ -24,7 +24,7 @@
 			?>
 			</div><!-- .entry-meta -->
 
-			<hr class="bar"/>
+			<hr>
 		</header>
 
 		<div class="post-thumbnail">
@@ -43,7 +43,7 @@
 		?>
 		<?php else : ?>
 
-			<div class="view-image">
+			<div id="view-image" class="view-image">
 				<span class="dashicons dashicons-instagram"></span>
 				<span>View Image</span>
 			</div>

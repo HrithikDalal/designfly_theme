@@ -8,7 +8,8 @@
 get_header();
 ?>
 
-<section id="primary">
+<div id="primary" class="site-primary">
+	<h1>Hello</h1>
 	<main id="main" class="site-main" role="main">
 
 		<?php if ( have_posts() ) : ?>
@@ -46,7 +47,7 @@ get_header();
 
 	</main><!-- #main -->
 	<?php designfly_pagination(); ?>
-</section><!-- #primary -->
+</div><!-- #primary -->
 
 <?php
 get_sidebar();

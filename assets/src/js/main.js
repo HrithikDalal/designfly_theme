@@ -5,6 +5,7 @@
  */
 
 import '../sass/main.scss';
+import './components/lighthouse';
 import * as components from './components';
 
 window.$ = window.$ || jQuery;

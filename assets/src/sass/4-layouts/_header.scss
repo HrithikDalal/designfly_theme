@@ -46,91 +46,89 @@
 	display: grid;
 	grid-template-columns: repeat(13, 1fr);
 	grid-column-gap: 30px;
+}
 
-	.service-nav-container{
-		grid-column: 4/11;
-		display: grid;
-		grid-column-gap: 20px;
-		grid-template-columns: repeat(9, 1fr);
+.service-nav-container{
+	grid-column: 4/11;
+	display: grid;
+	grid-column-gap: 20px;
+	grid-template-columns: repeat(9, 1fr);
+}
 
+.service__advertising{
+	grid-column: 1/4;
+	display: flex;
+	align-items: center;
 
-		.service__advertising{
-			grid-column: 1/4;
-			display: flex;
-			align-items: center;
-
-			.service__advertising__icon{
-				margin-right: 10px;
-				min-width: 50px;
-			}
-
-			.service__advertising__content{
-
-				h3{
-					margin: 5px ;
-					font-size: 20px;
-					color: $red-100;
-				}
-
-				p{
-					margin: 5px ;
-					font-size: 13px;
-					line-height: 19.5px;
-				}
-			}
-		}
-
-		.service__multimedia{
-			grid-column: 4/7;
-			display: flex;
-			align-items: center;
-
-			.service__multimedia__icon{
-				margin-right: 10px;
-				min-width: 50px;
-			}
-
-			.service__multimedia__content{
-
-				h3{
-					margin: 5px ;
-					font-size: 20px;
-					color: $red-100;
-				}
-
-				p{
-					margin: 5px ;
-					font-size: 13px;
-					line-height: 19.5px;
-				}
-			}
-		}
-
-		.service__photography{
-			grid-column: 7/10;
-			display: flex;
-			align-items: center;
-
-			.service__photography__icon{
-				margin-right: 10px;
-				min-width: 50px;
-			}
-
-			.service__photography__content{
-
-				h3{
-					margin: 5px ;
-					font-size: 20px;
-					color: $red-100;
-				}
-
-				p{
-					margin: 5px;
-					font-size: 13px;
-					line-height: 19.5px;
-				}
-			}
-		}
+	.service__advertising__icon{
+		margin-right: 10px;
+		min-width: 50px;
 	}
 
+	.service__advertising__content{
+
+		h3{
+			margin: 5px ;
+			font-size: 20px;
+			color: $red-100;
+		}
+
+		p{
+			margin: 5px ;
+			font-size: 13px;
+			line-height: 19.5px;
+		}
+	}
+}
+
+.service__multimedia{
+	grid-column: 4/7;
+	display: flex;
+	align-items: center;
+
+	.service__multimedia__icon{
+		margin-right: 10px;
+		min-width: 50px;
+	}
+
+	.service__multimedia__content{
+
+		h3{
+			margin: 5px ;
+			font-size: 20px;
+			color: $red-100;
+		}
+
+		p{
+			margin: 5px ;
+			font-size: 13px;
+			line-height: 19.5px;
+		}
+	}
+}
+
+.service__photography{
+	grid-column: 7/10;
+	display: flex;
+	align-items: center;
+
+	.service__photography__icon{
+		margin-right: 10px;
+		min-width: 50px;
+	}
+
+	.service__photography__content{
+
+		h3{
+			margin: 5px ;
+			font-size: 20px;
+			color: $red-100;
+		}
+
+		p{
+			margin: 5px;
+			font-size: 13px;
+			line-height: 19.5px;
+		}
+	}
 }
