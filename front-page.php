@@ -28,9 +28,9 @@ get_header();
 				<!-- top bar -->
 				<div class="portfolio-content-top">
 					<p class="title"> D'SIGN IS THE SOUL </p>
-					<a href="<?php echo get_permalink( get_page_by_path( 'portfollio' ) ) ?>">
-					View All
-		</a>
+					<a class = "portfolio__button" href="<?php echo get_permalink( get_page_by_path( 'portfollio' ) ) ?>">
+					view all
+					</a>
 
 					<hr />
 				</div>

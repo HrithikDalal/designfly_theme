@@ -1292,6 +1292,15 @@ object {
 .home-page-wrap {
   grid-column: 1/13; }
 
+.portfolio__button {
+  background-color: #222222;
+  padding: 0.625rem;
+  border-radius: 0.1875rem;
+  font-size: 1rem;
+  color: #ffffff;
+  float: right;
+  margin-top: 3.75rem; }
+
 /* Blog Page */
 .blog-content-top .title {
   display: inline-block;
