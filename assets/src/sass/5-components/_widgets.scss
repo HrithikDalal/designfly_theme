@@ -50,3 +50,29 @@
 	width: 100%;
 	border-radius: 5px;
 }
+
+.custom-recent-post__img.wp-post-image{
+	float: left;
+	border-radius: 3px;
+	margin: 5px 5px 0 0;
+}
+
+.custom-recent-post__title {
+	font-size: 14px;
+	color: #62585f;
+	margin: 0 0 3px 0;
+	padding-top: 0;
+}
+
+.custom-recent-post__title:hover {
+	color: #ef4634;
+}
+
+.custom-recent-post__author {
+	font-size: 12px;
+	margin-top: 3px;
+}
+
+.custom-recent-post__author .byline .author a{
+	color: red;
+}

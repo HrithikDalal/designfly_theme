@@ -1122,9 +1122,14 @@ object {
   align-self: end; }
 
 .navigation__form {
-  padding-top: 0.375rem; }
+  padding: 0.375rem; }
 
-#search-box {
+.navigation__form__button {
+  position: relative;
+  top: 0.1875rem;
+  left: 0.3125rem; }
+
+.navigation__form .navigation__form__box {
   border: 1px solid #62585f;
   border-radius: 0.1875rem;
   height: 1.25rem;
@@ -1431,7 +1436,7 @@ object {
   color: #ffffff; }
 
 /** Hover effect **/
-.portfolio-content div[class^="post-"]:hover .post-thumbnail img {
+div[class^="post-"]:hover img {
   transform: scale(1.1); }
 
 .portfolio-content .view-image:hover {
@@ -1641,6 +1646,27 @@ object {
 .portfolio__img.wp-post-image {
   width: 100%;
   border-radius: 0.3125rem; }
+
+.custom-recent-post__img.wp-post-image {
+  float: left;
+  border-radius: 0.1875rem;
+  margin: 0.3125rem 0.3125rem 0 0; }
+
+.custom-recent-post__title {
+  font-size: 0.875rem;
+  color: #62585f;
+  margin: 0 0 0.1875rem 0;
+  padding-top: 0; }
+
+.custom-recent-post__title:hover {
+  color: #ef4634; }
+
+.custom-recent-post__author {
+  font-size: 0.75rem;
+  margin-top: 0.1875rem; }
+
+.custom-recent-post__author .byline .author a {
+  color: red; }
 
 @media print, screen and (min-width: 48em) {
     body {

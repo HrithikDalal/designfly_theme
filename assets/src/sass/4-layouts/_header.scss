@@ -12,10 +12,16 @@
 }
 
 .navigation__form{
-	padding-top: 6px;
+	padding: 6px;
 }
 
-#search-box{
+.navigation__form__button{
+	position: relative;
+	top: 3px;
+	left: 5px;
+}
+
+.navigation__form .navigation__form__box{
 	border: 1px solid #62585f;
 	border-radius: 3px;
 	height: 20px;
@@ -71,8 +77,8 @@
 /* Services Navigation */
 .service-nav{
 	height: 101px;
-    background-image: url('../img/features-repeatable-bg.png');
-    background-repeat: repeat;
+	background-image: url('../img/features-repeatable-bg.png');
+	background-repeat: repeat;
 	grid-column: 1/14;
 	display: grid;
 	grid-template-columns: repeat(13, 1fr);

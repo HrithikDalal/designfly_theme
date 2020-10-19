@@ -70,16 +70,19 @@ class Custom_Recent_Post_Widget extends WP_Widget {
 		// This is where you run the code and display the output.
 		foreach ( $recent_posts as $post ) : ?>
 		<div class = " recent-post__custom">
-			<?php echo get_the_post_thumbnail( $post['ID'], array( 45, 45), array( 'class' => 'recent-post__custom--img' ) ); ?>
+			<?php echo get_the_post_thumbnail( $post['ID'], array( 45, 45), array( 'class' => 'custom-recent-post__img' ) ); ?>
 			<a href="<?php echo get_permalink( $post['ID'] ) ?>">
-				<p class="recent-post__custom--title"><?php echo $post['post_title'] ?></p>
+				<p class="custom-recent-post__title"><?php echo $post['post_title'] ?></p>
 			</a>
-			<?php designfly_posted_by(); ?>
+			<p class="custom-recent-post__author"><?php designfly_posted_by(); ?>
+			<span class="custom-recent-post__date">
 			<?php
 			if ( $show_date ) :
 					designfly_posted_on();
 			endif;
 			?>
+			</span>
+			</p>
 		</div>
 		<?php
 		endforeach; wp_reset_postdata();
