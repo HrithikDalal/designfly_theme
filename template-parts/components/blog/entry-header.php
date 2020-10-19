@@ -5,10 +5,7 @@
  * @package Designfly
  */
 
-$designfly_the_post_id   = get_the_ID();
-$designfly_hide_title    = get_post_meta( $designfly_the_post_id, '_hide_page_title', true );
-$designfly_heading_class = ( ! empty( $designfly_hide_title ) && 'yes' === $hide_title ) ? 'hide d-none' : '';
-
+$designfly_the_post_id        = get_the_ID();
 $designfly_has_post_thumbnail = get_the_post_thumbnail( $designfly_the_post_id );
 
 ?>
@@ -18,22 +15,19 @@ $designfly_has_post_thumbnail = get_the_post_thumbnail( $designfly_the_post_id )
 	// Title.
 	if ( is_single() || is_page() ) {
 		printf(
-			'<h1 class="page-title %1$s">%2$s</h1>',
-			esc_attr( $designfly_heading_class ),
+			'<h1 class="page-title">%1$s</h1>',
 			wp_kses_post( get_the_title() )
 		);
 	} else {
 		?>
-		<div class="blog__post__date">
-			<div class="blog__post__day"><?php echo get_the_date( 'd' ); ?></div>
-			<div class="blog__post__month"><?php echo get_the_date( 'M' ); ?></div>
-		</div>
+		<a href="<?php esc_url( the_permalink() ); ?>">
+			<div class="blog__post__date">
+				<div class="blog__post__day"><?php echo get_the_date( 'd' ); ?></div>
+				<div class="blog__post__month"><?php echo get_the_date( 'M' ); ?></div>
+			</div>
+			<p class="entry-title"> <?php wp_kses_post( the_title() ); ?></p>
+		</a>
 		<?php
-		printf(
-			'<h2 class="entry-title mb-3"><a href="%1$s">%2$s</a></h2>',
-			esc_url( get_the_permalink() ),
-			wp_kses_post( get_the_title() )
-		);
 	}
 
 	// Featured image.

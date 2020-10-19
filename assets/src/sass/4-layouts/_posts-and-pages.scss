@@ -61,8 +61,7 @@
 
 .blog__post__date{
 	float: left;
-	background-color: #222222;
-	border-radius: 3px;
+	background-color: inherit;
 	color: #ffffff;
 	padding-left: 16px;
 	padding-right: 16px;
@@ -71,7 +70,7 @@
 	.blog__post__day{
 		font-size: 25px;
 		max-height: 25px;
-		margin-top: -3px;
+		margin-top: -2px;
 	}
 
 	.blog__post__month{
@@ -88,25 +87,18 @@
 }
 
 .entry-title {
-	padding-left: 20px;
+	padding-left: 80px;
 	padding-top: 8px;
 	background-color: #222222;
 	height: 50px;
 	border-radius: 3px;
 	color: #ffffff;
-}
-.blog__post__date:hover{
-	background-color:  #ef4634;
-}
-.entry-title:hover {
-	background-color: #ef4634;
-}
-
-.entry-title a{
 	color: #ffffff;
 	font-size: 20px;
 	font-weight: 400;
-	padding-left: 10px;
+}
+.entry-title:hover {
+	background-color: #ef4634;
 }
 
 .entry-title a:hover{

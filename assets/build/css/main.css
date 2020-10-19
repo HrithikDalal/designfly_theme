@@ -1318,8 +1318,7 @@ object {
 
 .blog__post__date {
   float: left;
-  background-color: #222222;
-  border-radius: 0.1875rem;
+  background-color: inherit;
   color: #ffffff;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -1327,7 +1326,7 @@ object {
   .blog__post__date .blog__post__day {
     font-size: 1.5625rem;
     max-height: 1.5625rem;
-    margin-top: -0.1875rem; }
+    margin-top: -0.125rem; }
   .blog__post__date .blog__post__month {
     font-size: 0.875rem;
     margin-top: 0.25rem;
@@ -1340,24 +1339,18 @@ object {
   text-shadow: 0.125rem 0.125rem #ffffff; }
 
 .entry-title {
-  padding-left: 1.25rem;
+  padding-left: 5rem;
   padding-top: 0.5rem;
   background-color: #222222;
   height: 3.125rem;
   border-radius: 0.1875rem;
-  color: #ffffff; }
-
-.blog__post__date:hover {
-  background-color: #ef4634; }
+  color: #ffffff;
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 400; }
 
 .entry-title:hover {
   background-color: #ef4634; }
-
-.entry-title a {
-  color: #ffffff;
-  font-size: 1.25rem;
-  font-weight: 400;
-  padding-left: 0.625rem; }
 
 .entry-title a:hover {
   text-decoration: none; }
