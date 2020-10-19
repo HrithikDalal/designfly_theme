@@ -69,12 +69,12 @@ class Portfolio_Widget extends WP_Widget {
 		echo $args['before_widget'];
 		// This is where you run the code and display the output.
 		foreach ( $recent_posts as $post ) : ?>
-		<div class = " portfolio--widget">
-		<a href="<?php echo get_permalink( get_page_by_path( 'portfollio' ) ) ?>">
-			<?php echo get_the_post_thumbnail( $post['ID'], array( 45, 45), array( 'class' => 'portfolio__img' ) ); ?>
-		</a>
-		</div>
-		<?php
+			<div class = " portfolio--widget">
+				<a href="<?php echo get_permalink( get_page_by_path( 'portfollio' ) ) ?>">
+					<?php echo get_the_post_thumbnail( $post['ID'], array( 45, 45 ), array( 'class' => 'portfolio__img' ) ); ?>
+				</a>
+			</div>
+			<?php
 		endforeach; wp_reset_postdata();
 		echo $args['after_widget'];
 	}

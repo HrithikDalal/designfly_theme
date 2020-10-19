@@ -19,9 +19,6 @@
 /*---------------------------------
 		Body Text Font Sizes
 -----------------------------------*/
-body {
-  font-family: "Open Sans", sans-serif; }
-
 /**
  * Add font scale with media query as per configuration on $body-text
  * Ex: @include body-text( h1 );

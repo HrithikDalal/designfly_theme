@@ -19,9 +19,6 @@
 /*---------------------------------
 		Body Text Font Sizes
 -----------------------------------*/
-body {
-  font-family: "Open Sans", sans-serif; }
-
 /**
  * Add font scale with media query as per configuration on $body-text
  * Ex: @include body-text( h1 );
@@ -1425,10 +1422,10 @@ object {
   color: #ffffff; }
 
 /** Hover effect **/
-.portfolio-content > div[class^="post-"]:hover .post-thumbnail img {
+.portfolio-content div[class^="post-"]:hover .post-thumbnail img {
   transform: scale(1.1); }
 
-.portfolio-content > div[class^="post-"]:hover .view-image {
+.portfolio-content .view-image:hover {
   opacity: 1; }
 
 /** View Image styles **/
@@ -1456,11 +1453,11 @@ object {
   margin: 0.9375rem 0;
   text-align: center; }
 
-.lightbox .lightbox__content .post-title a {
+.lightbox__content .post-title a {
   font-size: 1.4rem;
   color: #62585f; }
 
-.lightbox .lightbox__content .post-title a:hover {
+.lightbox__content .post-title a:hover {
   text-decoration: none;
   color: #ef4634; }
 

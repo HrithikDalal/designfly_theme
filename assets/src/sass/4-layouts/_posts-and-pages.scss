@@ -195,12 +195,12 @@
 
 /** Hover effect **/
 
-.portfolio-content> div[class^="post-"]:hover .post-thumbnail img {
+.portfolio-content div[class^="post-"]:hover .post-thumbnail img {
 	-moz-transform: scale(1.1);
 	transform: scale(1.1);
 }
 
-.portfolio-content> div[class^="post-"]:hover .view-image {
+.portfolio-content .view-image:hover {
 	opacity: 1;
 }
 
@@ -233,12 +233,12 @@
 	text-align: center;
 }
 
-.lightbox .lightbox__content .post-title a {
+.lightbox__content .post-title a {
 	font-size: 1.4rem;
 	color: #62585f;
 }
 
-.lightbox .lightbox__content .post-title a:hover {
+.lightbox__content .post-title a:hover {
 	text-decoration: none;
 	color: #ef4634;
 }

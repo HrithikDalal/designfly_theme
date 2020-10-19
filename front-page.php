@@ -9,12 +9,10 @@ get_header();
 ?>
 		<?php
 		// Portfolio Items.
-		$designfly_paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 		$designfly_query = new WP_Query(
 			array(
 				'post_type'      => 'portfolio',
-				'posts_per_page' => 15,
-				'paged'          => $designfly_paged,
+				'posts_per_page' => 6,
 			)
 		);
 		if ( $designfly_query->have_posts() ) :
@@ -30,6 +28,10 @@ get_header();
 				<!-- top bar -->
 				<div class="portfolio-content-top">
 					<p class="title"> D'SIGN IS THE SOUL </p>
+					<a href="<?php echo get_permalink( get_page_by_path( 'portfollio' ) ) ?>">
+					View All
+		</a>
+
 					<hr />
 				</div>
 
@@ -40,11 +42,6 @@ get_header();
 				endwhile;
 				?>
 			</div> <!-- #portfolio-content -->
-			<div class = "designfly-pagination">
-				<?php
-					designfly_pagination( $designfly_query );
-				?>
-			</div>
 
 			<?php
 		else :

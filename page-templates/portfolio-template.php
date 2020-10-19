@@ -23,7 +23,7 @@ get_header();
 				<div id="lightbox" class="lightbox">
 					<div class="lightbox__content">
 						<img src="" />
-						<span class="close"><span class="dashicons dashicons-no-alt"></span></span>
+						<span class="close">&#10005;</span>
 					</div>
 				</div>
 			<div id="portfolio-wrapper" class="portfolio-content">
