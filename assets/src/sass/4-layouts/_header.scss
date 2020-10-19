@@ -37,7 +37,38 @@
 	width: 100%;
 	background-position: center;
 }
-/* Services Navigation*/
+/* Carousel */
+.carousel__content{
+	text-align: center;
+	max-width: 55%;
+	margin: auto;
+	margin-top: 13%;
+}
+.carousel__slides__title {
+	color: #ffffff;
+	font-size: 70px;
+	font-weight: 700;
+	text-shadow: 2px 0 #950904;
+}
+
+.carousel__slides__content {
+	color: #ffffff;
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 600;
+}
+
+.carousel__button--left {
+	left: -50%;
+	position: relative;
+}
+
+.carousel__button--right {
+	left: 50%;
+	position: relative;
+}
+
+/* Services Navigation */
 .service-nav{
 	height: 101px;
     background-image: url('../img/features-repeatable-bg.png');

@@ -76,7 +76,7 @@ class Customizer {
 		$wp_customize->add_section(
 			'designfly-navigation-section',
 			array(
-				'title'      => __( 'Site Navigation', 'designfly' ),
+				'title'      => __( 'Navigation Bar', 'designfly' ),
 				'priority'   => 120,
 				'capability' => 'edit_theme_options',
 			)
@@ -115,6 +115,86 @@ class Customizer {
 				)
 			)
 		);
+		/**
+		 * Theme options for Front Page Carousel.
+		 */
+		$wp_customize->add_section(
+			'designfly-carousel-section',
+			array(
+				'title'      => __( 'Carousel', 'designfly' ),
+				'priority'   => 130,
+				'capability' => 'edit_theme_options',
+			)
+		);
+		/* Settings Left Slider Arrow */
+		$wp_customize->add_setting(
+			'designfly-carousel-slider-left',
+			array(
+				'default'           => '',
+				'transport'         => 'refresh',
+				'sanitize_callback' => 'absint',
+			)
+		);
+
+		$wp_customize->add_control(
+			new \WP_Customize_Cropped_Image_Control(
+				$wp_customize,
+				'designfly-carousel-slider-left',
+				array(
+					'label'         => __( 'Add Carousel Left Slider icon', 'designfly' ),
+					'description'   => esc_html__( 'Carousel Left Slider Cropped Image Control', 'designfly' ),
+					'section'       => 'designfly-carousel-section',
+					'flex_width'    => false, // Optional. Default: false.
+					'flex_height'   => true, // Optional. Default: false.
+					'width'         => 50, // Optional. Default: 150.
+					'height'        => 50, // Optional. Default: 150.
+					'button_labels' => array( // Optional.
+						'select'       => __( 'Select Image', 'designfly' ),
+						'change'       => __( 'Change Image', 'designfly' ),
+						'remove'       => __( 'Remove', 'designfly' ),
+						'default'      => __( 'Default', 'designfly' ),
+						'placeholder'  => __( 'No image selected', 'designfly' ),
+						'frame_title'  => __( 'Select Image', 'designfly' ),
+						'frame_button' => __( 'Choose Image', 'designfly' ),
+					),
+				)
+			)
+		);
+
+		/* Settings Right Slider Arrow */
+		$wp_customize->add_setting(
+			'designfly-carousel-slider-right',
+			array(
+				'default'           => '',
+				'transport'         => 'refresh',
+				'sanitize_callback' => 'absint',
+			)
+		);
+
+		$wp_customize->add_control(
+			new \WP_Customize_Cropped_Image_Control(
+				$wp_customize,
+				'designfly-carousel-slider-right',
+				array(
+					'label'         => __( 'Add Carousel Right Slider icon', 'designfly' ),
+					'description'   => esc_html__( 'Carousel right Slider Arrow Cropped Image Control', 'designfly' ),
+					'section'       => 'designfly-carousel-section',
+					'flex_width'    => false, // Optional. Default: false.
+					'flex_height'   => true, // Optional. Default: false.
+					'width'         => 50, // Optional. Default: 150.
+					'height'        => 50, // Optional. Default: 150.
+					'button_labels' => array( // Optional.
+						'select'       => __( 'Select Image', 'designfly' ),
+						'change'       => __( 'Change Image', 'designfly' ),
+						'remove'       => __( 'Remove', 'designfly' ),
+						'default'      => __( 'Default', 'designfly' ),
+						'placeholder'  => __( 'No image selected', 'designfly' ),
+						'frame_title'  => __( 'Select Image', 'designfly' ),
+						'frame_button' => __( 'Choose Image', 'designfly' ),
+					),
+				)
+			)
+		);
 
 		/**
 		 * Theme options for Service navbar Images
@@ -123,11 +203,11 @@ class Customizer {
 			'designfly-service-section',
 			array(
 				'title'      => __( 'Service Navbar', 'designfly' ),
-				'priority'   => 130,
+				'priority'   => 140,
 				'capability' => 'edit_theme_options',
 			)
 		);
-
+		/* Settings for Advertising */
 		$wp_customize->add_setting(
 			'designfly-service-advertising',
 			array(
@@ -162,6 +242,7 @@ class Customizer {
 			)
 		);
 
+		/* Settings for Multimedia */
 		$wp_customize->add_setting(
 			'designfly-service-multimedia',
 			array(
@@ -196,6 +277,7 @@ class Customizer {
 			)
 		);
 
+		/* Settings for Photography */
 		$wp_customize->add_setting(
 			'designfly-service-photography',
 			array(
@@ -238,7 +320,7 @@ class Customizer {
 			'designfly-footer-section',
 			array(
 				'title'      => __( 'Footer settings', 'designfly' ),
-				'priority'   => 140,
+				'priority'   => 145,
 				'capability' => 'edit_theme_options',
 			)
 		);

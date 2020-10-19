@@ -71,19 +71,23 @@
 			if ( $designfly_carousel_query->have_posts() ) :
 				?>
 				<div id="carousel__container" class="carousel__content">
+				<input id="carousel__button--left" class="carousel__button--left" type="image" alt="Prev" src="<?php echo wp_get_attachment_url( get_theme_mod( 'designfly-carousel-slider-left' ) ); ?>" />
+				<input id="carousel__button--right" class="carousel__button--right" type="image" alt="Prev" src="<?php echo wp_get_attachment_url( get_theme_mod( 'designfly-carousel-slider-right' ) ); ?>" />
 				<?php
 				while ( $designfly_carousel_query->have_posts() ) :
 					$designfly_carousel_query->the_post();
 					?>
 						<div class="carousel__slides">
-							<?php the_title(); ?>
-							<?php the_content(); ?>
+							<div class="carousel__slides__title">
+								<?php the_title(); ?>
+							</div>
+							<div class="carousel__slides__content">
+								<?php the_content(); ?>
+							</div>
 						</div>
 					<?php
 				endwhile;
 				?>
-				<button id="button-left">&#10094;</button>
-				<button id="button-right">&#10095;</button>
 				</div>
 				<?php
 			else :
