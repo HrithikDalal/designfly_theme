@@ -10,9 +10,11 @@
 	.footer__post{
 		grid-column: 1/5;
 
-		.title{
+		.post__title{
 			font-weight: 400;
 			font-size: 25px;
+			text-shadow: 2px 0 #ffffff;
+			margin-bottom: 15px;
 		}
 	}
 
@@ -22,6 +24,12 @@
 		.contact__title{
 			font-weight: 400;
 			font-size: 25px;
+			text-shadow: 2px 0 #ffffff;
+			margin-bottom: 15px;
+		}
+
+		.contact__info{
+			font-size: 14px;
 		}
 	}
 }

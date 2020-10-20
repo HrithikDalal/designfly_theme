@@ -8,7 +8,7 @@
 
 ?>
 
-<div class="entry-meta mb-3">
+<div class="entry-meta">
 	<?php
 	designfly_posted_by();
 	designfly_posted_on();

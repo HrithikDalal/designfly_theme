@@ -1248,14 +1248,20 @@ object {
   grid-gap: 1.875rem; }
   .footer-content .footer__post {
     grid-column: 1/5; }
-    .footer-content .footer__post .title {
+    .footer-content .footer__post .post__title {
       font-weight: 400;
-      font-size: 1.5625rem; }
+      font-size: 1.5625rem;
+      text-shadow: 0.125rem 0 #ffffff;
+      margin-bottom: 0.9375rem; }
   .footer-content .footer__contact {
     grid-column: 5/9; }
     .footer-content .footer__contact .contact__title {
       font-weight: 400;
-      font-size: 1.5625rem; }
+      font-size: 1.5625rem;
+      text-shadow: 0.125rem 0 #ffffff;
+      margin-bottom: 0.9375rem; }
+    .footer-content .footer__contact .contact__info {
+      font-size: 0.875rem; }
 
 .site-footer hr {
   margin: 0.625rem 0 1.25rem 0;
@@ -1307,6 +1313,9 @@ object {
   margin-top: 3.75rem; }
 
 /* Blog Page */
+.entry-header {
+  clear: both; }
+
 .blog-content-top .title {
   display: inline-block;
   color: #62585f;
@@ -1322,7 +1331,8 @@ object {
   color: #ffffff;
   padding-left: 1rem;
   padding-right: 1rem;
-  border-right: 1px solid #ffffff; }
+  border-right: 1px solid #ffffff;
+  margin-right: 0.625rem; }
   .blog__post__date .blog__post__day {
     font-size: 1.5625rem;
     max-height: 1.5625rem;
@@ -1339,7 +1349,7 @@ object {
   text-shadow: 0.125rem 0.125rem #ffffff; }
 
 .entry-title {
-  padding-left: 5rem;
+  padding-left: 0.625rem;
   padding-top: 0.5rem;
   background-color: #222222;
   height: 3.125rem;
@@ -1357,10 +1367,68 @@ object {
 
 .blog__attachment {
   float: left;
-  margin-right: 1.25rem; }
+  margin: 0 1.25rem 1.25rem 0; }
+
+article .entry-meta {
+  font-size: 0.8125rem;
+  font-weight: 400; }
+
+article .entry-meta .comments {
+  float: right;
+  color: #ef4634; }
+
+.entry-meta .byline .author a {
+  color: #ef4634; }
+
+.excerpt {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #62585f;
+  line-height: 1.3125rem; }
+
+.entry-content p {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #62585f;
+  line-height: 1.3125rem; }
+
+.designfly-read-more {
+  font-size: 0.875rem;
+  color: #ef4634;
+  text-transform: uppercase; }
+
+.designfly-read-more:hover {
+  text-decoration: underline; }
+
+.entry-content p a {
+  font-size: 0.875rem;
+  color: #ef4634;
+  text-transform: uppercase; }
+
+.entry-content p a:hover {
+  text-decoration: underline; }
+
+.moretag::before {
+  content: " \a ";
+  white-space: pre; }
 
 .entry-content {
   margin-bottom: 3.75rem; }
+
+.designfly-pagination .current {
+  color: #ffffff;
+  background-color: #ef4634;
+  border: 1px solid #62585f;
+  border-radius: 0.1875rem;
+  padding: 0 0.625rem 0 0.625rem; }
+
+.designfly-pagination a {
+  padding: 0 0.625rem 0 0.5rem; }
+
+.designfly-pagination a:hover {
+  color: #ffffff;
+  background-color: #ef4634;
+  border-radius: 0.1875rem; }
 
 /* Portfolio page*/
 .portfolio-content {

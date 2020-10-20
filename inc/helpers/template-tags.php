@@ -256,9 +256,22 @@ function designfly_pagination() {
 			'class' => [],
 			'href'  => [],
 		],
+		'img' => [
+			'src'   => [],
+			'class' => [],
+			'alt'   => [],
+		],
 	];
 
-	printf( '<nav class="designfly-pagination clearfix">%s</nav>', wp_kses( paginate_links(), $allowed_tags ) );
+	printf( '<nav class="designfly-pagination clearfix">%s</nav>', wp_kses( paginate_links(
+		array(
+			'prev_text' => '<img class="pagination-arrow-left" alt="prev" src="' . get_template_directory_uri() . '/assets/src/img/pagination-arrow-prev.png' . '" />',
+			'next_text' => '<img class="pagination-arrow-right" alt="next" src="' . get_template_directory_uri() . '/assets/src/img/pagination-arrow-next.png' . '" />',
+			)
+		),
+		$allowed_tags,
+		)
+	);
 }
 
 /**

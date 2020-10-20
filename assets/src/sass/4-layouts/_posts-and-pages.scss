@@ -49,6 +49,10 @@
 }
 
 /* Blog Page */
+.entry-header{
+	clear: both;
+}
+
 .blog-content-top .title {
 	display: inline-block;
 	color: #62585f;
@@ -66,6 +70,7 @@
 	padding-left: 16px;
 	padding-right: 16px;
 	border-right: 1px solid #ffffff;
+	margin-right: 10px;
 
 	.blog__post__day{
 		font-size: 25px;
@@ -87,7 +92,7 @@
 }
 
 .entry-title {
-	padding-left: 80px;
+	padding-left: 10px;
 	padding-top: 8px;
 	background-color: #222222;
 	height: 50px;
@@ -107,17 +112,81 @@
 
 .blog__attachment {
 	float: left;
-	margin-right: 20px;
+	margin: 0 20px 20px 0;
+}
+article .entry-meta{
+	font-size: 13px;
+	font-weight: 400;
+}
+
+article .entry-meta .comments{
+	float: right;
+	color: $red-100;
+}
+
+.entry-meta .byline .author a{
+	color: $red-100;
+}
+
+.excerpt{
+	font-size: 14px;
+	font-weight: 400;
+	color: #62585f;
+	line-height: 21px;
+}
+
+.entry-content p{
+	font-size: 14px;
+	font-weight: 400;
+	color: #62585f;
+	line-height: 21px;
+}
+
+.designfly-read-more{
+	font-size: 14px;
+	color: $red-100;
+	text-transform: uppercase;
+}
+
+.designfly-read-more:hover{
+	text-decoration: underline;
+}
+
+.entry-content p a{
+	font-size: 14px;
+	color: $red-100;
+	text-transform: uppercase;
+}
+
+.entry-content p a:hover{
+	text-decoration: underline;
+}
+
+.moretag::before {
+	content: " \a ";
+	white-space: pre;
 }
 
 .entry-content{
 	margin-bottom: 60px;
 }
 
-// .entry-image img{
-// 	float: left;
-// 	margin-right: 20px;
-// }
+.designfly-pagination .current{
+	color: #ffffff;
+	background-color: $red-100;
+	border: 1px solid #62585f;
+	border-radius: 3px;
+	padding: 0 10px 0 10px;
+}
+
+.designfly-pagination a{
+	padding: 0 10px 0 8px;
+}
+.designfly-pagination a:hover{
+	color: #ffffff;
+	background-color: $red-100;
+	border-radius: 3px;
+}
 
 /* Portfolio page*/
 
