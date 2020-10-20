@@ -1315,6 +1315,9 @@ object {
   float: right;
   margin-top: 3.75rem; }
 
+.carousel__slides {
+  display: none; }
+
 /* Blog Page */
 .entry-header {
   clear: both; }
@@ -1502,14 +1505,12 @@ article .entry-meta .comments {
   margin-bottom: 0.3125rem;
   color: #ffffff; }
 
-/** Hover effect **/
 div[class^="post-"]:hover img {
   transform: scale(1.1); }
 
 .portfolio-content .view-image:hover {
   opacity: 1; }
 
-/** View Image styles **/
 .lightbox {
   position: fixed;
   z-index: 10;
@@ -1556,8 +1557,18 @@ div[class^="post-"]:hover img {
   align-items: center;
   justify-content: center; }
 
-.carousel__slides {
-  display: none; }
+/* Single Page */
+.page-title {
+  font-size: 2.1875rem;
+  color: #62585f;
+  text-shadow: 0.125rem 0 #ffffff;
+  font-weight: 400; }
+
+.entry-footer {
+  font-size: 0.8125rem; }
+
+.entry-footer-link:hover {
+  text-decoration: underline; }
 
 /*==============================
           Main Menu
@@ -1671,6 +1682,38 @@ div[class^="post-"]:hover img {
 
 .comment-form-comment textarea {
   width: 100%; }
+
+/** Comments **/
+.comments-title {
+  font-size: 1.125rem;
+  color: #62585f;
+  font-weight: 400;
+  margin-top: -0.4375rem; }
+
+.comment-form-comment textarea {
+  border: 1px solid #62585f; }
+
+.comment-form-author,
+.comment-form-email,
+.comment-form-url {
+  margin: 0;
+  padding: 0;
+  width: 33.33%;
+  float: left; }
+
+.comment-form-author input,
+.comment-form-email input,
+.comment-form-url input {
+  width: 95%;
+  border: 1px solid #62585f; }
+
+.form-submit .submit {
+  float: right;
+  padding: 0.625rem;
+  color: #FFF;
+  background-color: #222222;
+  border-radius: 0.3125rem;
+  margin-top: 0.9375rem; }
 
 .widget {
   margin: 0 0 1.875rem;

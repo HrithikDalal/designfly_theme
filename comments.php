@@ -26,33 +26,11 @@ if ( post_password_required() ) {
 	// You can start editing here -- including this comment!
 	if ( have_comments() ) {
 		?>
+		<hr>
 		<h2 class="comments-title">
-			<?php
-			$comments_number = get_comments_number();
-			if ( 1 === $comments_number ) {
-				printf(
-					/* translators: %s: post title */
-					esc_html_x( 'One thought on &ldquo;%s&rdquo;', 'comments title', 'designfly' ),
-					'<span>' . esc_html( get_the_title() ) . '</span>'
-				);
-			} else {
-				printf(
-					esc_html(
-						/* translators: 1: number of comments, 2: post title */
-						_nx(
-							'%1$s thought on &ldquo;%2$s&rdquo;',
-							'%1$s thoughts on &ldquo;%2$s&rdquo;',
-							$comments_number,
-							'comments title',
-							'designfly'
-						)
-					),
-					esc_html( number_format_i18n( $comments_number ) ),
-					'<span>' . esc_html( get_the_title() ) . '</span>'
-				);
-			}
-			?>
+			Comments
 		</h2>
+		<hr>
 
 		<?php
 		if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) { // Are there comments to navigate through?
@@ -73,12 +51,9 @@ if ( post_password_required() ) {
 		<ol class="comment-list">
 			<?php
 			wp_list_comments(
-				apply_filters(
-					'designfly_list_comments_args',
-					[
-						'style'      => 'ol',
-						'short_ping' => true,
-					]
+				array(
+					'type' => 'comment',
+					'callback' => 'designfly_custom_comments',
 				)
 			);
 			?>
@@ -108,7 +83,10 @@ if ( post_password_required() ) {
 		<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'designfly' ); ?></p>
 		<?php
 	}
-
+	?>
+	<hr>
+		<p class="post-comment"><?php esc_html_e( 'Post your comment', 'designfly' ); ?></p>
+	<?php
 	comment_form();
 	?>
 

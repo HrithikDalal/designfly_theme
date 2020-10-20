@@ -15,12 +15,12 @@ if ( empty( $designfly_article_terms ) || ! is_array( $designfly_article_terms )
 }
 if ( is_single() || is_page() ) {
 	?>
-	<div class="entry-footer mt-4">
+	<div class="entry-footer">
 		<span class="post-tags">TAGS: </span>
 		<?php
 		foreach ( $designfly_article_terms as $designfly_key => $designfly_article_term ) {
 			?>
-			<a class="entry-footer-link text-black-50" href="<?php echo esc_url( get_term_link( $designfly_article_term ) ); ?>">
+			<a class="entry-footer-link" href="<?php echo esc_url( get_term_link( $designfly_article_term ) ); ?>">
 					<?php echo esc_html( $designfly_article_term->name ); ?>
 			</a>
 			<?php
