@@ -1110,6 +1110,9 @@ object {
   grid-column: 9/11;
   padding-top: 1.25rem; }
 
+.designfly-pagination {
+  grid-column: 4/11; }
+
 .site-header {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
@@ -1429,6 +1432,9 @@ article .entry-meta .comments {
   color: #ffffff;
   background-color: #ef4634;
   border-radius: 0.1875rem; }
+
+.pagination-arrow-right {
+  padding-bottom: 0.3125rem; }
 
 /* Portfolio page*/
 .portfolio-content {

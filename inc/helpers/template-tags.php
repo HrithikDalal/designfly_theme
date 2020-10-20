@@ -263,15 +263,53 @@ function designfly_pagination() {
 		],
 	];
 
-	printf( '<nav class="designfly-pagination clearfix">%s</nav>', wp_kses( paginate_links(
-		array(
-			'prev_text' => '<img class="pagination-arrow-left" alt="prev" src="' . get_template_directory_uri() . '/assets/src/img/pagination-arrow-prev.png' . '" />',
-			'next_text' => '<img class="pagination-arrow-right" alt="next" src="' . get_template_directory_uri() . '/assets/src/img/pagination-arrow-next.png' . '" />',
-			)
-		),
-		$allowed_tags,
+	printf(
+		'<nav class="designfly-pagination clearfix">%s</nav>',
+		wp_kses(
+			paginate_links(
+				array(
+					'prev_text' => '<img class="pagination-arrow-left" alt="prev" src="' . get_template_directory_uri() . '/assets/src/img/pagination-arrow-prev.png' . '" />',
+					'next_text' => '<img class="pagination-arrow-right" alt="next" src="' . get_template_directory_uri() . '/assets/src/img/pagination-arrow-next.png' . '" />',
+				)
+			),
+			$allowed_tags,
 		)
 	);
+}
+
+/**
+ * Designfly Pagination for Portfolio Items.
+ *
+ * @param Object $custom_query requires the query object to get pagination.
+ */
+function designfly_portfolio_pagination( $custom_query ) {
+
+	$total_pages = $custom_query->max_num_pages;
+	$big         = 999999999; // need an unlikely integer.
+
+	if ( $total_pages > 1 ) {
+		$current_page = max( 1, get_query_var( 'paged' ) );
+
+		$pages = paginate_links(
+			array(
+				'base'      => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+				'format'    => '?paged=%#%',
+				'current'   => $current_page,
+				'total'     => $total_pages,
+				'type'      => 'array',
+				'prev_text' => '<img class="pagination-arrow-left" alt="prev" src="' . get_template_directory_uri() . '/assets/src/img/pagination-arrow-prev.png' . '" />',
+				'next_text' => '<img class="pagination-arrow-right" alt="next" src="' . get_template_directory_uri() . '/assets/src/img/pagination-arrow-next.png' . '" />',
+			)
+		);
+
+		/* for echoing out with custom html tags */
+		if ( is_array( $pages ) ) {
+			$paged = ( get_query_var( 'paged' ) === 0 ) ? 1 : get_query_var( 'paged' );
+			foreach ( $pages as $page ) {
+					echo $page;
+			}
+		}
+	}
 }
 
 /**

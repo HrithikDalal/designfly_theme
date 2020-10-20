@@ -43,7 +43,7 @@ get_header();
 			</div> <!-- #portfolio-content -->
 			<div class = "designfly-pagination">
 				<?php
-					designfly_pagination( $designfly_query );
+					designfly_portfolio_pagination( $designfly_query );
 				?>
 			</div>
 
