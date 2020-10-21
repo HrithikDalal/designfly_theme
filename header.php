@@ -93,7 +93,7 @@
 			else :
 				?>
 				<p>
-					<?php esc_html_e( 'No items found.', 'designfly' ); ?>
+					<?php esc_html_e( 'No portfolio items found. Please add some portfolio items in admin-dashboard', 'designfly' ); ?>
 				</p>
 				<?php
 			endif;

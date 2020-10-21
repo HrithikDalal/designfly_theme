@@ -1147,8 +1147,9 @@ object {
 .header-img {
   height: 34rem;
   grid-column: 1/14;
-  background-image: url(../../src/img/slider-image.png);
+  background-image: url(../../src/img/Slider-Image-2.png);
   width: 100%;
+  background-size: cover;
   background-position: center; }
 
 /* Carousel */

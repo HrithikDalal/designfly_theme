@@ -159,7 +159,7 @@ function showDivs(n) {
 
   ;
 
-  if (n < 1) {
+  if (1 > n) {
     slideIndex = posts.length;
   }
 

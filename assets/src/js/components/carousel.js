@@ -22,7 +22,7 @@ function showDivs( n ) {
 	if ( n > posts.length ) {
 		slideIndex = 1;
 	};
-	if ( n < 1 ) {
+	if ( 1 > n ) {
 		slideIndex = posts.length;
 	}
 	for ( i = 0; i < posts.length; i++ ) {
