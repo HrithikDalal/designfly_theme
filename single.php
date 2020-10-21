@@ -10,8 +10,8 @@ get_header();
 
 <div id="primary" class="site-primary">
 	<main id="main" class="site-main" role="main">
-
 		<?php
+		designfly_set_post_views( get_the_ID() );
 		while ( have_posts() ) :
 
 			the_post();

@@ -1,6 +1,6 @@
 <?php
 /**
- * Custom Recent Post Widget
+ * Custom Popular Post Widget
  *
  * @package Designfly
  */
@@ -10,10 +10,11 @@ namespace DESIGNFLY\Inc;
 use WP_Widget;
 
 use DESIGNFLY\Inc\Traits\Singleton;
+
 /**
- * This Class displays Custom Recent post widget in the sidebar.
+ * Popular Posts Widget Class.
  */
-class Custom_Recent_Post_Widget extends WP_Widget {
+class Popular_Post_Widget extends WP_Widget {
 
 	use Singleton;
 
@@ -22,33 +23,33 @@ class Custom_Recent_Post_Widget extends WP_Widget {
 	 */
 	public function __construct() {
 		$designfly_widget_ops = array(
-			'classname'                   => 'widget_recent_entries__custom',
-			'description'                 => __( 'Your site&#8217;s most recent Posts customized.', 'designfly' ),
+			'classname'                   => 'widget_popular_posts',
+			'description'                 => __( 'Your site&#8217;s most Popular Posts.', 'designfly' ),
 			'customize_selective_refresh' => true,
 		);
 		parent::__construct(
-			'custom-recent-posts',
-			__( 'Custom Recent Posts', 'designfly' ),
+			'popular-posts',
+			__( 'Popular Posts', 'designfly' ),
 			$designfly_widget_ops,
 		);
-		$this->alt_option_name = 'widget_custom_recent_entries';
+		$this->alt_option_name = 'widget_popular_post_entries';
 	}
 
 	/**
-	 * Outputs the content for the current Recent Posts widget instance.
+	 * Outputs the content for the current Popular Posts widget instance.
 	 *
 	 * @since 2.8.0
 	 *
 	 * @param array $args     Display arguments including 'before_title', 'after_title',
 	 *                        'before_widget', and 'after_widget'.
-	 * @param array $instance Settings for the current Recent Posts widget instance.
+	 * @param array $instance Settings for the current Popular Posts widget instance.
 	 */
 	public function widget( $args, $instance ) {
 		if ( ! isset( $args['widget_id'] ) ) {
 			$args['widget_id'] = $this->id;
 		}
 
-		$default_title = __( 'Recent Posts', 'designfly' );
+		$default_title = __( 'Popular Posts', 'designfly' );
 		$title         = ( ! empty( $instance['title'] ) ) ? $instance['title'] : $default_title;
 
 		/** This filter is documented in wp-includes/widgets/class-wp-widget-pages.php */
@@ -63,20 +64,23 @@ class Custom_Recent_Post_Widget extends WP_Widget {
 			echo $args['before_title'] . $title . $args['after_title'];
 		}
 
-		$recent_posts = wp_get_recent_posts(
+		$popular_posts = new \WP_Query(
 			array(
-				'numberposts' => $number, // Number of recent posts thumbnails to display.
-				'post_status' => 'publish', // Show only the published posts.
+				'posts_per_page' => $number,
+				'meta_key'       => 'post_views_count',
+				'orderby'        => 'meta_value_num',
+				'order'          => 'DESC',
 			)
 		);
 		// before and after widget arguments are defined by themes.
-		echo ( $args['before_widget'] );
+		echo $args['before_widget'];
 		// This is where you run the code and display the output.
-		foreach ( $recent_posts as $post ) : ?>
+		while ( $popular_posts->have_posts() ) :
+			$popular_posts->the_post(); ?>
 		<div class = " recent-post__custom">
-			<?php echo get_the_post_thumbnail( $post['ID'], array( 45, 45 ), array( 'class' => 'widget-post__img' ) ); ?>
-			<a href="<?php echo esc_url( get_permalink( $post['ID'] ) ); ?>">
-				<p class="widget-post__title"><?php echo esc_html( $post['post_title'] ); ?></p>
+			<?php echo esc_html( the_post_thumbnail( array( 45, 45 ), array( 'class' => 'widget-post__img' ) ) ); ?>
+			<a href="<?php echo esc_url( the_permalink() ); ?>">
+				<p class="widget-post__title"><?php echo the_title(); ?></p>
 			</a>
 			<p class="widget-post__author"><?php designfly_posted_by(); ?>
 			<span class="widget-post__date">
@@ -89,13 +93,12 @@ class Custom_Recent_Post_Widget extends WP_Widget {
 			</p>
 		</div>
 			<?php
-		endforeach;
-		wp_reset_postdata();
+		endwhile;
 		echo $args['after_widget'];
 	}
 
 	/**
-	 * Handles updating the settings for the current Recent Posts widget instance.
+	 * Handles updating the settings for the current Popular Posts widget instance.
 	 *
 	 * @since 2.8.0
 	 *
@@ -113,7 +116,7 @@ class Custom_Recent_Post_Widget extends WP_Widget {
 	}
 
 	/**
-	 * Outputs the settings form for the Recent Posts widget.
+	 * Outputs the settings form for the Popular Posts widget.
 	 *
 	 * @since 2.8.0
 	 *

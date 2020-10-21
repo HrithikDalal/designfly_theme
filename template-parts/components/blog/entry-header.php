@@ -20,12 +20,12 @@ $designfly_has_post_thumbnail = get_the_post_thumbnail( $designfly_the_post_id )
 		);
 	} else {
 		?>
-		<a href="<?php esc_url( the_permalink() ); ?>">
-			<div class="blog__post__date">
-				<div class="blog__post__day"><?php echo get_the_date( 'd' ); ?></div>
-				<div class="blog__post__month"><?php echo get_the_date( 'M' ); ?></div>
+		<a class = "blog-post__heading" href="<?php esc_url( the_permalink() ); ?>">
+			<div class="blog-post__date">
+				<div class="blog-post__day"><?php echo get_the_date( 'd' ); ?></div>
+				<div class="blog-post__month"><?php echo get_the_date( 'M' ); ?></div>
 			</div>
-			<p class="entry-title"> <?php wp_kses_post( the_title() ); ?></p>
+			<p class="blog-post__title"> <?php wp_kses_post( the_title() ); ?></p>
 		</a>
 		<?php
 	}

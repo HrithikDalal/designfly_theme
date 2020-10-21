@@ -28,7 +28,7 @@ get_header();
 				<!-- top bar -->
 				<div class="portfolio-content-top">
 					<p class="title"> D'SIGN IS THE SOUL </p>
-					<a class = "portfolio__button" href="<?php echo get_permalink( get_page_by_path( 'portfollio' ) ) ?>">
+					<a class = "portfolio__button" href="<?php echo esc_url( get_permalink( get_page_by_path( 'portfollio' ) ) ); ?>">
 					view all
 					</a>
 
@@ -42,7 +42,6 @@ get_header();
 				endwhile;
 				?>
 			</div> <!-- #portfolio-content -->
-
 			<?php
 		else :
 			?>

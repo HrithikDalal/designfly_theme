@@ -315,9 +315,9 @@ function designfly_portfolio_pagination( $custom_query ) {
 /**
  * Displays custom comments.
  *
- * @param $comment comment
- * @param $args standard arguments
- * @param $depth depth of the comments
+ * @param Object  $comment comment.
+ * @param Array   $args standard arguments.
+ * @param Integer $depth depth of the comments.
 */
 function designfly_custom_comments( $comment, $args, $depth ) {
 	if ( 'div' === $args['style'] ) {
@@ -329,21 +329,24 @@ function designfly_custom_comments( $comment, $args, $depth ) {
 	}
 	?>
 
-	<<?php echo $tag ?> <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ) ?> id="comment-<?php comment_ID() ?>">
+	<<?php echo $tag; ?> <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ); ?> id="comment-<?php comment_ID(); ?>">
 		<?php if ( 'div' !== $args['style'] ) : ?>
-			<div id="div-comment-<?php comment_ID() ?>" class="comment__conatiner">
+			<div id="div-comment-<?php comment_ID(); ?>" class="comment__conatiner">
 		<?php endif; ?>
 		<div class = "comment__icon">
 			<p>&#128172</p>
 		</div>
 		<div class = "comment__body">
 			<p class="comment__header">
-				<?php printf( __( '<span class = "comment__author"><cite class="fn">%s</cite> <span class="author-said">said on </span></span>' ), get_comment_author_link() ); ?>
+				<?php
+				/* translators: 1: Author*/
+				printf( __( '<span class = "comment__author"><cite class="fn">%s</cite> <span class="author-said">said on </span></span>' ), get_comment_author_link() );
+				?>
 
 			<span class="comment__meta "><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ); ?>">
 				<?php
 				/* translators: 1: date, 2: time */
-				printf( __('%1$s at %2$s'), get_comment_date(),  get_comment_time() ); ?></a><?php edit_comment_link( __( '(Edit)' ), '  ', '' );
+				printf( __( '%1$s at %2$s' ), get_comment_date(),  get_comment_time() ); ?></a><?php edit_comment_link( __( '(Edit)' ), '  ', '' );
 				?>
 				</span>
 			</p>
@@ -358,14 +361,45 @@ function designfly_custom_comments( $comment, $args, $depth ) {
 			</div>
 
 			<div class="comment__reply">
-				<?php comment_reply_link( array_merge( $args, array( 'add_below' => $add_below, 'reply_text' => '&#10150 reply' ,'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+				<?php
+				comment_reply_link(
+					array_merge(
+						$args,
+						array(
+							'add_below'  => $add_below,
+							'reply_text' => '&#10150 reply',
+							'depth'      => $depth,
+							'max_depth'  => $args['max_depth'],
+						)
+					)
+				);
+				?>
 			</div>
 		</div>
-	<?php if ( 'div' != $args['style'] ) : ?>
+	<?php if ( 'div' !== $args['style'] ) : ?>
 	</div>
 
 	<?php endif; ?>
 	<?php
+}
+
+/**
+ * Set post views count using post meta
+ *
+ * @param Integer $post_id Post ID.
+ *
+ */
+function designfly_set_post_views( $post_id ) {
+	$count_key = 'post_views_count';
+	$count     = get_post_meta( $post_id, $count_key, true );
+	if ( '' === $count ) {
+		$count = 0;
+		delete_post_meta( $post_id, $count_key );
+		add_post_meta( $post_id, $count_key, '0' );
+	} else {
+		$count++;
+		update_post_meta( $post_id, $count_key, $count );
+	}
 }
 
 /**

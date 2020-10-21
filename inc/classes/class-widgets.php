@@ -68,6 +68,7 @@ class Widgets {
 			]
 		);
 		register_widget( 'DESIGNFLY\Inc\Custom_Recent_Post_Widget' );
+		register_widget( 'DESIGNFLY\Inc\Popular_Post_Widget' );
 		register_widget( 'DESIGNFLY\Inc\Portfolio_Widget' );
 
 	}

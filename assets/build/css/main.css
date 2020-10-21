@@ -1332,44 +1332,43 @@ object {
   margin-bottom: 0;
   margin-top: 2.1875rem; }
 
-.blog__post__date {
-  float: left;
-  background-color: inherit;
+.blog-post__heading {
+  display: flex;
+  background-color: #222222;
   color: #ffffff;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  min-height: 3.125rem;
+  border-radius: 0.1875rem;
+  margin-bottom: 1.25rem; }
+
+.blog-post__date {
+  align-self: center;
+  float: left;
+  padding: 0.25rem 1rem 0.25rem 1rem;
+  border-top-left-radius: 0.1875rem;
+  border-bottom-left-radius: 0.1875rem;
   border-right: 1px solid #ffffff;
   margin-right: 0.625rem; }
-  .blog__post__date .blog__post__day {
+  .blog-post__date .blog-post__day {
     font-size: 1.5625rem;
-    max-height: 1.5625rem;
-    margin-top: -0.125rem; }
-  .blog__post__date .blog__post__month {
+    max-height: 1.5625rem; }
+  .blog-post__date .blog-post__month {
     font-size: 0.875rem;
-    margin-top: 0.25rem;
-    margin-left: 1px;
+    padding-top: 0.25rem;
     text-transform: uppercase; }
 
-.blog-page-heading {
-  font-size: 2.8125rem;
-  color: #424242;
-  text-shadow: 0.125rem 0.125rem #ffffff; }
-
-.entry-title {
-  padding-left: 0.625rem;
-  padding-top: 0.5rem;
-  background-color: #222222;
-  height: 3.125rem;
-  border-radius: 0.1875rem;
-  color: #ffffff;
+.blog-post__title {
+  align-self: center;
+  padding: 0.25rem 0.75rem;
   color: #ffffff;
   font-size: 1.25rem;
-  font-weight: 400; }
+  font-weight: 400;
+  margin: 0; }
 
-.entry-title:hover {
-  background-color: #ef4634; }
+.blog-post__heading:hover {
+  background-color: #ef4634;
+  color: #ffffff; }
 
-.entry-title a:hover {
+.blog-post__title a:hover {
   text-decoration: none; }
 
 .blog__attachment {
@@ -1795,25 +1794,25 @@ label .required {
   width: 100%;
   border-radius: 0.3125rem; }
 
-.custom-recent-post__img.wp-post-image {
+.widget-post__img.wp-post-image {
   float: left;
   border-radius: 0.1875rem;
   margin: 0.3125rem 0.3125rem 0 0; }
 
-.custom-recent-post__title {
+.widget-post__title {
   font-size: 0.875rem;
   color: #62585f;
   margin: 0 0 0.1875rem 0;
   padding-top: 0; }
 
-.custom-recent-post__title:hover {
+.widget-post__title:hover {
   color: #ef4634; }
 
-.custom-recent-post__author {
+.widget-post__author {
   font-size: 0.75rem;
   margin-top: 0.1875rem; }
 
-.custom-recent-post__author .byline .author a {
+.widget-post__author .byline .author a {
   color: red; }
 
 @media print, screen and (min-width: 48em) {
