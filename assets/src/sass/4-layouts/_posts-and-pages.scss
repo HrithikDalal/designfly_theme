@@ -43,7 +43,7 @@
 	padding: 10px;
 	border-radius: 3px;
 	font-size: 16px;
-	color: #ffffff;
+	color: $white;
 	float: right;
 	margin-top: 60px;
 }
@@ -60,10 +60,10 @@
 
 .blog-content-top .title {
 	display: inline-block;
-	color: #62585f;
+	color:$dark-gray-100;
 	font-weight: 300;
 	font-size: 45px;
-	text-shadow: 2px 0 #ffffff;
+	text-shadow: 2px 0 $white;
 	margin-bottom: 0;
 	margin-top: 35px;
 }
@@ -71,10 +71,10 @@
 .blog__post__date{
 	float: left;
 	background-color: inherit;
-	color: #ffffff;
+	color: $white;
 	padding-left: 16px;
 	padding-right: 16px;
-	border-right: 1px solid #ffffff;
+	border-right: 1px solid $white;
 	margin-right: 10px;
 
 	.blog__post__day{
@@ -92,8 +92,8 @@
 }
 .blog-page-heading {
 	font-size: 45px;
-	color: #62585f;
-	text-shadow: 2px 2px #ffffff;
+	color:$dark-gray-100;
+	text-shadow: 2px 2px $white;
 }
 
 .entry-title {
@@ -102,13 +102,13 @@
 	background-color: #222222;
 	height: 50px;
 	border-radius: 3px;
-	color: #ffffff;
-	color: #ffffff;
+	color: $white;
+	color: $white;
 	font-size: 20px;
 	font-weight: 400;
 }
 .entry-title:hover {
-	background-color: #ef4634;
+	background-color: $red-100;
 }
 
 .entry-title a:hover{
@@ -136,14 +136,14 @@ article .entry-meta .comments{
 .excerpt{
 	font-size: 14px;
 	font-weight: 400;
-	color: #62585f;
+	color:$dark-gray-100;
 	line-height: 21px;
 }
 
 .entry-content p{
 	font-size: 14px;
 	font-weight: 400;
-	color: #62585f;
+	color:$dark-gray-100;
 	line-height: 21px;
 }
 
@@ -177,9 +177,9 @@ article .entry-meta .comments{
 }
 
 .designfly-pagination .current{
-	color: #ffffff;
+	color: $white;
 	background-color: $red-100;
-	border: 1px solid #62585f;
+	border: 1px solid$dark-gray-100;
 	border-radius: 3px;
 	padding: 0 10px 0 10px;
 }
@@ -188,7 +188,7 @@ article .entry-meta .comments{
 	padding: 0 10px 0 8px;
 }
 .designfly-pagination a:hover{
-	color: #ffffff;
+	color: $white;
 	background-color: $red-100;
 	border-radius: 3px;
 }
@@ -217,16 +217,16 @@ article .entry-meta .comments{
 
 .portfolio-content .portfolio-content-top hr {
 	margin: 10px 0 20px 0;
-	background: #62585f;
+	background:$dark-gray-100;
 	height: 1px;
 }
 
 .portfolio-content .portfolio-content-top .title {
 	display: inline-block;
-	color: #62585f;
+	color:$dark-gray-100;
 	font-weight: 300;
 	font-size: 45px;
-	text-shadow: 2px 0 #ffffff;
+	text-shadow: 2px 0 $white;
 	margin-bottom: 0;
 }
 
@@ -267,7 +267,7 @@ article .entry-meta .comments{
 
 .portfolio-content .view-image span {
 	margin-bottom: 5px;
-	color: #ffffff;
+	color: $white;
 }
 
 div[class^="post-"]:hover img {
@@ -295,7 +295,7 @@ div[class^="post-"]:hover img {
 .lightbox .lightbox__content {
 	position: relative;
 	padding: 20px 20px 0px 20px;
-	background-color: #ffffff;
+	background-color: $white;
 }
 
 .lightbox .lightbox__content img {
@@ -309,12 +309,12 @@ div[class^="post-"]:hover img {
 
 .lightbox__content .post-title a {
 	font-size: 1.4rem;
-	color: #62585f;
+	color:$dark-gray-100;
 }
 
 .lightbox__content .post-title a:hover {
 	text-decoration: none;
-	color: #ef4634;
+	color: $red-100;
 }
 
 .lightbox .lightbox__content .close{
@@ -324,8 +324,8 @@ div[class^="post-"]:hover img {
 	height: 35px;
 	width: 35px;
 	cursor: pointer;
-	color: #62585f;
-	background-color: #ffffff;
+	color:$dark-gray-100;
+	background-color: $white;
 	opacity: 1;
 	display: -ms-inline-flexbox;
 	display: inline-flex;
@@ -336,8 +336,8 @@ div[class^="post-"]:hover img {
 /* Single Page */
 .page-title{
 	font-size: 35px;
-	color: #62585f;
-	text-shadow: 2px 0 #ffffff;
+	color:$dark-gray-100;
+	text-shadow: 2px 0 $white;
 	font-weight: 400;
 }
 

@@ -87,7 +87,10 @@ if ( post_password_required() ) {
 	<hr>
 		<p class="post-comment"><?php esc_html_e( 'Post your comment', 'designfly' ); ?></p>
 	<?php
-	comment_form();
+	$comment_args=array(
+		'submit_button' => '<input name="submit" type="submit" id="submit" class="submit" value="Submit" />',
+	);
+	comment_form($comment_args);
 	?>
 
 </div><!-- #comments -->

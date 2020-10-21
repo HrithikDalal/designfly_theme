@@ -61,13 +61,52 @@
 /** Comments **/
 .comments-title{
 	font-size: 18px;
-	color: #62585f;
+	color: $dark-gray-100;
 	font-weight: 400;
 	margin-top: -7px;
 }
 
+.comment__conatiner{
+	display: flex;
+}
+.comment__icon {
+	margin: 0 10px 10px 10px;
+}
+.comment__icon p{
+	margin-top: 13px;
+}
+
+.comment__author .fn .url{
+	color: $red-100;
+}
+.comment__body{
+	width: 100%;
+}
+
+.comment__header{
+	font-size: 13px;
+}
+
+.comment__content{
+	font-size: 14px;
+}
+
+.comment-reply-link {
+	float: right;
+	padding: 0 10px 10px 0;
+}
+
+.bypostauthor{
+	background-color: $white;
+}
+.comment-reply-title,
+.comment-notes,
+.comment-form-comment label,
+label .required{
+	display: none;
+}
 .comment-form-comment textarea{
-	border: 1px solid #62585f;
+	border: 1px solid $dark-gray-100;
 }
 
 .comment-form-author,
@@ -82,15 +121,18 @@
 .comment-form-author input,
 .comment-form-email input,
 .comment-form-url input {
+	margin-top: 10px;
 	width: 95%;
-	border: 1px solid #62585f;
+	border: 1px solid $dark-gray-100;
+	border-radius: 0px;
 }
 
 .form-submit .submit {
     float: right;
     padding: 10px;
-    color: #FFF;
-    background-color: #222222;
+    color: $white;
+	background-color: #222222;
+	background-image: none;
     border-radius: 5px;
     margin-top: 15px;
 }

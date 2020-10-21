@@ -645,7 +645,7 @@ samp {
 
 hr {
   margin: 0.625rem 0 1.25rem 0;
-  background: #62585f;
+  background: #424242;
   height: 1px; }
 
 /* Aside */
@@ -1133,7 +1133,7 @@ object {
   left: 0.3125rem; }
 
 .navigation__form .navigation__form__box {
-  border: 1px solid #62585f;
+  border: 1px solid #424242;
   border-radius: 0.1875rem;
   height: 1.25rem;
   width: 9.375rem; }
@@ -1269,7 +1269,7 @@ object {
 
 .site-footer hr {
   margin: 0.625rem 0 1.25rem 0;
-  background: #62585f;
+  background: #424242;
   height: 1px; }
 
 .site-info.text-center {
@@ -1325,7 +1325,7 @@ object {
 
 .blog-content-top .title {
   display: inline-block;
-  color: #62585f;
+  color: #424242;
   font-weight: 300;
   font-size: 2.8125rem;
   text-shadow: 0.125rem 0 #ffffff;
@@ -1352,7 +1352,7 @@ object {
 
 .blog-page-heading {
   font-size: 2.8125rem;
-  color: #62585f;
+  color: #424242;
   text-shadow: 0.125rem 0.125rem #ffffff; }
 
 .entry-title {
@@ -1390,13 +1390,13 @@ article .entry-meta .comments {
 .excerpt {
   font-size: 0.875rem;
   font-weight: 400;
-  color: #62585f;
+  color: #424242;
   line-height: 1.3125rem; }
 
 .entry-content p {
   font-size: 0.875rem;
   font-weight: 400;
-  color: #62585f;
+  color: #424242;
   line-height: 1.3125rem; }
 
 .designfly-read-more {
@@ -1425,7 +1425,7 @@ article .entry-meta .comments {
 .designfly-pagination .current {
   color: #ffffff;
   background-color: #ef4634;
-  border: 1px solid #62585f;
+  border: 1px solid #424242;
   border-radius: 0.1875rem;
   padding: 0 0.625rem 0 0.625rem; }
 
@@ -1460,12 +1460,12 @@ article .entry-meta .comments {
 
 .portfolio-content .portfolio-content-top hr {
   margin: 0.625rem 0 1.25rem 0;
-  background: #62585f;
+  background: #424242;
   height: 1px; }
 
 .portfolio-content .portfolio-content-top .title {
   display: inline-block;
-  color: #62585f;
+  color: #424242;
   font-weight: 300;
   font-size: 2.8125rem;
   text-shadow: 0.125rem 0 #ffffff;
@@ -1538,7 +1538,7 @@ div[class^="post-"]:hover img {
 
 .lightbox__content .post-title a {
   font-size: 1.4rem;
-  color: #62585f; }
+  color: #424242; }
 
 .lightbox__content .post-title a:hover {
   text-decoration: none;
@@ -1551,7 +1551,7 @@ div[class^="post-"]:hover img {
   height: 2.1875rem;
   width: 2.1875rem;
   cursor: pointer;
-  color: #62585f;
+  color: #424242;
   background-color: #ffffff;
   opacity: 1;
   display: inline-flex;
@@ -1561,7 +1561,7 @@ div[class^="post-"]:hover img {
 /* Single Page */
 .page-title {
   font-size: 2.1875rem;
-  color: #62585f;
+  color: #424242;
   text-shadow: 0.125rem 0 #ffffff;
   font-weight: 400; }
 
@@ -1687,12 +1687,46 @@ div[class^="post-"]:hover img {
 /** Comments **/
 .comments-title {
   font-size: 1.125rem;
-  color: #62585f;
+  color: #424242;
   font-weight: 400;
   margin-top: -0.4375rem; }
 
+.comment__conatiner {
+  display: flex; }
+
+.comment__icon {
+  margin: 0 0.625rem 0.625rem 0.625rem; }
+
+.comment__icon p {
+  margin-top: 0.8125rem; }
+
+.comment__author .fn .url {
+  color: #ef4634; }
+
+.comment__body {
+  width: 100%; }
+
+.comment__header {
+  font-size: 0.8125rem; }
+
+.comment__content {
+  font-size: 0.875rem; }
+
+.comment-reply-link {
+  float: right;
+  padding: 0 0.625rem 0.625rem 0; }
+
+.bypostauthor {
+  background-color: #ffffff; }
+
+.comment-reply-title,
+.comment-notes,
+.comment-form-comment label,
+label .required {
+  display: none; }
+
 .comment-form-comment textarea {
-  border: 1px solid #62585f; }
+  border: 1px solid #424242; }
 
 .comment-form-author,
 .comment-form-email,
@@ -1705,14 +1739,17 @@ div[class^="post-"]:hover img {
 .comment-form-author input,
 .comment-form-email input,
 .comment-form-url input {
+  margin-top: 0.625rem;
   width: 95%;
-  border: 1px solid #62585f; }
+  border: 1px solid #424242;
+  border-radius: 0px; }
 
 .form-submit .submit {
   float: right;
   padding: 0.625rem;
-  color: #FFF;
+  color: #ffffff;
   background-color: #222222;
+  background-image: none;
   border-radius: 0.3125rem;
   margin-top: 0.9375rem; }
 
