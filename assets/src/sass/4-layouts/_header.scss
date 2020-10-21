@@ -77,7 +77,8 @@
 
 /* Services Navigation */
 .service-nav{
-	height: 101px;
+	height: 100%;
+	min-height: 101px;
 	background-image: url('../img/features-repeatable-bg.png');
 	background-repeat: repeat;
 	grid-column: 1/14;
@@ -88,13 +89,13 @@
 
 .service-nav-container{
 	grid-column: 4/11;
-	display: grid;
-	grid-column-gap: 20px;
-	grid-template-columns: repeat(9, 1fr);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
 .service__advertising{
-	grid-column: 1/4;
+	max-width : 300px;
 	display: flex;
 	align-items: center;
 
@@ -120,7 +121,7 @@
 }
 
 .service__multimedia{
-	grid-column: 4/7;
+	max-width : 300px;
 	display: flex;
 	align-items: center;
 
@@ -146,7 +147,7 @@
 }
 
 .service__photography{
-	grid-column: 7/10;
+	max-width : 300px;
 	display: flex;
 	align-items: center;
 

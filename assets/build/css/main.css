@@ -1181,7 +1181,8 @@ object {
 
 /* Services Navigation */
 .service-nav {
-  height: 6.3125rem;
+  height: 100%;
+  min-height: 6.3125rem;
   background-image: url(../../src/img/features-repeatable-bg.png);
   background-repeat: repeat;
   grid-column: 1/14;
@@ -1191,12 +1192,12 @@ object {
 
 .service-nav-container {
   grid-column: 4/11;
-  display: grid;
-  grid-column-gap: 1.25rem;
-  grid-template-columns: repeat(9, 1fr); }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
 
 .service__advertising {
-  grid-column: 1/4;
+  max-width: 18.75rem;
   display: flex;
   align-items: center; }
   .service__advertising .service__advertising__icon {
@@ -1212,7 +1213,7 @@ object {
     line-height: 1.21875rem; }
 
 .service__multimedia {
-  grid-column: 4/7;
+  max-width: 18.75rem;
   display: flex;
   align-items: center; }
   .service__multimedia .service__multimedia__icon {
@@ -1228,7 +1229,7 @@ object {
     line-height: 1.21875rem; }
 
 .service__photography {
-  grid-column: 7/10;
+  max-width: 18.75rem;
   display: flex;
   align-items: center; }
   .service__photography .service__photography__icon {
@@ -1338,12 +1339,13 @@ object {
   color: #ffffff;
   min-height: 3.125rem;
   border-radius: 0.1875rem;
-  margin-bottom: 1.25rem; }
+  margin-bottom: 1.25rem;
+  font-weight: 400; }
 
 .blog-post__date {
   align-self: center;
   float: left;
-  padding: 0.25rem 1rem 0.25rem 1rem;
+  padding: 0 1rem 0.125rem 1rem;
   border-top-left-radius: 0.1875rem;
   border-bottom-left-radius: 0.1875rem;
   border-right: 1px solid #ffffff;
@@ -1353,7 +1355,7 @@ object {
     max-height: 1.5625rem; }
   .blog-post__date .blog-post__month {
     font-size: 0.875rem;
-    padding-top: 0.25rem;
+    padding-top: 0.125rem;
     text-transform: uppercase; }
 
 .blog-post__title {
@@ -1443,24 +1445,13 @@ article .entry-meta .comments {
 .portfolio-content {
   grid-column: 4/11;
   margin: 3.125rem auto;
-  display: -ms-grid;
-  display: -moz-grid;
-  display: grid;
-  -ms-grid-columns: repeat(3, 1fr);
-  grid-template-columns: repeat(3, 1fr);
-  -moz-column-gap: 0.9375rem;
-       column-gap: 0.9375rem;
-  row-gap: 0.9375rem;
-  justify-content: center; }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; }
 
 .portfolio-content .portfolio-content-top {
-  grid-column: 1/4;
+  width: 100%;
   margin: 0.3125rem 0; }
-
-.portfolio-content .portfolio-content-top hr {
-  margin: 0.625rem 0 1.25rem 0;
-  background: #424242;
-  height: 1px; }
 
 .portfolio-content .portfolio-content-top .title {
   display: inline-block;

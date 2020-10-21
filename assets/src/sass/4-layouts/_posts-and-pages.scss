@@ -75,12 +75,13 @@
 	min-height: 50px;
 	border-radius: 3px;
 	margin-bottom: 20px;
+	font-weight: 400;
 }
 
 .blog-post__date{
 	align-self: center;
 	float: left;
-	padding: 4px 16px 4px 16px;
+	padding: 0 16px 2px 16px;
 	border-top-left-radius: 3px;
 	border-bottom-left-radius: 3px;
 	border-right: 1px solid $white;
@@ -93,7 +94,7 @@
 
 	.blog-post__month{
 		font-size: 14px;
-		padding-top: 4px;
+		padding-top: 2px;
 		text-transform: uppercase;
 	}
 }
@@ -200,25 +201,14 @@ article .entry-meta .comments{
 .portfolio-content {
 	grid-column: 4/11;
 	margin: 50px auto;
-	display: -ms-grid;
-	display: -moz-grid;
-	display: grid;
-	-ms-grid-columns: repeat(3,1fr);
-	grid-template-columns: repeat(3,1fr);
-	column-gap: 15px;
-	row-gap: 15px;
-	justify-content: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
 }
 
 .portfolio-content .portfolio-content-top {
-	grid-column: 1/4;
+	width: 100%;
 	margin: 5px 0;
-}
-
-.portfolio-content .portfolio-content-top hr {
-	margin: 10px 0 20px 0;
-	background:$dark-gray-100;
-	height: 1px;
 }
 
 .portfolio-content .portfolio-content-top .title {
