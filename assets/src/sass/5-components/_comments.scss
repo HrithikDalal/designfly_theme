@@ -112,9 +112,9 @@ label .required{
 .comment-form-author,
 .comment-form-email,
 .comment-form-url {
-    margin: 0;
-    padding: 0;
-    width: 33.33%;
+	margin: 0;
+	padding: 0;
+	width: 33.33%;
 	float: left;
 }
 
@@ -128,11 +128,11 @@ label .required{
 }
 
 .form-submit .submit {
-    float: right;
-    padding: 10px;
-    color: $white;
+	float: right;
+	padding: 10px;
+	color: $white;
 	background-color: #222222;
 	background-image: none;
-    border-radius: 5px;
-    margin-top: 15px;
+	border-radius: 5px;
+	margin-top: 15px;
 }
