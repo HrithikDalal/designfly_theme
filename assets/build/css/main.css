@@ -1116,7 +1116,9 @@ object {
   grid-column: 4/11;
   display: flex;
   justify-content: space-between;
-  min-height: 6.5625rem; }
+  min-height: 6.5625rem;
+  flex-wrap: wrap;
+  min-width: 15.625rem; }
 
 .site-branding {
   float: left; }
@@ -2380,5 +2382,6 @@ label .required {
   .designfly-main-navigation.responsive {
     display: flex;
     flex-direction: column;
+    width: 100%;
     order: 1; } }
 

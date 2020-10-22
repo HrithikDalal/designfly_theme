@@ -3,7 +3,7 @@
  *
  */
 
-( function( $ ) {
+jQuery( document ).ready( ( function( $ ) {
 
 	// Show Lightbox
 	$( '#portfolio-wrapper .view-image' ).on( 'click', function() {
@@ -39,4 +39,5 @@
 	}
 	);
 }
-)( jQuery );
+)
+);

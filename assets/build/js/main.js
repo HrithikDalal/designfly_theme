@@ -136,7 +136,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports) {
 
 /**
- * CarouselJS.
+ * Carousel JS.
  *
  */
 var slideIndex = 1;
@@ -285,7 +285,7 @@ __webpack_require__.r(__webpack_exports__);
  * Lighthouse JS.
  *
  */
-(function ($) {
+jQuery(document).ready(function ($) {
   // Show Lightbox
   $('#portfolio-wrapper .view-image').on('click', function () {
     // Get the Image url of the clicked portfolio item.
@@ -308,7 +308,7 @@ __webpack_require__.r(__webpack_exports__);
 
     $(this).parent().parent().css('display', 'none');
   });
-})(jQuery);
+});
 
 /***/ }),
 
@@ -323,17 +323,18 @@ __webpack_require__.r(__webpack_exports__);
  * Responsive Navbar.
  *
  */
-document.getElementById('navigation--togller').addEventListener('click', myFunction);
+jQuery(document).ready(function ($) {
+  $('#masthead .navigation--togller').on('click', function () {
+    $x = $('#site-navigation');
+    $y = $x.attr('class');
 
-function myFunction() {
-  var x = document.getElementById('site-navigation');
-
-  if ('designfly-main-navigation' === x.className) {
-    x.className += ' responsive';
-  } else {
-    x.className = 'designfly-main-navigation';
-  }
-}
+    if ('designfly-main-navigation' === $y) {
+      $x.addClass('responsive');
+    } else {
+      $x.removeClass('responsive');
+    }
+  });
+});
 
 /***/ }),
 
@@ -350,10 +351,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _sass_main_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_sass_main_scss__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_lightbox__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/lightbox */ "./src/js/components/lightbox.js");
 /* harmony import */ var _components_lightbox__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_lightbox__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _components_carousel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/carousel */ "./src/js/components/carousel.js");
-/* harmony import */ var _components_carousel__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_carousel__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _components_navigation__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/navigation */ "./src/js/components/navigation.js");
-/* harmony import */ var _components_navigation__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components_navigation__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _components_navigation__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/navigation */ "./src/js/components/navigation.js");
+/* harmony import */ var _components_navigation__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_navigation__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components_carousel__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/carousel */ "./src/js/components/carousel.js");
+/* harmony import */ var _components_carousel__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components_carousel__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components */ "./src/js/components/index.js");
 /* harmony import */ var _img_features_repeatable_bg_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../img/features-repeatable-bg.png */ "./src/img/features-repeatable-bg.png");
 /**

@@ -1,8 +1,7 @@
 /**
- * CarouselJS.
+ * Carousel JS.
  *
  */
-
 var slideIndex = 1;
 document.getElementById( 'carousel__button--left' ).addEventListener( 'click', function() {
 	slideIndex += 1;

@@ -5,6 +5,8 @@
 	display: flex;
 	justify-content: space-between;
 	min-height: 105px;
+	flex-wrap: wrap;
+	min-width: 250px;
 }
 
 .site-branding{
@@ -199,6 +201,7 @@
 	.designfly-main-navigation.responsive{
 		display: flex;
 		flex-direction: column;
+		width: 100%;
 		order: 1;
 	}
 }

@@ -2,13 +2,16 @@
  * Responsive Navbar.
  *
  */
-document.getElementById( 'navigation--togller' ).addEventListener( 'click', myFunction );
-
-function myFunction() {
-	var x = document.getElementById( 'site-navigation' );
-	if ( 'designfly-main-navigation' === x.className ) {
-		x.className += ' responsive';
-	} else {
-		x.className = 'designfly-main-navigation';
-	}
+jQuery( document ).ready( ( function( $ ) {
+	$( '#masthead .navigation--togller' ).on( 'click', function() {
+		$x = $( '#site-navigation' );
+		$y = $x.attr( 'class' ) ;
+		if ( 'designfly-main-navigation' === $y ) {
+			$x.addClass( 'responsive' );
+		} else {
+			$x.removeClass( 'responsive' );
+		}
+	} );
 }
+)
+);
