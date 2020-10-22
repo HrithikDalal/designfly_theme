@@ -7,6 +7,7 @@
 import '../sass/main.scss';
 import './components/lightbox';
 import './components/carousel';
+import './components/navigation';
 import * as components from './components';
 
 window.$ = window.$ || jQuery;

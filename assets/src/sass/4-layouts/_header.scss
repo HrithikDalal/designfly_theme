@@ -4,11 +4,11 @@
 	grid-column: 4/11;
 	display: flex;
 	justify-content: space-between;
-	height: 105px;
+	min-height: 105px;
 }
 
-.designfly-main-navigation{
-	align-self: end;
+.site-branding{
+	float: left;
 }
 
 .navigation__form{
@@ -36,6 +36,12 @@
 	margin-bottom: 0;
 }
 
+.navigation--togller{
+	margin-top: 16px;
+	display: none;
+}
+
+/* Carousel */
 .header-img{
 	height: 544px;
 	grid-column: 1/14;
@@ -44,7 +50,7 @@
 	background-size: cover;
 	background-position: center;
 }
-/* Carousel */
+
 .carousel__content{
 	text-align: center;
 	max-width: 55%;
@@ -169,5 +175,30 @@
 			font-size: 13px;
 			line-height: 19.5px;
 		}
+	}
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 1400px) {
+	.designfly-main-navigation{
+		display: none;
+	}
+	.navigation--togller {
+		float: right;
+		display: block;
+		height: 45px;
+	}
+	.primary-menu{
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 1400px) {
+	.designfly-main-navigation.responsive{
+		display: flex;
+		flex-direction: column;
+		order: 1;
 	}
 }

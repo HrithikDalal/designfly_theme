@@ -1092,9 +1092,6 @@ object {
   grid-template-columns: repeat(13, 1fr);
   grid-column-gap: 1.875rem; }
 
-.site {
-  grid-column: 3/11; }
-
 .site-main {
   margin-right: 1.875rem; }
 
@@ -1119,10 +1116,10 @@ object {
   grid-column: 4/11;
   display: flex;
   justify-content: space-between;
-  height: 6.5625rem; }
+  min-height: 6.5625rem; }
 
-.designfly-main-navigation {
-  align-self: end; }
+.site-branding {
+  float: left; }
 
 .navigation__form {
   padding: 0.375rem; }
@@ -1144,6 +1141,11 @@ object {
 .site-description {
   margin-bottom: 0; }
 
+.navigation--togller {
+  margin-top: 1rem;
+  display: none; }
+
+/* Carousel */
 .header-img {
   height: 34rem;
   grid-column: 1/14;
@@ -1152,7 +1154,6 @@ object {
   background-size: cover;
   background-position: center; }
 
-/* Carousel */
 .carousel__content {
   text-align: center;
   max-width: 55%;
@@ -1243,6 +1244,10 @@ object {
     margin: 0.3125rem;
     font-size: 0.8125rem;
     line-height: 1.21875rem; }
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
 
 .site-footer {
   grid-column: 4/11; }
@@ -1565,9 +1570,9 @@ div[class^="post-"]:hover img {
           Main Menu
 ===============================*/
 .designfly-main-navigation {
-  clear: both;
+  margin-top: 1.125rem;
   display: flex;
-  float: left; }
+  float: right; }
   .designfly-main-navigation ul {
     list-style: none;
     margin: 0;
@@ -2361,4 +2366,19 @@ label .required {
     .hide-for-landscape,
     .show-for-portrait {
       display: block !important; } }
+
+@media screen and (max-width: 1400px) {
+  .designfly-main-navigation {
+    display: none; }
+  .navigation--togller {
+    float: right;
+    display: block;
+    height: 2.8125rem; }
+  .primary-menu {
+    display: flex;
+    flex-direction: column; }
+  .designfly-main-navigation.responsive {
+    display: flex;
+    flex-direction: column;
+    order: 1; } }
 

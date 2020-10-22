@@ -54,6 +54,7 @@
 				<input id="searchsubmit" class="navigation__form__button" type="image" alt="Search" src="<?php echo wp_get_attachment_url( get_theme_mod( 'designfly-site-navigation' ) ); ?>" />
 			</form>
 		</nav><!-- #site-navigation -->
+		<button id = "navigation--togller" class="navigation--togller">&#9776;</button>
 	</header><!-- #masthead -->
 
 	<!-- Home Page Carasoul -->
