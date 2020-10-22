@@ -1092,9 +1092,6 @@ object {
   grid-template-columns: repeat(13, 1fr);
   grid-column-gap: 1.875rem; }
 
-.site-main {
-  margin-right: 1.875rem; }
-
 .site-content {
   grid-column: 1/14;
   display: grid;
@@ -1102,6 +1099,9 @@ object {
 
 .site-primary {
   grid-column: 4/9; }
+
+.site-main {
+  margin-right: 1.875rem; }
 
 .site-secondary {
   grid-column: 9/11;
@@ -1247,9 +1247,7 @@ object {
     font-size: 0.8125rem;
     line-height: 1.21875rem; }
 
-/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-
-/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+/* Media Queries for Responsive Navbar */
 
 .site-footer {
   grid-column: 4/11; }
@@ -1274,11 +1272,6 @@ object {
       margin-bottom: 0.9375rem; }
     .footer-content .footer__contact .contact__info {
       font-size: 0.875rem; }
-
-.site-footer hr {
-  margin: 0.625rem 0 1.25rem 0;
-  background: #424242;
-  height: 1px; }
 
 .site-info.text-center {
   margin-bottom: 0.9375rem; }
@@ -2369,7 +2362,12 @@ label .required {
     .show-for-portrait {
       display: block !important; } }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1360px) {
+  .site-primary {
+    grid-column: 2/13; }
+  .site-secondary {
+    grid-column: 2/11;
+    padding-top: 1.25rem; }
   .designfly-main-navigation {
     display: none; }
   .navigation--togller {
@@ -2383,5 +2381,10 @@ label .required {
     display: flex;
     flex-direction: column;
     width: 100%;
-    order: 1; } }
+    order: 1; }
+  .site-footer {
+    grid-column: 2/13; }
+  .site-secondary {
+    grid-column: 2/13;
+    padding-top: 1.25rem; } }
 
