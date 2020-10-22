@@ -48,11 +48,6 @@
 	margin-top: 60px;
 }
 
-.carousel__slides
-{
-	display: none;
-}
-
 /* Blog Page */
 .entry-header{
 	clear: both;
@@ -286,6 +281,7 @@ div[class^="post-"]:hover img {
 	position: relative;
 	padding: 20px 20px 0px 20px;
 	background-color: $white;
+	max-width: 80%;
 }
 
 .lightbox .lightbox__content img {
@@ -337,4 +333,16 @@ div[class^="post-"]:hover img {
 
 .entry-footer-link:hover{
 	text-decoration: underline;
+}
+
+@media screen and (max-width: 1360px) {
+	.portfolio-content{
+		grid-column: 2/13;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.blog__attachment {
+		width: 100%;
+	}
 }

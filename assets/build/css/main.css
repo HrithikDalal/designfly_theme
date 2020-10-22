@@ -487,7 +487,6 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   background: #eff3f6;
-  background-image: linear-gradient(-180deg, #fafbfc 0%, #eff3f6 90%);
   border-radius: 0.1875rem;
   border: 1px solid #333;
   color: #424242;
@@ -503,7 +502,6 @@ input[type="submit"] {
   input[type="reset"]:hover,
   input[type="submit"]:hover {
     background: #eff3f6;
-    background-image: linear-gradient(-180deg, #f0f3f6 0%, #e6ebf1 90%);
     border-color: #000000; }
   button:active, button:focus,
   input[type="button"]:active,
@@ -513,7 +511,6 @@ input[type="submit"] {
   input[type="submit"]:active,
   input[type="submit"]:focus {
     background: #eff3f6;
-    background-image: linear-gradient(-180deg, #f0f3f6 0%, #e6ebf1 90%);
     border-color: #000000; }
 
 /*---------------------------
@@ -1144,8 +1141,14 @@ object {
   margin-bottom: 0; }
 
 .navigation--togller {
-  margin-top: 1rem;
-  display: none; }
+  display: none;
+  font-size: 1.875rem;
+  border: none;
+  background: inherit; }
+
+.navigation--togller:hover {
+  color: #ef4634;
+  background: inherit; }
 
 /* Carousel */
 .header-img {
@@ -1155,6 +1158,9 @@ object {
   width: 100%;
   background-size: cover;
   background-position: center; }
+
+.carousel__slides {
+  display: none; }
 
 .carousel__content {
   text-align: center;
@@ -1316,9 +1322,6 @@ object {
   color: #ffffff;
   float: right;
   margin-top: 3.75rem; }
-
-.carousel__slides {
-  display: none; }
 
 /* Blog Page */
 .entry-header {
@@ -1517,7 +1520,8 @@ div[class^="post-"]:hover img {
 .lightbox .lightbox__content {
   position: relative;
   padding: 1.25rem 1.25rem 0px 1.25rem;
-  background-color: #ffffff; }
+  background-color: #ffffff;
+  max-width: 80%; }
 
 .lightbox .lightbox__content img {
   border-radius: 0.3125rem; }
@@ -2373,7 +2377,7 @@ label .required {
   .navigation--togller {
     float: right;
     display: block;
-    height: 2.8125rem; }
+    background: inherit; }
   .primary-menu {
     display: flex;
     flex-direction: column; }
@@ -2386,5 +2390,11 @@ label .required {
     grid-column: 2/13; }
   .site-secondary {
     grid-column: 2/13;
-    padding-top: 1.25rem; } }
+    padding-top: 1.25rem; }
+  .portfolio-content {
+    grid-column: 2/13; } }
+
+@media screen and (max-width: 480px) {
+  .blog__attachment {
+    width: 100%; } }
 

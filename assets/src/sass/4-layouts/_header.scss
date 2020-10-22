@@ -39,8 +39,15 @@
 }
 
 .navigation--togller{
-	margin-top: 16px;
 	display: none;
+	font-size: 30px;
+	border: none;
+	background: inherit;
+}
+
+.navigation--togller:hover{
+	color: $red-100;
+	background: inherit;
 }
 
 /* Carousel */
@@ -51,6 +58,11 @@
 	width: 100%;
 	background-size: cover;
 	background-position: center;
+}
+
+.carousel__slides
+{
+	display: none;
 }
 
 .carousel__content{
@@ -188,7 +200,7 @@
 	.navigation--togller {
 		float: right;
 		display: block;
-		height: 45px;
+		background: inherit;
 	}
 	.primary-menu{
 		display: flex;
