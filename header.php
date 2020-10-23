@@ -51,7 +51,7 @@
 			<form class="navigation__form" role="search" method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ), 'designfly' ); ?>">
 				<label class="screen-reader-text" for="search-box">Search Box</label>
 				<input class="navigation__form__box" type="text" value="" name="s" id="search-box" />
-				<input id="searchsubmit" class="navigation__form__button" type="image" alt="Search" src="<?php echo wp_get_attachment_url( get_theme_mod( 'designfly-site-navigation' ) ); ?>" />
+				<input id="searchsubmit" class="navigation__form__button" type="image" alt="Search" src="<?php echo esc_url( wp_get_attachment_url( get_theme_mod( 'designfly-site-navigation' ) ) ); ?>" />
 			</form>
 		</nav><!-- #site-navigation -->
 		<button id = "navigation--togller" class="navigation--togller">&#9776;</button>
@@ -72,8 +72,8 @@
 			if ( $designfly_carousel_query->have_posts() ) :
 				?>
 				<div id="carousel__container" class="carousel__content">
-				<input id="carousel__button--left" class="carousel__button--left" type="image" alt="Prev" src="<?php echo wp_get_attachment_url( get_theme_mod( 'designfly-carousel-slider-left' ) ); ?>" />
-				<input id="carousel__button--right" class="carousel__button--right" type="image" alt="Next" src="<?php echo wp_get_attachment_url( get_theme_mod( 'designfly-carousel-slider-right' ) ); ?>" />
+				<input id="carousel__button--left" class="carousel__button--left" type="image" alt="Prev" src="<?php echo esc_url( wp_get_attachment_url( get_theme_mod( 'designfly-carousel-slider-left' ) ) ); ?>" />
+				<input id="carousel__button--right" class="carousel__button--right" type="image" alt="Next" src="<?php echo esc_url( wp_get_attachment_url( get_theme_mod( 'designfly-carousel-slider-right' ) ) ); ?>" />
 				<?php
 				while ( $designfly_carousel_query->have_posts() ) :
 					$designfly_carousel_query->the_post();
@@ -100,8 +100,6 @@
 			endif;
 			?>
 		</div>
-		<?php else : ?>
-		<?php ?>
 	<?php endif; ?>
 
 
@@ -110,7 +108,7 @@
 		<div class="service-nav-container">
 			<div class = "service__advertising">
 				<div class="service__advertising__icon">
-					<img src=" <?php echo wp_get_attachment_url( get_theme_mod( 'designfly-service-advertising' ) ); ?> "/>
+					<img src=" <?php echo esc_url( wp_get_attachment_url( get_theme_mod( 'designfly-service-advertising' ) ) ); ?> "/>
 				</div><!-- .service__advertising__icon -->
 				<div class="service__advertising__content">
 					<h3>Advertising</h3>
@@ -119,7 +117,7 @@
 			</div>
 			<div class = "service__multimedia">
 				<div class="service__multimedia__icon">
-					<img src=" <?php echo wp_get_attachment_url( get_theme_mod( 'designfly-service-multimedia' ) ); ?> "/>
+					<img src=" <?php echo esc_url( wp_get_attachment_url( get_theme_mod( 'designfly-service-multimedia' ) ) ); ?> "/>
 				</div>
 				<div class="service__multimedia__content">
 					<h3>Multimedia</h3>
@@ -128,7 +126,7 @@
 			</div>
 			<div class = "service__photography">
 				<div class="service__photography__icon">
-					<img src=" <?php echo wp_get_attachment_url( get_theme_mod( 'designfly-service-photography' ) ); ?> "/>
+					<img src=" <?php echo esc_url( wp_get_attachment_url( get_theme_mod( 'designfly-service-photography' ) ) ); ?> "/>
 				</div>
 				<div class="service__photography__content">
 					<h3>Photography</h3>

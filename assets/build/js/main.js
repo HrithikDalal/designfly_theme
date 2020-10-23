@@ -140,14 +140,6 @@ __webpack_require__.r(__webpack_exports__);
  *
  */
 var slideIndex = 1;
-document.getElementById('carousel__button--left').addEventListener('click', function () {
-  slideIndex += 1;
-  showDivs(slideIndex);
-});
-document.getElementById('carousel__button--right').addEventListener('click', function () {
-  slideIndex -= 1;
-  showDivs(slideIndex);
-});
 
 function showDivs(n) {
   var i;
@@ -171,7 +163,18 @@ function showDivs(n) {
 }
 
 ;
-showDivs(slideIndex);
+
+if ('/' == document.location.pathname) {
+  document.getElementById('carousel__button--left').addEventListener('click', function () {
+    slideIndex += 1;
+    showDivs(slideIndex);
+  });
+  document.getElementById('carousel__button--right').addEventListener('click', function () {
+    slideIndex -= 1;
+    showDivs(slideIndex);
+  });
+  showDivs(slideIndex);
+}
 
 /***/ }),
 

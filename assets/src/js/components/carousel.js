@@ -3,17 +3,6 @@
  *
  */
 var slideIndex = 1;
-document.getElementById( 'carousel__button--left' ).addEventListener( 'click', function() {
-	slideIndex += 1;
-	showDivs( slideIndex );
-}
-);
-
-document.getElementById( 'carousel__button--right' ).addEventListener( 'click', function() {
-	slideIndex -= 1;
-	showDivs( slideIndex );
-}
-);
 
 function showDivs( n ) {
 	var i;
@@ -29,4 +18,19 @@ function showDivs( n ) {
 	}
 	posts[slideIndex - 1].style.display = 'block';
 };
-showDivs( slideIndex );
+
+if ( '/' == document.location.pathname ) {
+	document.getElementById( 'carousel__button--left' ).addEventListener( 'click', function() {
+		slideIndex += 1;
+		showDivs( slideIndex );
+	}
+	);
+
+	document.getElementById( 'carousel__button--right' ).addEventListener( 'click', function() {
+		slideIndex -= 1;
+		showDivs( slideIndex );
+	}
+	);
+
+	showDivs( slideIndex );
+}

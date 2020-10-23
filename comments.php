@@ -52,7 +52,7 @@ if ( post_password_required() ) {
 			<?php
 			wp_list_comments(
 				array(
-					'type' => 'comment',
+					'type'     => 'comment',
 					'callback' => 'designfly_custom_comments',
 				)
 			);

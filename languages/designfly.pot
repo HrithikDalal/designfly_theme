@@ -26,45 +26,48 @@ msgstr ""
 msgid "Try looking in the monthly archives. %1$s"
 msgstr ""
 
-#. translators: 1: number of comments, 2: post title
-#: ../comments.php:42
-msgctxt "comments title"
-msgid "%1$s thought on &ldquo;%2$s&rdquo;"
-msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] ""
-msgstr[1] ""
-
-#: ../comments.php:35
-msgctxt "comments title"
-msgid "One thought on &ldquo;%s&rdquo;"
-msgstr ""
-
-#: ../comments.php:61, ../comments.php:91
+#: ../comments.php:39, ../comments.php:66
 msgid "Comment navigation"
 msgstr ""
 
-#: ../comments.php:64, ../comments.php:94
+#: ../comments.php:42, ../comments.php:69
 msgid "Older Comments"
 msgstr ""
 
-#: ../comments.php:65, ../comments.php:95
+#: ../comments.php:43, ../comments.php:70
 msgid "Newer Comments"
 msgstr ""
 
-#: ../comments.php:108
+#: ../comments.php:83
 msgid "Comments are closed."
+msgstr ""
+
+#: ../comments.php:88
+msgid "Post your comment"
+msgstr ""
+
+#: ../footer.php:49
+msgid "Contact Us"
+msgstr ""
+
+#: ../front-page.php:49, ../page-templates/portfolio-template.php:54
+msgid "No items found."
 msgstr ""
 
 #: ../header.php:24
 msgid "Skip to content"
 msgstr ""
 
-#: ../header.php:40, ../inc/classes/class-designfly.php:121
+#: ../header.php:40, ../inc/classes/class-designfly.php:122
 msgid "Primary Menu"
 msgstr ""
 
+#: ../header.php:97
+msgid "No portfolio items found. Please add some portfolio items in admin-dashboard"
+msgstr ""
+
 #. translators: %s: search phrase
-#: ../search.php:20
+#: ../search.php:21
 msgid "Search Results for: %s"
 msgstr ""
 
@@ -88,6 +91,10 @@ msgstr ""
 msgid "Full Width Template"
 msgstr ""
 
+#: ../page-templates/portfolio-template.php:3
+msgid "Portfolio Page"
+msgstr ""
+
 #: ../template-parts/content-none.php:14
 msgid "Nothing Found"
 msgstr ""
@@ -104,7 +111,7 @@ msgstr ""
 msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
-#: ../template-parts/content-page.php:20, ../template-parts/content-single.php:24, ../template-parts/content.php:47
+#: ../template-parts/content-page.php:20, ../template-parts/content-portfolio.php:40, ../template-parts/content-single.php:24, ../template-parts/components/blog/entry-content.php:32
 msgid "Pages:"
 msgstr ""
 
@@ -112,13 +119,152 @@ msgstr ""
 msgid "Edit"
 msgstr ""
 
-#. translators: %s: Name of current post.
-#: ../template-parts/content.php:32
-msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
+#: ../inc/classes/class-custom-recent-post-widget.php:26
+msgid "Your site&#8217;s most recent Posts customized."
 msgstr ""
 
-#: ../inc/classes/class-designfly.php:140
+#: ../inc/classes/class-custom-recent-post-widget.php:31
+msgid "Custom Recent Posts"
+msgstr ""
+
+#: ../inc/classes/class-custom-recent-post-widget.php:51
+msgid "Recent Posts"
+msgstr ""
+
+#: ../inc/classes/class-custom-recent-post-widget.php:139, ../inc/classes/class-popular-post-widget.php:142
+msgid "Display post date?"
+msgstr ""
+
+#: ../inc/classes/class-customizer.php:79
+msgid "Navigation Bar"
+msgstr ""
+
+#: ../inc/classes/class-customizer.php:99
+msgid "Add search icon"
+msgstr ""
+
+#: ../inc/classes/class-customizer.php:100
+msgid "Site Navigation Search Box Image Control"
+msgstr ""
+
+#: ../inc/classes/class-customizer.php:107, ../inc/classes/class-customizer.php:112, ../inc/classes/class-customizer.php:152, ../inc/classes/class-customizer.php:157, ../inc/classes/class-customizer.php:187, ../inc/classes/class-customizer.php:192, ../inc/classes/class-customizer.php:233, ../inc/classes/class-customizer.php:238, ../inc/classes/class-customizer.php:268, ../inc/classes/class-customizer.php:273, ../inc/classes/class-customizer.php:303, ../inc/classes/class-customizer.php:308, ../inc/classes/class-customizer.php:426, ../inc/classes/class-customizer.php:431
+msgid "Select Image"
+msgstr ""
+
+#: ../inc/classes/class-customizer.php:108, ../inc/classes/class-customizer.php:153, ../inc/classes/class-customizer.php:188, ../inc/classes/class-customizer.php:234, ../inc/classes/class-customizer.php:269, ../inc/classes/class-customizer.php:304, ../inc/classes/class-customizer.php:427
+msgid "Change Image"
+msgstr ""
+
+#: ../inc/classes/class-customizer.php:109, ../inc/classes/class-customizer.php:154, ../inc/classes/class-customizer.php:189, ../inc/classes/class-customizer.php:235, ../inc/classes/class-customizer.php:270, ../inc/classes/class-customizer.php:305, ../inc/classes/class-customizer.php:428
+msgid "Remove"
+msgstr ""
+
+#: ../inc/classes/class-customizer.php:110, ../inc/classes/class-customizer.php:155, ../inc/classes/class-customizer.php:190, ../inc/classes/class-customizer.php:236, ../inc/classes/class-customizer.php:271, ../inc/classes/class-customizer.php:306, ../inc/classes/class-customizer.php:429
+msgid "Default"
+msgstr ""
+
+#: ../inc/classes/class-customizer.php:111, ../inc/classes/class-customizer.php:156, ../inc/classes/class-customizer.php:191, ../inc/classes/class-customizer.php:237, ../inc/classes/class-customizer.php:272, ../inc/classes/class-customizer.php:307, ../inc/classes/class-customizer.php:430
+msgid "No image selected"
+msgstr ""
+
+#: ../inc/classes/class-customizer.php:113, ../inc/classes/class-customizer.php:158, ../inc/classes/class-customizer.php:193, ../inc/classes/class-customizer.php:239, ../inc/classes/class-customizer.php:274, ../inc/classes/class-customizer.php:309, ../inc/classes/class-customizer.php:432
+msgid "Choose Image"
+msgstr ""
+
+#: ../inc/classes/class-customizer.php:124
+msgid "Carousel"
+msgstr ""
+
+#: ../inc/classes/class-customizer.php:144
+msgid "Add Carousel Left Slider icon"
+msgstr ""
+
+#: ../inc/classes/class-customizer.php:145
+msgid "Carousel Left Slider Cropped Image Control"
+msgstr ""
+
+#: ../inc/classes/class-customizer.php:179
+msgid "Add Carousel Right Slider icon"
+msgstr ""
+
+#: ../inc/classes/class-customizer.php:180
+msgid "Carousel right Slider Arrow Cropped Image Control"
+msgstr ""
+
+#: ../inc/classes/class-customizer.php:205
+msgid "Service Navbar"
+msgstr ""
+
+#: ../inc/classes/class-customizer.php:225
+msgid "Add Advertising service icon"
+msgstr ""
+
+#: ../inc/classes/class-customizer.php:226
+msgid "Advertising Service Cropped Image Control"
+msgstr ""
+
+#: ../inc/classes/class-customizer.php:260
+msgid "Add Multimedia service icon"
+msgstr ""
+
+#: ../inc/classes/class-customizer.php:261
+msgid "Multimedia Service Cropped Image Control"
+msgstr ""
+
+#: ../inc/classes/class-customizer.php:295
+msgid "Add Photography service icon"
+msgstr ""
+
+#: ../inc/classes/class-customizer.php:296
+msgid "Photography Service Cropped Image Control"
+msgstr ""
+
+#: ../inc/classes/class-customizer.php:322
+msgid "Footer settings"
+msgstr ""
+
+#: ../inc/classes/class-customizer.php:343
+msgid "Address"
+msgstr ""
+
+#: ../inc/classes/class-customizer.php:362
+msgid "Telephone Number"
+msgstr ""
+
+#: ../inc/classes/class-customizer.php:380
+msgid "Fax Number"
+msgstr ""
+
+#: ../inc/classes/class-customizer.php:399
+msgid "E-mail Address"
+msgstr ""
+
+#: ../inc/classes/class-customizer.php:417
+msgid "Add Social Media Icon Images"
+msgstr ""
+
+#: ../inc/classes/class-customizer.php:418
+msgid "Social Media Image Control"
+msgstr ""
+
+#: ../inc/classes/class-designfly.php:141
 msgid "Read More"
+msgstr ""
+
+#: ../inc/classes/class-popular-post-widget.php:27
+msgid "Your site&#8217;s most Popular Posts."
+msgstr ""
+
+#: ../inc/classes/class-popular-post-widget.php:32, ../inc/classes/class-popular-post-widget.php:52
+msgid "Popular Posts"
+msgstr ""
+
+#: ../inc/classes/class-portfolio-widget.php:29, ../inc/helpers/custom-functions.php:40
+msgid "Portfolio Posts"
+msgstr ""
+
+#: ../inc/classes/class-portfolio-widget.php:49
+msgid "Portfolio"
 msgstr ""
 
 #: ../inc/classes/class-widgets.php:49
@@ -129,64 +275,165 @@ msgstr ""
 msgid "Footer"
 msgstr ""
 
+#: ../inc/helpers/custom-functions.php:41
+msgid "Portfolio Post"
+msgstr ""
+
+#: ../inc/helpers/custom-functions.php:42
+msgid "Add Portfolio Item"
+msgstr ""
+
+#: ../inc/helpers/custom-functions.php:43
+msgid "All Portfolio Items"
+msgstr ""
+
+#: ../inc/helpers/custom-functions.php:44
+msgid "Add Portfolio item"
+msgstr ""
+
+#: ../inc/helpers/custom-functions.php:45
+msgid "Edit Portfolio Item"
+msgstr ""
+
+#: ../inc/helpers/custom-functions.php:46
+msgid "New Portfolio Item"
+msgstr ""
+
+#: ../inc/helpers/custom-functions.php:47
+msgid "View Portfolio Item"
+msgstr ""
+
+#: ../inc/helpers/custom-functions.php:48
+msgid "Search Portfolio"
+msgstr ""
+
+#: ../inc/helpers/custom-functions.php:49
+msgid "No portfolio items found"
+msgstr ""
+
+#: ../inc/helpers/custom-functions.php:50
+msgid "No portfolio items found in trash"
+msgstr ""
+
+#: ../inc/helpers/custom-functions.php:51, ../inc/helpers/custom-functions.php:102
+msgid "Parent Item"
+msgstr ""
+
+#: ../inc/helpers/custom-functions.php:91
+msgid "Carousel Posts"
+msgstr ""
+
+#: ../inc/helpers/custom-functions.php:92
+msgid "Carousel Post"
+msgstr ""
+
+#: ../inc/helpers/custom-functions.php:93
+msgid "Add Carousel Item"
+msgstr ""
+
+#: ../inc/helpers/custom-functions.php:94
+msgid "All Carousel Items"
+msgstr ""
+
+#: ../inc/helpers/custom-functions.php:95
+msgid "Add Carousel item"
+msgstr ""
+
+#: ../inc/helpers/custom-functions.php:96
+msgid "Edit Carousel Item"
+msgstr ""
+
+#: ../inc/helpers/custom-functions.php:97
+msgid "New Carousel Item"
+msgstr ""
+
+#: ../inc/helpers/custom-functions.php:98
+msgid "View Carousel Item"
+msgstr ""
+
+#: ../inc/helpers/custom-functions.php:99
+msgid "Search Carousel"
+msgstr ""
+
+#: ../inc/helpers/custom-functions.php:100
+msgid "No Carousel items found"
+msgstr ""
+
+#: ../inc/helpers/custom-functions.php:101
+msgid "No Carousel items found in trash"
+msgstr ""
+
 #. translators: %s: post date.
-#: ../inc/helpers/template-tags.php:33
+#: ../inc/helpers/template-tags.php:78
 msgctxt "post date"
-msgid "Posted on %s"
+msgid " on %s"
 msgstr ""
 
 #. translators: %s: post author.
-#: ../inc/helpers/template-tags.php:48
+#: ../inc/helpers/template-tags.php:93
 msgctxt "post author"
 msgid "by %s"
 msgstr ""
 
 #. translators: used between list items, there is a space after the comma
-#: ../inc/helpers/template-tags.php:64
+#: ../inc/helpers/template-tags.php:109
 msgid ", "
 msgstr ""
 
 #. translators: 1: list of categories.
-#: ../inc/helpers/template-tags.php:67
+#: ../inc/helpers/template-tags.php:112
 msgid "Posted in %1$s"
 msgstr ""
 
 #. translators: used between list items, there is a space after the comma
-#: ../inc/helpers/template-tags.php:71
+#: ../inc/helpers/template-tags.php:116
 msgctxt "list item separator"
 msgid ", "
 msgstr ""
 
 #. translators: 1: list of tags.
-#: ../inc/helpers/template-tags.php:74
+#: ../inc/helpers/template-tags.php:119
 msgid "Tagged %1$s"
 msgstr ""
 
 #. translators: %s: post title
-#: ../inc/helpers/template-tags.php:84
+#: ../inc/helpers/template-tags.php:129
 msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr ""
 
 #. translators: %s: Name of current post. Only visible to screen readers
-#: ../inc/helpers/template-tags.php:101
+#: ../inc/helpers/template-tags.php:146
 msgid "Edit <span class=\"screen-reader-text\">%s</span>"
 msgstr ""
 
+#: ../inc/helpers/template-tags.php:237
+msgid "Read more"
+msgstr ""
+
+#: ../inc/helpers/template-tags.php:355
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
 #. translators: 1: Theme name, 2: Theme copyright date, 3: Theme author.
-#: ../inc/helpers/template-tags.php:182
+#: ../inc/helpers/template-tags.php:413
 msgid "&copy; %1$s %2$s by %3$s"
 msgstr ""
 
 #. translators: Copyright date format, see https://secure.php.net/date
-#: ../inc/helpers/template-tags.php:185
+#: ../inc/helpers/template-tags.php:416
 msgctxt "copyright date format"
 msgid "Y"
 msgstr ""
 
-#: ../inc/helpers/template-tags.php:187
+#: ../inc/helpers/template-tags.php:418
 msgid "Designfly"
 msgstr ""
 
-#: ../inc/helpers/template-tags.php:188
+#: ../inc/helpers/template-tags.php:419
 msgid "rtCamp"
+msgstr ""
+
+#. translators: %s: Name of current post.
+#: ../template-parts/components/blog/entry-content.php:19
+msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""

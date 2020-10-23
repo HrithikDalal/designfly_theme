@@ -39,7 +39,8 @@
 			array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'designfly' ),
 				'after'  => '</div>',
-		) );
+			),
+		);
 		?>
 		<?php else : ?>
 

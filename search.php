@@ -9,7 +9,6 @@ get_header();
 ?>
 
 <div id="primary" class="site-primary">
-	<h1>Hello</h1>
 	<main id="main" class="site-main" role="main">
 
 		<?php if ( have_posts() ) : ?>

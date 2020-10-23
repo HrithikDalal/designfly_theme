@@ -80,7 +80,7 @@ class Popular_Post_Widget extends WP_Widget {
 		<div class = " recent-post__custom">
 			<?php echo esc_html( the_post_thumbnail( array( 45, 45 ), array( 'class' => 'widget-post__img' ) ) ); ?>
 			<a href="<?php echo esc_url( the_permalink() ); ?>">
-				<p class="widget-post__title"><?php echo the_title(); ?></p>
+				<p class="widget-post__title"><?php echo wp_kses_post( the_title() ); ?></p>
 			</a>
 			<p class="widget-post__author"><?php designfly_posted_by(); ?>
 			<span class="widget-post__date">
@@ -128,12 +128,12 @@ class Popular_Post_Widget extends WP_Widget {
 		$show_date = isset( $instance['show_date'] ) ? (bool) $instance['show_date'] : false;
 		?>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
+			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:', 'designfly' ); ?></label>
 			<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" />
 		</p>
 
 		<p>
-			<label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'Number of posts to show:' ); ?></label>
+			<label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'Number of posts to show:', 'designfly' ); ?></label>
 			<input class="tiny-text" id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="number" step="1" min="1" value="<?php echo $number; ?>" size="3" />
 		</p>
 

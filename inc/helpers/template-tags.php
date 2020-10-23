@@ -306,7 +306,7 @@ function designfly_portfolio_pagination( $custom_query ) {
 		if ( is_array( $pages ) ) {
 			$paged = ( get_query_var( 'paged' ) === 0 ) ? 1 : get_query_var( 'paged' );
 			foreach ( $pages as $page ) {
-					echo $page;
+					echo wp_kses_post( $page );
 			}
 		}
 	}
@@ -315,10 +315,10 @@ function designfly_portfolio_pagination( $custom_query ) {
 /**
  * Displays custom comments.
  *
- * @param Object  $comment comment.
- * @param Array   $args standard arguments.
- * @param Integer $depth depth of the comments.
-*/
+ * @param object  $comment comment.
+ * @param array   $args standard arguments.
+ * @param integer $depth depth of the comments.
+ */
 function designfly_custom_comments( $comment, $args, $depth ) {
 	if ( 'div' === $args['style'] ) {
 		$tag       = 'div';
@@ -329,7 +329,7 @@ function designfly_custom_comments( $comment, $args, $depth ) {
 	}
 	?>
 
-	<<?php echo $tag; ?> <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ); ?> id="comment-<?php comment_ID(); ?>">
+	<<?php echo esc_attr( $tag ); ?> <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ); ?> id="comment-<?php comment_ID(); ?>">
 		<?php if ( 'div' !== $args['style'] ) : ?>
 			<div id="div-comment-<?php comment_ID(); ?>" class="comment__conatiner">
 		<?php endif; ?>
@@ -340,19 +340,24 @@ function designfly_custom_comments( $comment, $args, $depth ) {
 			<p class="comment__header">
 				<?php
 				/* translators: 1: Author*/
-				printf( __( '<span class = "comment__author"><cite class="fn">%s</cite> <span class="author-said">said on </span></span>' ), get_comment_author_link() );
+				printf( wp_kses_post( '<span class = "comment__author"><cite class="fn">%s</cite> <span class="author-said">said on </span></span>' ), get_comment_author_link() );
 				?>
 
-			<span class="comment__meta "><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ); ?>">
+			<span class="comment__meta ">
 				<?php
 				/* translators: 1: date, 2: time */
-				printf( __( '%1$s at %2$s' ), get_comment_date(),  get_comment_time() ); ?></a><?php edit_comment_link( __( '(Edit)' ), '  ', '' );
+				printf( esc_html_x( '%1$s at %2$s', 'post date', 'designfly' ), esc_html( get_comment_date() ), esc_html( get_comment_time() ) );
+				?>
+				<?php
+				edit_comment_link( __( '(Edit)', 'designfly' ), '  ', '' );
 				?>
 				</span>
 			</p>
 
-			<?php if ( $comment->comment_approved == '0' ) : ?>
-					<em class="comment--awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'designfly' ); ?></em>
+			<?php if ( '0' === $comment->comment_approved ) : ?>
+					<em class="comment--awaiting-moderation">
+						<?php esc_attr_e( 'Your comment is awaiting moderation.', 'designfly' ); ?>
+					</em>
 					<br />
 			<?php endif; ?>
 
@@ -386,8 +391,7 @@ function designfly_custom_comments( $comment, $args, $depth ) {
 /**
  * Set post views count using post meta
  *
- * @param Integer $post_id Post ID.
- *
+ * @param int $post_id Post ID.
  */
 function designfly_set_post_views( $post_id ) {
 	$count_key = 'post_views_count';

@@ -332,6 +332,7 @@ class Customizer {
 				'capability'        => 'edit_theme_options',
 				'default'           => 'Street 21 Planet, A-11, dapibus tristique, 123551',
 				'sanitize_callback' => array( __CLASS__, 'sanitize_custom_text' ),
+				'transport'         => 'refresh',
 			)
 		);
 
@@ -350,6 +351,7 @@ class Customizer {
 			array(
 				'capability'        => 'edit_theme_options',
 				'default'           => '123 4567890',
+				'transport'         => 'refresh',
 				'sanitize_callback' => array( __CLASS__, 'sanitize_custom_text' ),
 			)
 		);
@@ -357,9 +359,9 @@ class Customizer {
 		$wp_customize->add_control(
 			'designfly-footer-telephone',
 			array(
-				'section'  => 'designfly-footer-section',
-				'priority' => 11,
-				'label'    => __( 'Telephone Number', 'designfly' ),
+				'section'   => 'designfly-footer-section',
+				'priority'  => 11,
+				'label'     => __( 'Telephone Number', 'designfly' ),
 			)
 		);
 		/* Settings for Fax */
@@ -369,6 +371,7 @@ class Customizer {
 				'capability'        => 'edit_theme_options',
 				'default'           => '123 456789',
 				'sanitize_callback' => array( __CLASS__, 'sanitize_custom_text' ),
+				'transport'         => 'refresh',
 			)
 		);
 
@@ -388,6 +391,7 @@ class Customizer {
 				'capability'        => 'edit_theme_options',
 				'default'           => 'contactus@dsignfly.com',
 				'sanitize_callback' => array( __CLASS__, 'sanitize_custom_text' ),
+				'transport'         => 'refresh',
 			)
 		);
 

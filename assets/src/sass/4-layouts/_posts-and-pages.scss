@@ -264,6 +264,7 @@ div[class^="post-"]:hover img {
 	opacity: 1;
 }
 
+/* Portfolio Lightbox */
 .lightbox {
 	position: fixed;
 	z-index: 10;
@@ -335,6 +336,7 @@ div[class^="post-"]:hover img {
 	text-decoration: underline;
 }
 
+/* Media Queries */
 @media screen and (max-width: 1360px) {
 	.portfolio-content{
 		grid-column: 2/13;

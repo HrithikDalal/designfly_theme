@@ -396,7 +396,7 @@ html {
   box-sizing: border-box;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  color: #424242; }
+  color: #62585f; }
 
 /* stylelint-disable */
 *,
@@ -447,7 +447,7 @@ figure {
 a {
   transition: 0.3s; }
   a {
-    color: #424242;
+    color: #62585f;
     text-decoration: none; }
   a:hover {
     color: #ef4634; }
@@ -489,7 +489,7 @@ input[type="submit"] {
   background: #eff3f6;
   border-radius: 0.1875rem;
   border: 1px solid #333;
-  color: #424242;
+  color: #62585f;
   display: inline-block;
   font-size: 0.875rem;
   font-weight: 600;
@@ -642,7 +642,7 @@ samp {
 
 hr {
   margin: 0.625rem 0 1.25rem 0;
-  background: #424242;
+  background: #62585f;
   height: 1px; }
 
 /* Aside */
@@ -1129,7 +1129,7 @@ object {
   left: 0.3125rem; }
 
 .navigation__form .navigation__form__box {
-  border: 1px solid #424242;
+  border: 1px solid #62585f;
   border-radius: 0.1875rem;
   height: 1.25rem;
   width: 9.375rem; }
@@ -1329,7 +1329,7 @@ object {
 
 .blog-content-top .title {
   display: inline-block;
-  color: #424242;
+  color: #62585f;
   font-weight: 300;
   font-size: 2.8125rem;
   text-shadow: 0.125rem 0 #ffffff;
@@ -1394,13 +1394,13 @@ article .entry-meta .comments {
 .excerpt {
   font-size: 0.875rem;
   font-weight: 400;
-  color: #424242;
+  color: #62585f;
   line-height: 1.3125rem; }
 
 .entry-content p {
   font-size: 0.875rem;
   font-weight: 400;
-  color: #424242;
+  color: #62585f;
   line-height: 1.3125rem; }
 
 .designfly-read-more {
@@ -1429,7 +1429,7 @@ article .entry-meta .comments {
 .designfly-pagination .current {
   color: #ffffff;
   background-color: #ef4634;
-  border: 1px solid #424242;
+  border: 1px solid #62585f;
   border-radius: 0.1875rem;
   padding: 0 0.625rem 0 0.625rem; }
 
@@ -1458,7 +1458,7 @@ article .entry-meta .comments {
 
 .portfolio-content .portfolio-content-top .title {
   display: inline-block;
-  color: #424242;
+  color: #62585f;
   font-weight: 300;
   font-size: 2.8125rem;
   text-shadow: 0.125rem 0 #ffffff;
@@ -1505,6 +1505,7 @@ div[class^="post-"]:hover img {
 .portfolio-content .view-image:hover {
   opacity: 1; }
 
+/* Portfolio Lightbox */
 .lightbox {
   position: fixed;
   z-index: 10;
@@ -1532,7 +1533,7 @@ div[class^="post-"]:hover img {
 
 .lightbox__content .post-title a {
   font-size: 1.4rem;
-  color: #424242; }
+  color: #62585f; }
 
 .lightbox__content .post-title a:hover {
   text-decoration: none;
@@ -1545,7 +1546,7 @@ div[class^="post-"]:hover img {
   height: 2.1875rem;
   width: 2.1875rem;
   cursor: pointer;
-  color: #424242;
+  color: #62585f;
   background-color: #ffffff;
   opacity: 1;
   display: inline-flex;
@@ -1555,7 +1556,7 @@ div[class^="post-"]:hover img {
 /* Single Page */
 .page-title {
   font-size: 2.1875rem;
-  color: #424242;
+  color: #62585f;
   text-shadow: 0.125rem 0 #ffffff;
   font-weight: 400; }
 
@@ -1564,6 +1565,8 @@ div[class^="post-"]:hover img {
 
 .entry-footer-link:hover {
   text-decoration: underline; }
+
+/* Media Queries */
 
 /*==============================
           Main Menu
@@ -1656,7 +1659,7 @@ div[class^="post-"]:hover img {
   margin-right: 0.9375rem; }
 
 .comments-area .comment-author .url {
-  color: #424242;
+  color: #62585f;
   text-transform: capitalize; }
 
 .comments-area li.comment {
@@ -1681,7 +1684,7 @@ div[class^="post-"]:hover img {
 /** Comments **/
 .comments-title {
   font-size: 1.125rem;
-  color: #424242;
+  color: #62585f;
   font-weight: 400;
   margin-top: -0.4375rem; }
 
@@ -1720,7 +1723,7 @@ label .required {
   display: none; }
 
 .comment-form-comment textarea {
-  border: 1px solid #424242; }
+  border: 1px solid #62585f; }
 
 .comment-form-author,
 .comment-form-email,
@@ -1735,7 +1738,7 @@ label .required {
 .comment-form-url input {
   margin-top: 0.625rem;
   width: 95%;
-  border: 1px solid #424242;
+  border: 1px solid #62585f;
   border-radius: 0px; }
 
 .form-submit .submit {

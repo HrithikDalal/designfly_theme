@@ -48,7 +48,7 @@ function designfly_custom_post_type() {
 		'search_item'        => esc_html__( 'Search Portfolio', 'designfly' ),
 		'not_found'          => esc_html__( 'No portfolio items found', 'designfly' ),
 		'not_found_in_trash' => esc_html__( 'No portfolio items found in trash', 'designfly' ),
-		'parent_item_colon'  => esc_html__( 'Parent Item', 'designfly' )
+		'parent_item_colon'  => esc_html__( 'Parent Item', 'designfly' ),
 	);
 
 	$args = array(
@@ -99,7 +99,7 @@ function designfly_custom_post_type_2() {
 		'search_item'        => esc_html__( 'Search Carousel', 'designfly' ),
 		'not_found'          => esc_html__( 'No Carousel items found', 'designfly' ),
 		'not_found_in_trash' => esc_html__( 'No Carousel items found in trash', 'designfly' ),
-		'parent_item_colon'  => esc_html__( 'Parent Item', 'designfly' )
+		'parent_item_colon'  => esc_html__( 'Parent Item', 'designfly' ),
 	);
 
 	$args = array(

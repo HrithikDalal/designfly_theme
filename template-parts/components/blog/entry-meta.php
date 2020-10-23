@@ -1,4 +1,3 @@
-
 <?php
 /**
  * Template for entry meta
@@ -13,6 +12,6 @@
 	designfly_posted_by();
 	designfly_posted_on();
 	?>
-	<span class="comments"><?php echo get_comments_number(); ?> Comment(s) </span>
+	<span class="comments"><?php echo wp_kses_post( get_comments_number() ); ?> Comment(s) </span>
 	<hr>
 </div>

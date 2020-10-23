@@ -27,5 +27,5 @@ if ( is_single() || is_page() ) {
 		}
 		?>
 	</div>
-<?php
+	<?php
 }
