@@ -34,7 +34,7 @@ function designfly_get_template_part( $slug, $variables = [] ) {
  *
  * @since 1.0.3
  */
-function designfly_custom_post_type() {
+function designfly_portfolio_custom_post_type() {
 
 	$labels = array(
 		'name'               => esc_html__( 'Portfolio Posts', 'designfly' ),
@@ -69,7 +69,7 @@ function designfly_custom_post_type() {
 		),
 		'taxonomies'          => array( 'category', 'post_tag' ),
 		'menu_position'       => 5,
-		'exclude_from_search' => false,
+		'exclude_from_search' => true,
 		'rewrite'             => array( 'slug' => 'portfolio' ),
 		// 'show_in_rest'        => true,
 	);
@@ -77,7 +77,7 @@ function designfly_custom_post_type() {
 	register_post_type( 'portfolio', $args );
 }
 
-add_action( 'init', 'designfly_custom_post_type' );
+add_action( 'init', 'designfly_portfolio_custom_post_type' );
 
 
 /**
@@ -85,7 +85,7 @@ add_action( 'init', 'designfly_custom_post_type' );
  *
  * @since 1.0.3
  */
-function designfly_custom_post_type_2() {
+function designfly_carousel_custom_post_type() {
 
 	$labels = array(
 		'name'               => esc_html__( 'Carousel Posts', 'designfly' ),
@@ -120,7 +120,7 @@ function designfly_custom_post_type_2() {
 		),
 		'taxonomies'          => array( 'category', 'post_tag' ),
 		'menu_position'       => 4,
-		'exclude_from_search' => false,
+		'exclude_from_search' => true,
 		'rewrite'             => array( 'slug' => 'carousel' ),
 		'show_in_rest'        => true,
 	);
@@ -128,4 +128,4 @@ function designfly_custom_post_type_2() {
 	register_post_type( 'carousel', $args );
 }
 
-add_action( 'init', 'designfly_custom_post_type_2' );
+add_action( 'init', 'designfly_carousel_custom_post_type' );
