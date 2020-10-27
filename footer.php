@@ -53,7 +53,21 @@
 					Fax: <span class="contact__fax"><?php echo wp_kses_post( get_theme_mod( 'designfly-footer-fax' ) ); ?></span><br>
 					Email: <span class="contact__email"><?php echo wp_kses_post( get_theme_mod( 'designfly-footer-email' ) ); ?></span><br>
 					<div>
-						<img src=" <?php echo esc_url( wp_get_attachment_url( get_theme_mod( 'designfly-footer-social' ) ) ); ?> "/>
+						<a target="_blank" href="<?php echo esc_url( get_theme_mod( 'designfly-social-facebook-url' ) ); ?>">
+							<img src=" <?php echo esc_url( wp_get_attachment_url( get_theme_mod( 'designfly-social-facebook-icon' ) ) ); ?> "/>
+						</a>
+						<a target="_blank" href="<?php echo esc_url( get_theme_mod( 'designfly-social-google-url' ) ); ?>">
+							<img src=" <?php echo esc_url( wp_get_attachment_url( get_theme_mod( 'designfly-social-google-icon' ) ) ); ?> "/>
+						</a>
+						<a target="_blank" href="<?php echo esc_url( get_theme_mod( 'designfly-social-linkedin-url' ) ); ?>">
+							<img src=" <?php echo esc_url( wp_get_attachment_url( get_theme_mod( 'designfly-social-linkedin-icon' ) ) ); ?> "/>
+						</a>
+						<a target="_blank" href="<?php echo esc_url( get_theme_mod( 'designfly-social-pinterest-url' ) ); ?>">
+							<img src=" <?php echo esc_url( wp_get_attachment_url( get_theme_mod( 'designfly-social-pinterest-icon' ) ) ); ?> "/>
+						</a>
+						<a target="_blank" href="<?php echo esc_url( get_theme_mod( 'designfly-social-twitter-url' ) ); ?>">
+							<img src=" <?php echo esc_url( wp_get_attachment_url( get_theme_mod( 'designfly-social-twitter-icon' ) ) ); ?> "/>
+						</a>
 					</div>
 				</p>
 			</div>
