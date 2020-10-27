@@ -1205,50 +1205,50 @@ object {
   flex-wrap: wrap;
   justify-content: center; }
 
-.service__advertising {
+.service__1 {
   max-width: 18.75rem;
   display: flex;
   align-items: center; }
-  .service__advertising .service__advertising__icon {
+  .service__1 .service__1__icon {
     margin-right: 0.625rem;
     min-width: 3.125rem; }
-  .service__advertising .service__advertising__content h3 {
+  .service__1 .service__1__content h3 {
     margin: 0.3125rem;
     font-size: 1.25rem;
     color: #ef4634; }
-  .service__advertising .service__advertising__content p {
+  .service__1 .service__1__content p {
     margin: 0.3125rem;
     font-size: 0.8125rem;
     line-height: 1.21875rem; }
 
-.service__multimedia {
+.service__2 {
   max-width: 18.75rem;
   display: flex;
   align-items: center; }
-  .service__multimedia .service__multimedia__icon {
+  .service__2 .service__2__icon {
     margin-right: 0.625rem;
     min-width: 3.125rem; }
-  .service__multimedia .service__multimedia__content h3 {
+  .service__2 .service__2__content h3 {
     margin: 0.3125rem;
     font-size: 1.25rem;
     color: #ef4634; }
-  .service__multimedia .service__multimedia__content p {
+  .service__2 .service__2__content p {
     margin: 0.3125rem;
     font-size: 0.8125rem;
     line-height: 1.21875rem; }
 
-.service__photography {
+.service__3 {
   max-width: 18.75rem;
   display: flex;
   align-items: center; }
-  .service__photography .service__photography__icon {
+  .service__3 .service__3__icon {
     margin-right: 0.625rem;
     min-width: 3.125rem; }
-  .service__photography .service__photography__content h3 {
+  .service__3 .service__3__content h3 {
     margin: 0.3125rem;
     font-size: 1.25rem;
     color: #ef4634; }
-  .service__photography .service__photography__content p {
+  .service__3 .service__3__content p {
     margin: 0.3125rem;
     font-size: 0.8125rem;
     line-height: 1.21875rem; }

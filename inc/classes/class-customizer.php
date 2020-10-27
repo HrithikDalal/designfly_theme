@@ -207,9 +207,51 @@ class Customizer {
 				'capability' => 'edit_theme_options',
 			)
 		);
-		/* Settings for Advertising */
+
+		/* ----------------Service-1-------------------- */
+
+		/* Settings for Service -1 Heading */
 		$wp_customize->add_setting(
-			'designfly-service-advertising',
+			'designfly-service-1-heading',
+			array(
+				'capability'        => 'edit_theme_options',
+				'default'           => 'Advertising',
+				'sanitize_callback' => array( __CLASS__, 'sanitize_custom_text' ),
+				'transport'         => 'refresh',
+			)
+		);
+
+		$wp_customize->add_control(
+			'designfly-service-1-heading',
+			array(
+				'section'  => 'designfly-service-section',
+				'label'    => __( 'Service-1 Heading', 'designfly' ),
+			)
+		);
+
+		/* Settings for Service -1 Content */
+		$wp_customize->add_setting(
+			'designfly-service-1-content',
+			array(
+				'capability'        => 'edit_theme_options',
+				'default'           => 'Lorem ipsum dolor sit amet, hehe a consectetur adipiscing elit dem.',
+				'sanitize_callback' => array( __CLASS__, 'sanitize_custom_text' ),
+				'transport'         => 'refresh',
+			)
+		);
+
+		$wp_customize->add_control(
+			'designfly-service-1-content',
+			array(
+				'section'  => 'designfly-service-section',
+				'type'     => 'textarea',
+				'label'    => __( 'Service-1 Content', 'designfly' ),
+			)
+		);
+
+		/* Settings for Service-1 Icon */
+		$wp_customize->add_setting(
+			'designfly-service-1-icon',
 			array(
 				'default'           => '',
 				'transport'         => 'refresh',
@@ -220,10 +262,10 @@ class Customizer {
 		$wp_customize->add_control(
 			new \WP_Customize_Cropped_Image_Control(
 				$wp_customize,
-				'designfly-service-advertising',
+				'designfly-service-1-icon',
 				array(
-					'label'         => __( 'Add Advertising service icon', 'designfly' ),
-					'description'   => esc_html__( 'Advertising Service Cropped Image Control', 'designfly' ),
+					'label'         => __( 'Add Service-1 Icon', 'designfly' ),
+					'description'   => esc_html__( 'Service-1 Cropped Image Control', 'designfly' ),
 					'section'       => 'designfly-service-section',
 					'flex_width'    => false, // Optional. Default: false.
 					'flex_height'   => true, // Optional. Default: false.
@@ -242,9 +284,50 @@ class Customizer {
 			)
 		);
 
-		/* Settings for Multimedia */
+		/* ----------------Service-2-------------------- */
+
+		/* Settings for Service-2 Heading */
 		$wp_customize->add_setting(
-			'designfly-service-multimedia',
+			'designfly-service-2-heading',
+			array(
+				'capability'        => 'edit_theme_options',
+				'default'           => 'Multimedia',
+				'sanitize_callback' => array( __CLASS__, 'sanitize_custom_text' ),
+				'transport'         => 'refresh',
+			)
+		);
+
+		$wp_customize->add_control(
+			'designfly-service-2-heading',
+			array(
+				'section'  => 'designfly-service-section',
+				'label'    => __( 'Service-2 Heading', 'designfly' ),
+			)
+		);
+
+		/* Settings for Service -2 Content */
+		$wp_customize->add_setting(
+			'designfly-service-2-content',
+			array(
+				'capability'        => 'edit_theme_options',
+				'default'           => 'Lorem ipsum dolor sit amet, hehe a consectetur adipiscing elit dem.',
+				'sanitize_callback' => array( __CLASS__, 'sanitize_custom_text' ),
+				'transport'         => 'refresh',
+			)
+		);
+
+		$wp_customize->add_control(
+			'designfly-service-2-content',
+			array(
+				'section'  => 'designfly-service-section',
+				'type'     => 'textarea',
+				'label'    => __( 'Service-2 Content', 'designfly' ),
+			)
+		);
+
+		/* Settings for Service-2 Icon */
+		$wp_customize->add_setting(
+			'designfly-service-2-icon',
 			array(
 				'default'           => '',
 				'transport'         => 'refresh',
@@ -255,10 +338,10 @@ class Customizer {
 		$wp_customize->add_control(
 			new \WP_Customize_Cropped_Image_Control(
 				$wp_customize,
-				'designfly-service-multimedia',
+				'designfly-service-2-icon',
 				array(
-					'label'         => __( 'Add Multimedia service icon', 'designfly' ),
-					'description'   => esc_html__( 'Multimedia Service Cropped Image Control', 'designfly' ),
+					'label'         => __( 'Add Service-2 Icon', 'designfly' ),
+					'description'   => esc_html__( 'Service-2 Cropped Image Control', 'designfly' ),
 					'section'       => 'designfly-service-section',
 					'flex_width'    => false, // Optional. Default: false.
 					'flex_height'   => true, // Optional. Default: false.
@@ -277,9 +360,50 @@ class Customizer {
 			)
 		);
 
-		/* Settings for Photography */
+		/* ----------------Service-3-------------------- */
+
+		/* Settings for Service-3 Heading */
 		$wp_customize->add_setting(
-			'designfly-service-photography',
+			'designfly-service-3-heading',
+			array(
+				'capability'        => 'edit_theme_options',
+				'default'           => 'Photography',
+				'sanitize_callback' => array( __CLASS__, 'sanitize_custom_text' ),
+				'transport'         => 'refresh',
+			)
+		);
+
+		$wp_customize->add_control(
+			'designfly-service-3-heading',
+			array(
+				'section'  => 'designfly-service-section',
+				'label'    => __( 'Service-3 Heading', 'designfly' ),
+			)
+		);
+
+		/* Settings for Service -3 Content */
+		$wp_customize->add_setting(
+			'designfly-service-3-content',
+			array(
+				'capability'        => 'edit_theme_options',
+				'default'           => 'Lorem ipsum dolor sit amet, hehe a consectetur adipiscing elit dem.',
+				'sanitize_callback' => array( __CLASS__, 'sanitize_custom_text' ),
+				'transport'         => 'refresh',
+			)
+		);
+
+		$wp_customize->add_control(
+			'designfly-service-3-content',
+			array(
+				'section'  => 'designfly-service-section',
+				'type'     => 'textarea',
+				'label'    => __( 'Service-3 Content', 'designfly' ),
+			)
+		);
+
+		/* Settings for Service-3 Icon */
+		$wp_customize->add_setting(
+			'designfly-service-3-icon',
 			array(
 				'default'           => '',
 				'transport'         => 'refresh',
@@ -290,10 +414,10 @@ class Customizer {
 		$wp_customize->add_control(
 			new \WP_Customize_Cropped_Image_Control(
 				$wp_customize,
-				'designfly-service-photography',
+				'designfly-service-3-icon',
 				array(
-					'label'         => __( 'Add Photography service icon', 'designfly' ),
-					'description'   => esc_html__( 'Photography Service Cropped Image Control', 'designfly' ),
+					'label'         => __( 'Add Service-3 Icon', 'designfly' ),
+					'description'   => esc_html__( 'Service-3 Cropped Image Control', 'designfly' ),
 					'section'       => 'designfly-service-section',
 					'flex_width'    => false, // Optional. Default: false.
 					'flex_height'   => true, // Optional. Default: false.

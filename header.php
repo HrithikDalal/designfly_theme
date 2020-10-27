@@ -66,7 +66,7 @@
 			<?php
 			$designfly_carousel_query = new WP_Query(
 				array(
-					'post_type'      => 'carousel',
+					'post_type' => 'carousel',
 				)
 			);
 			if ( $designfly_carousel_query->have_posts() ) :
@@ -106,32 +106,32 @@
 	<!-- #Services Header -->
 	<div class = "service-nav">
 		<div class="service-nav-container">
-			<div class = "service__advertising">
-				<div class="service__advertising__icon">
-					<img src=" <?php echo esc_url( wp_get_attachment_url( get_theme_mod( 'designfly-service-advertising' ) ) ); ?> "/>
-				</div><!-- .service__advertising__icon -->
-				<div class="service__advertising__content">
-					<h3>Advertising</h3>
-					<p>Lorem ipsum dolor sit amet, hehe a consectetur adipiscing elit...</p>
+			<div class = "service__1">
+				<div class="service__1__icon">
+					<img src=" <?php echo esc_url( wp_get_attachment_url( get_theme_mod( 'designfly-service-1-icon' ) ) ); ?> "/>
 				</div>
+				<a href = '#' class="service__1__content">
+					<h3><?php echo wp_kses_post( get_theme_mod( 'designfly-service-1-heading' ) ); ?></h3>
+					<p><?php echo wp_kses_post( get_theme_mod( 'designfly-service-1-content' ) ); ?></p>
+				</a>
 			</div>
-			<div class = "service__multimedia">
-				<div class="service__multimedia__icon">
-					<img src=" <?php echo esc_url( wp_get_attachment_url( get_theme_mod( 'designfly-service-multimedia' ) ) ); ?> "/>
+			<div class = "service__2">
+				<div class="service__2__icon">
+					<img src=" <?php echo esc_url( wp_get_attachment_url( get_theme_mod( 'designfly-service-2-icon' ) ) ); ?> "/>
 				</div>
-				<div class="service__multimedia__content">
-					<h3>Multimedia</h3>
-					<p>Lorem ipsum dolor sit amet, hehe a consectetur adipiscing elit...</p>
-				</div>
+				<a href = '#' class="service__2__content">
+				<h3><?php echo wp_kses_post( get_theme_mod( 'designfly-service-2-heading' ) ); ?></h3>
+					<p><?php echo wp_kses_post( get_theme_mod( 'designfly-service-2-content' ) ); ?></p>
+				</a>
 			</div>
-			<div class = "service__photography">
-				<div class="service__photography__icon">
-					<img src=" <?php echo esc_url( wp_get_attachment_url( get_theme_mod( 'designfly-service-photography' ) ) ); ?> "/>
+			<div class = "service__3">
+				<div class="service__3__icon">
+					<img src=" <?php echo esc_url( wp_get_attachment_url( get_theme_mod( 'designfly-service-3-icon' ) ) ); ?> "/>
 				</div>
-				<div class="service__photography__content">
-					<h3>Photography</h3>
-					<p>Lorem ipsum dolor sit amet, hehe a consectetur adipiscing elit...</p>
-				</div>
+				<a href = '#' class="service__3__content">
+				<h3><?php echo wp_kses_post( get_theme_mod( 'designfly-service-3-heading' ) ); ?></h3>
+					<p><?php echo wp_kses_post( get_theme_mod( 'designfly-service-3-content' ) ); ?></p>
+				</a>
 			</div>
 		</div>
 	</div><!-- #Services Header -->
