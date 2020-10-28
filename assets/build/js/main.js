@@ -278,44 +278,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/js/components/lightbox.js":
-/*!***************************************!*\
-  !*** ./src/js/components/lightbox.js ***!
-  \***************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-/**
- * Lighthouse JS.
- *
- */
-jQuery(document).ready(function ($) {
-  // Show Lightbox
-  $('#portfolio-wrapper .view-image').on('click', function () {
-    // Get the Image url of the clicked portfolio item.
-    $imgSrc = $(this).next().find('img').attr('src'); // Get the title of portfolio item.
-
-    $titleDiv = $(this).next().next().clone(); // Select Lightbox div.
-
-    $img = $('.lightbox .lightbox__content img'); // Show Lightbox.
-
-    $('.lightbox').css('display', 'flex'); // Add title of the portfolio item to the lightbox.
-
-    $('.lightbox .lightbox__content').append($titleDiv); // Provide image url to the lightbox.
-
-    $img.attr('src', $imgSrc);
-  }); // Close the Lightbox.
-
-  $('#lightbox .close').on('click', function () {
-    // Remove The Title.
-    $(this).next().remove(); // Hide the lightbox.
-
-    $(this).parent().parent().css('display', 'none');
-  });
-});
-
-/***/ }),
-
 /***/ "./src/js/components/navigation.js":
 /*!*****************************************!*\
   !*** ./src/js/components/navigation.js ***!
@@ -353,14 +315,12 @@ jQuery(document).ready(function ($) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _sass_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../sass/main.scss */ "./src/sass/main.scss");
 /* harmony import */ var _sass_main_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_sass_main_scss__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_lightbox__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/lightbox */ "./src/js/components/lightbox.js");
-/* harmony import */ var _components_lightbox__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_lightbox__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _components_navigation__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/navigation */ "./src/js/components/navigation.js");
-/* harmony import */ var _components_navigation__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_navigation__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _components_carousel__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/carousel */ "./src/js/components/carousel.js");
-/* harmony import */ var _components_carousel__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components_carousel__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components */ "./src/js/components/index.js");
-/* harmony import */ var _img_features_repeatable_bg_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../img/features-repeatable-bg.png */ "./src/img/features-repeatable-bg.png");
+/* harmony import */ var _components_navigation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/navigation */ "./src/js/components/navigation.js");
+/* harmony import */ var _components_navigation__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_navigation__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components_carousel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/carousel */ "./src/js/components/carousel.js");
+/* harmony import */ var _components_carousel__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_carousel__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components */ "./src/js/components/index.js");
+/* harmony import */ var _img_features_repeatable_bg_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../img/features-repeatable-bg.png */ "./src/img/features-repeatable-bg.png");
 /**
  * Main scripts, loaded on all pages.
  *
@@ -370,11 +330,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
 window.$ = window.$ || jQuery; // Initialize common scripts.
 
-_components__WEBPACK_IMPORTED_MODULE_4__["WebFont"].init();
-_components__WEBPACK_IMPORTED_MODULE_4__["common"].init(); // Images.
+_components__WEBPACK_IMPORTED_MODULE_3__["WebFont"].init();
+_components__WEBPACK_IMPORTED_MODULE_3__["common"].init(); // Images.
 
 
 

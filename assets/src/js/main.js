@@ -5,7 +5,6 @@
  */
 
 import '../sass/main.scss';
-import './components/lightbox';
 import './components/navigation';
 import './components/carousel';
 import * as components from './components';

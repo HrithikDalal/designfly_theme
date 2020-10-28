@@ -42,20 +42,43 @@
 			),
 		);
 		?>
-		<?php else : ?>
+		<?php else :
+			$id = $args['id'];
+			$previd = $args['previd'];
+			$nextid = $args['nextid'];
+			?>
 
-			<div id="view-image" class="view-image">
-				<span class="dashicons dashicons-instagram"></span>
-				<span>View Image</span>
-			</div>
-			<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
+			<a class="post-thumbnail" href="#img<?php echo $id ?>">
 				<?php the_post_thumbnail(); ?>
 			</a>
 
-			<div class="post-title">
-				<a aia-hidden="true" href="<?php the_permalink(); ?>" tabindex="-1">
-					<?php the_title(); ?>
-				</a>
+			<div class="lightbox" id="img<?php echo $id ?>">
+				<div class="lightbox__content">
+					<div>
+						<?php the_post_thumbnail(); ?>
+						<a href="#_" class='exit'>
+						&#10005;
+						</a>
+					</div>
+					<div class="lightbox__footer">
+						<div>
+						<a href="#img<?php echo $previd ?>" class='previous'>
+							&lt;
+						</a>
+						</div>
+						<div class="post-title">
+							<a aia-hidden="true" href="<?php the_permalink(); ?>" tabindex="-1">
+								<?php the_title(); ?>
+							</a>
+						</div>
+						<div>
+						<a href="#img<?php echo $nextid ?>" class='next'>
+							&gt;
+						</a>
+						</div>
+					</div>
+				</div>
+				<!-- </a> -->
 			</div>
 
 			<?php

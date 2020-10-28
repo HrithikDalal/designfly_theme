@@ -36,9 +36,28 @@ get_header();
 				</div>
 
 				<?php
+				$index = 1;
+				$total_post = $designfly_query->post_count;
 				while ( $designfly_query->have_posts() ) :
+					if( $index === 1){
+						$prev_index = $total_post;
+					}
+					else{
+						$prev_index = $index - 1;
+					}
+					if( $index === $total_post){
+						$next_index = 1;
+					}
+					else{
+						$next_index = $index + 1;
+					}
 					$designfly_query->the_post();
-					get_template_part( 'template-parts/content', get_post_type() );
+					get_template_part( 'template-parts/content', get_post_type(), array(
+						'id'     => $index,
+						'previd' => $prev_index,
+						'nextid' => $next_index,
+					) );
+					$index++;
 				endwhile;
 				?>
 			</div> <!-- #portfolio-content -->
