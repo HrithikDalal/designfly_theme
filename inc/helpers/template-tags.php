@@ -268,11 +268,11 @@ function designfly_pagination() {
 		wp_kses(
 			paginate_links(
 				array(
-					'prev_text' => '<img class="pagination-arrow-left" alt="prev" src="' . get_template_directory_uri() . '/assets/src/img/pagination-arrow-prev.png' . '" />',
-					'next_text' => '<img class="pagination-arrow-right" alt="next" src="' . get_template_directory_uri() . '/assets/src/img/pagination-arrow-next.png' . '" />',
+					'prev_text' => '<img class="pagination-arrow-left" alt="prev" src="' . get_template_directory_uri() . '/assets/src/img/pagination-arrow-prev.png" />',
+					'next_text' => '<img class="pagination-arrow-right" alt="next" src="' . get_template_directory_uri() . '/assets/src/img/pagination-arrow-next.png" />',
 				)
 			),
-			$allowed_tags,
+			$allowed_tags
 		)
 	);
 }
@@ -297,8 +297,8 @@ function designfly_portfolio_pagination( $custom_query ) {
 				'current'   => $current_page,
 				'total'     => $total_pages,
 				'type'      => 'array',
-				'prev_text' => '<img class="pagination-arrow-left" alt="prev" src="' . get_template_directory_uri() . '/assets/src/img/pagination-arrow-prev.png' . '" />',
-				'next_text' => '<img class="pagination-arrow-right" alt="next" src="' . get_template_directory_uri() . '/assets/src/img/pagination-arrow-next.png' . '" />',
+				'prev_text' => '<img class="pagination-arrow-left" alt="prev" src="' . get_template_directory_uri() . '/assets/src/img/pagination-arrow-prev.png" />',
+				'next_text' => '<img class="pagination-arrow-right" alt="next" src="' . get_template_directory_uri() . '/assets/src/img/pagination-arrow-next.png" />',
 			)
 		);
 

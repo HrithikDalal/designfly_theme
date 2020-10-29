@@ -29,7 +29,7 @@ class Custom_Recent_Post_Widget extends WP_Widget {
 		parent::__construct(
 			'custom-recent-posts',
 			__( 'Custom Recent Posts', 'designfly' ),
-			$designfly_widget_ops,
+			$designfly_widget_ops
 		);
 		$this->alt_option_name = 'widget_custom_recent_entries';
 	}
@@ -60,7 +60,7 @@ class Custom_Recent_Post_Widget extends WP_Widget {
 		}
 		$show_date = isset( $instance['show_date'] ) ? $instance['show_date'] : false;
 		if ( $title ) {
-			echo $args['before_title'] . $title . $args['after_title'];
+			echo wp_kses_post( $args['before_title'] . $title . $args['after_title'] );
 		}
 
 		$recent_posts = wp_get_recent_posts(
@@ -70,7 +70,7 @@ class Custom_Recent_Post_Widget extends WP_Widget {
 			)
 		);
 		// before and after widget arguments are defined by themes.
-		echo ( $args['before_widget'] );
+		echo wp_kses_post( $args['before_widget'] );
 		// This is where you run the code and display the output.
 		foreach ( $recent_posts as $post ) : ?>
 		<div class = " recent-post__custom">
@@ -91,7 +91,7 @@ class Custom_Recent_Post_Widget extends WP_Widget {
 			<?php
 		endforeach;
 		wp_reset_postdata();
-		echo $args['after_widget'];
+		echo wp_kses_post( $args['after_widget'] );
 	}
 
 	/**
@@ -125,18 +125,18 @@ class Custom_Recent_Post_Widget extends WP_Widget {
 		$show_date = isset( $instance['show_date'] ) ? (bool) $instance['show_date'] : false;
 		?>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
-			<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" />
+			<label for="<?php echo wp_kses_post( $this->get_field_id( 'title' ) ); ?>"><?php esc_html_e( 'Title:', 'designfly' ); ?></label>
+			<input class="widefat" id="<?php echo wp_kses_post( $this->get_field_id( 'title' ) ); ?>" name="<?php echo wp_kses_post( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo wp_kses_post( $title ); ?>" />
 		</p>
 
 		<p>
-			<label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'Number of posts to show:' ); ?></label>
-			<input class="tiny-text" id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="number" step="1" min="1" value="<?php echo $number; ?>" size="3" />
+			<label for="<?php echo wp_kses_post( $this->get_field_id( 'number' ) ); ?>"><?php esc_html_e( 'Number of posts to show:', 'designfly' ); ?></label>
+			<input class="tiny-text" id="<?php echo wp_kses_post( $this->get_field_id( 'number' ) ); ?>" name="<?php echo wp_kses_post( $this->get_field_name( 'number' ) ); ?>" type="number" step="1" min="1" value="<?php echo wp_kses_post( $number ); ?>" size="3" />
 		</p>
 
 		<p>
-			<input class="checkbox" type="checkbox"<?php checked( $show_date ); ?> id="<?php echo $this->get_field_id( 'show_date' ); ?>" name="<?php echo $this->get_field_name( 'show_date' ); ?>" />
-			<label for="<?php echo $this->get_field_id( 'show_date' ); ?>"><?php _e( 'Display post date?', 'designfly' ); ?></label>
+			<input class="checkbox" type="checkbox"<?php checked( $show_date ); ?> id="<?php echo wp_kses_post( $this->get_field_id( 'show_date' ) ); ?>" name="<?php echo wp_kses_post( $this->get_field_name( 'show_date' ) ); ?>" />
+			<label for="<?php echo wp_kses_post( $this->get_field_id( 'show_date' ) ); ?>"><?php esc_html_e( 'Display post date?', 'designfly' ); ?></label>
 		</p>
 		<?php
 	}

@@ -1472,27 +1472,20 @@ article .entry-meta .comments {
   border-radius: 0.625rem;
   overflow: hidden; }
 
-.portfolio-content .view-image span {
-  margin-bottom: 0.3125rem;
-  color: #ffffff; }
-
-.portfolio-content .view-image:hover {
-  opacity: 1; }
+.post-thumbnail:hover img {
+  transform: scale(1.1); }
 
 /** LIGHTBOX MARKUP **/
 .lightbox {
   /* Default to hidden */
   display: none;
-  /* Overlay entire screen */
   position: fixed;
   z-index: 999;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  /* A bit of padding around image */
   padding: 1em;
-  /* Translucent background */
   background: rgba(0, 0, 0, 0.8); }
 
 /* Unhide the lightbox when it's the target */
@@ -1504,40 +1497,40 @@ article .entry-meta .comments {
 .lightbox__content {
   /* Full width and height */
   display: block;
-  /* Size and position background image */
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  padding: 1rem;
+  padding: 0.625rem;
   background-color: #ffffff; }
 
 .lightbox__content .exit {
-  /**styling the exit button**/
   position: absolute;
   z-index: 10;
-  height: 2.5rem;
-  width: 2.5rem;
-  font-size: 1.5rem;
-  margin-left: 1rem;
+  height: 1.875rem;
+  width: 1.875rem;
+  font-size: 1.25rem;
+  margin-left: 0.625rem;
   background-color: #ffffff;
-  margin-top: -1rem;
-  padding: 0.25rem 0.25rem 0.25rem 0.5rem; }
+  margin-top: -0.625rem;
+  padding: 0.125rem 0.125rem 0.125rem 0.375rem; }
 
 .lightbox__footer {
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  color: #62585f;
+  padding: 0.625rem 0.625rem 0 0.625rem; }
+
+.lightbox__content img {
+  border-radius: 0.3125rem; }
 
 .lightbox__content .previous {
-  /**styling the left arrow**/
-  z-index: 10;
-  width: 2.5rem;
-  font-size: 1.5rem; }
+  font-size: 1.25rem; }
+
+.lightbox__content .post-title {
+  font-size: 1.25rem; }
 
 .lightbox__content .next {
-  /**styling the right arrow**/
-  z-index: 10;
-  width: 2.5rem;
-  font-size: 1.5rem; }
+  font-size: 1.25rem; }
 
 /* Single Page */
 .page-title {

@@ -224,13 +224,9 @@ article .entry-meta .comments{
 	overflow: hidden;
 }
 
-.portfolio-content .view-image span {
-	margin-bottom: 5px;
-	color: $white;
-}
-
-.portfolio-content .view-image:hover {
-	opacity: 1;
+.post-thumbnail:hover img {
+	-moz-transform: scale(1.1);
+	transform: scale(1.1);
 }
 
 /** LIGHTBOX MARKUP **/
@@ -238,76 +234,67 @@ article .entry-meta .comments{
 .lightbox {
 	/* Default to hidden */
 	display: none;
-
-	/* Overlay entire screen */
 	position: fixed;
 	z-index: 999;
 	top: 0;
 	left: 0;
 	right: 0;
 	bottom: 0;
-
-	/* A bit of padding around image */
 	padding: 1em;
-
-	/* Translucent background */
 	background: rgba(0, 0, 0, 0.8);
-  }
+}
 
-  /* Unhide the lightbox when it's the target */
-  .lightbox:target {
+/* Unhide the lightbox when it's the target */
+.lightbox:target {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-  }
+}
 
-  .lightbox__content {
+.lightbox__content {
 	/* Full width and height */
 	display: block;
-
-	/* Size and position background image */
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
-	padding: 16px;
+	padding: 10px;
 	background-color: $white;
-  }
+}
 
-
-  .lightbox__content .exit {
-	/**styling the exit button**/
-
+.lightbox__content .exit {
 	position: absolute;
 	z-index: 10;
-	height: 40px;
-	width: 40px;
-	font-size: 24px;
-	margin-left: 16px;
+	height: 30px;
+	width: 30px;
+	font-size: 20px;
+	margin-left: 10px;
 	background-color: $white;
-	margin-top: -16px;
-	padding: 4px 4px 4px 8px;
+	margin-top: -10px;
+	padding: 2px 2px 2px 6px;
 
-  }
-  .lightbox__footer{
-	  display: flex;
-	  justify-content: space-between;
-  }
+}
+.lightbox__footer{
+	display: flex;
+	justify-content: space-between;
+	color:$dark-gray-100;
+	padding: 10px 10px 0 10px;
+}
 
-  .lightbox__content .previous {
-	/**styling the left arrow**/
-	z-index: 10;
-	width: 40px;
-	font-size: 24px;
+.lightbox__content img{
+	border-radius: 5px;
+}
 
-  }
+.lightbox__content .previous {
+	font-size: 20px;
+}
 
-  .lightbox__content .next {
-	/**styling the right arrow**/
-	z-index: 10;
-	width: 40px;
-	font-size: 24px;
+.lightbox__content .post-title {
+	font-size: 20px;
+}
 
-  }
+.lightbox__content .next {
+	font-size: 20px;
+}
 
 /* Single Page */
 .page-title{

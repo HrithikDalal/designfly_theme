@@ -39,20 +39,18 @@
 			array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'designfly' ),
 				'after'  => '</div>',
-			),
+			)
 		);
 		?>
-		<?php else :
-			$id = $args['id'];
-			$previd = $args['previd'];
-			$nextid = $args['nextid'];
+		<?php
+		else :
 			?>
 
-			<a class="post-thumbnail" href="#img<?php echo $id ?>">
+			<a class="post-thumbnail" href="#img<?php echo wp_kses_post( $args['id'] ); ?>">
 				<?php the_post_thumbnail(); ?>
 			</a>
 
-			<div class="lightbox" id="img<?php echo $id ?>">
+			<div class="lightbox" id="img<?php echo wp_kses_post( $args['id'] ); ?>">
 				<div class="lightbox__content">
 					<div>
 						<?php the_post_thumbnail(); ?>
@@ -62,8 +60,8 @@
 					</div>
 					<div class="lightbox__footer">
 						<div>
-						<a href="#img<?php echo $previd ?>" class='previous'>
-							&lt;
+						<a href="#img<?php echo wp_kses_post( $args['previd'] ); ?>" class='previous'>
+						&#8592;
 						</a>
 						</div>
 						<div class="post-title">
@@ -72,8 +70,8 @@
 							</a>
 						</div>
 						<div>
-						<a href="#img<?php echo $nextid ?>" class='next'>
-							&gt;
+						<a href="#img<?php echo wp_kses_post( $args['nextid'] ); ?>" class='next'>
+						&#8594;
 						</a>
 						</div>
 					</div>
