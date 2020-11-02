@@ -20,7 +20,7 @@ get_header();
 		);
 		if ( $designfly_query->have_posts() ) :
 			?>
-			<div id="portfolio-wrapper" class="portfolio-content">
+			<div class="portfolio-content">
 
 				<!-- top bar -->
 				<div class="portfolio-content-top">

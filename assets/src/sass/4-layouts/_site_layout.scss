@@ -29,12 +29,23 @@
 
 @media screen and (max-width:1360px) {
 	.site-primary{
+		grid-column: 2/9;
+	}
+
+	.site-secondary{
+		grid-column: 9/13;
+		padding-top: 20px;
+	}
+
+}
+
+@media screen and (max-width:768px) {
+	.site-primary{
 		grid-column: 2/13;
 	}
 
 	.site-secondary{
-		grid-column: 2/11;
-		padding-top: 20px;
+		grid-column: 2/13;
 	}
 
 }

@@ -47,13 +47,29 @@
 			?>
 
 			<a class="post-thumbnail" href="#img<?php echo wp_kses_post( $args['id'] ); ?>">
-				<?php the_post_thumbnail(); ?>
+			<div id="image-overlay" class="image-overlay">
+				<span class="dashicons dashicons-cover-image"></span>
+				<span>View Image</span>
+			</div>
+			<?php
+			if ( has_post_thumbnail() ) {
+				the_post_thumbnail();
+			} else {
+				echo wp_kses_post( '<img  alt="No Image" src="' . get_template_directory_uri() . '/assets/src/img/placeholder-portfolio.png" />' );
+			}
+			?>
 			</a>
 
 			<div class="lightbox" id="img<?php echo wp_kses_post( $args['id'] ); ?>">
 				<div class="lightbox__content">
-					<div>
-						<?php the_post_thumbnail(); ?>
+					<div class="lightbox__image">
+					<?php
+					if ( has_post_thumbnail() ) {
+						the_post_thumbnail();
+					} else {
+						echo wp_kses_post( '<img  alt="No Image" src="' . get_template_directory_uri() . '/assets/src/img/placeholder-portfolio.png" />' );
+					}
+					?>
 						<a href="#_" class='exit'>
 						&#10005;
 						</a>

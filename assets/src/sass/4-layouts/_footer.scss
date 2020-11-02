@@ -9,6 +9,7 @@
 
 	.footer__post{
 		grid-column: 1/5;
+		text-align: justify;
 
 		.post__title{
 			font-weight: 400;
@@ -42,10 +43,17 @@
 	.site-footer{
 		grid-column: 2/13;
 	}
+}
+@media screen and (max-width: 667px) {
+	.footer-content{
+		.footer__post{
+			grid-column: 1/9;
+			text-align: center;
+		}
 
-	.site-secondary{
-		grid-column: 2/13;
-		padding-top: 20px;
+		.footer__contact{
+			grid-column: 1/9;
+			text-align: center;
+		}
 	}
-
 }

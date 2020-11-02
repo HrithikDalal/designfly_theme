@@ -77,20 +77,22 @@ class Popular_Post_Widget extends WP_Widget {
 		// This is where you run the code and display the output.
 		while ( $popular_posts->have_posts() ) :
 			$popular_posts->the_post(); ?>
-		<div class = " recent-post__custom">
+		<div class = "widget-post--custom">
 			<?php echo esc_html( the_post_thumbnail( array( 45, 45 ), array( 'class' => 'widget-post__img' ) ) ); ?>
-			<a href="<?php echo esc_url( the_permalink() ); ?>">
-				<p class="widget-post__title"><?php echo wp_kses_post( the_title() ); ?></p>
-			</a>
-			<p class="widget-post__author"><?php designfly_posted_by(); ?>
-			<span class="widget-post__date">
-			<?php
-			if ( $show_date ) :
-					designfly_posted_on();
-			endif;
-			?>
-			</span>
-			</p>
+			<div class = "widget-post__meta">
+				<a href="<?php echo esc_url( the_permalink() ); ?>">
+					<p class="widget-post__title"><?php echo wp_kses_post( the_title() ); ?></p>
+				</a>
+				<p class="widget-post__author"><?php designfly_posted_by(); ?>
+				<span class="widget-post__date">
+				<?php
+				if ( $show_date ) :
+						designfly_posted_on();
+				endif;
+				?>
+				</span>
+				</p>
+			</div>
 		</div>
 			<?php
 		endwhile;

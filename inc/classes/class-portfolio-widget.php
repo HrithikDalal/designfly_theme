@@ -76,7 +76,13 @@ class Portfolio_Widget extends WP_Widget {
 		foreach ( $recent_posts as $post ) : ?>
 			<div class = " portfolio--widget">
 				<a href="<?php echo esc_url( get_permalink( get_page_by_path( 'portfollio' ) ) ); ?>">
-					<?php echo get_the_post_thumbnail( $post['ID'], array( 45, 45 ), array( 'class' => 'portfolio__img' ) ); ?>
+				<?php
+				if ( has_post_thumbnail( $post['ID'] ) ) {
+					echo get_the_post_thumbnail( $post['ID'], array( 45, 45 ), array( 'class' => 'portfolio__img' ) );
+				} else {
+					echo wp_kses_post( '<img  alt="portfolio__img" src="' . get_template_directory_uri() . '/assets/src/img/placeholder-portfolio.png" />' );
+				}
+				?>
 				</a>
 			</div>
 			<?php

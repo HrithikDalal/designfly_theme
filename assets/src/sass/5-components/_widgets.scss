@@ -52,7 +52,7 @@
 }
 
 .widget-post__img.wp-post-image{
-	float: left;
+	height: 45px;
 	border-radius: 3px;
 	margin: 5px 5px 0 0;
 }
@@ -68,6 +68,11 @@
 	color: $red-100;
 }
 
+.widget-post--custom
+{
+	display: flex;
+}
+
 .widget-post__author {
 	font-size: 12px;
 	margin-top: 3px;
@@ -75,4 +80,10 @@
 
 .widget-post__author .byline .author a{
 	color: red;
+}
+
+@media (max-width:962px) and (min-width:768px) {
+	.posted-on {
+		display: none;
+	}
 }

@@ -51,7 +51,17 @@
 			<form class="navigation__form" role="search" method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ), 'designfly' ); ?>">
 				<label class="screen-reader-text" for="search-box">Search Box</label>
 				<input class="navigation__form__box" type="text" value="" name="s" id="search-box" />
-				<input id="searchsubmit" class="navigation__form__button" type="image" alt="Search" src="<?php echo esc_url( wp_get_attachment_url( get_theme_mod( 'designfly-site-navigation' ) ) ); ?>" />
+				<?php
+				if ( wp_get_attachment_url( get_theme_mod( 'designfly-site-navigation' ) ) === false ) {
+					?>
+					<input id="searchsubmit" class="navigation__form__button" type="image" alt="Search" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/src/img/search-icon.png" />
+					<?php
+				} else {
+					?>
+					<input id="searchsubmit" class="navigation__form__button" type="image" alt="Search" src="<?php echo esc_url( wp_get_attachment_url( get_theme_mod( 'designfly-site-navigation' ) ) ); ?>" />
+					<?php
+				}
+				?>
 			</form>
 		</nav><!-- #site-navigation -->
 		<button id = "navigation--togller" class="navigation--togller">&#9776;</button>
@@ -72,9 +82,25 @@
 			if ( $designfly_carousel_query->have_posts() ) :
 				?>
 				<div id="carousel__container" class="carousel__content">
-				<input id="carousel__button--left" class="carousel__button--left" type="image" alt="Prev" src="<?php echo esc_url( wp_get_attachment_url( get_theme_mod( 'designfly-carousel-slider-left' ) ) ); ?>" />
-				<input id="carousel__button--right" class="carousel__button--right" type="image" alt="Next" src="<?php echo esc_url( wp_get_attachment_url( get_theme_mod( 'designfly-carousel-slider-right' ) ) ); ?>" />
 				<?php
+				if ( wp_get_attachment_url( get_theme_mod( 'designfly-carousel-slider-left' ) ) === false ) {
+					?>
+					<input id="carousel__button--left" class="carousel__button--left" type="image" alt="Prev" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/src/img/slider-arrow-left.png" />
+					<?php
+				} else {
+					?>
+					<input id="carousel__button--left" class="carousel__button--left" type="image" alt="Prev" src="<?php echo esc_url( wp_get_attachment_url( get_theme_mod( 'designfly-carousel-slider-left' ) ) ); ?>" />
+					<?php
+				}
+				if ( wp_get_attachment_url( get_theme_mod( 'designfly-carousel-slider-right' ) ) === false ) {
+					?>
+					<input id="carousel__button--right" class="carousel__button--right" type="image" alt="Next" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/src/img/slider-arrow-right.png" />
+					<?php
+				} else {
+					?>
+					<input id="carousel__button--right" class="carousel__button--right" type="image" alt="Next" src="<?php echo esc_url( wp_get_attachment_url( get_theme_mod( 'designfly-carousel-slider-right' ) ) ); ?>" />
+					<?php
+				}
 				while ( $designfly_carousel_query->have_posts() ) :
 					$designfly_carousel_query->the_post();
 					?>
@@ -106,29 +132,59 @@
 	<!-- #Services Header -->
 	<div class = "service-nav">
 		<div class="service-nav-container">
-			<div class = "service__1">
-				<div class="service__1__icon">
-					<img src=" <?php echo esc_url( wp_get_attachment_url( get_theme_mod( 'designfly-service-1-icon' ) ) ); ?> "/>
+			<div class = "service">
+				<div class="service__icon" >
+					<a href = '#'>
+					<?php
+					if ( wp_get_attachment_url( get_theme_mod( 'designfly-service-1-icon' ) ) === false ) {
+						echo wp_kses_post( '<img alt="Service Icon" src="' . get_template_directory_uri() . '/assets/src/img/service-icon-1.png" />' );
+					} else {
+						?>
+						<img src=" <?php echo esc_url( wp_get_attachment_url( get_theme_mod( 'designfly-service-1-icon' ) ) ); ?> "/>
+						<?php
+					}
+					?>
+					</a>
 				</div>
-				<a href = '#' class="service__1__content">
+				<a href = '#' class="service__content">
 					<h3><?php echo wp_kses_post( get_theme_mod( 'designfly-service-1-heading' ) ); ?></h3>
 					<p><?php echo wp_kses_post( get_theme_mod( 'designfly-service-1-content' ) ); ?></p>
 				</a>
 			</div>
-			<div class = "service__2">
-				<div class="service__2__icon">
-					<img src=" <?php echo esc_url( wp_get_attachment_url( get_theme_mod( 'designfly-service-2-icon' ) ) ); ?> "/>
+			<div class = "service">
+				<div class="service__icon">
+					<a href = '#'>
+					<?php
+					if ( wp_get_attachment_url( get_theme_mod( 'designfly-service-2-icon' ) ) === false ) {
+						echo wp_kses_post( '<img alt="Service Icon" src="' . get_template_directory_uri() . '/assets/src/img/service-icon-2.png" />' );
+					} else {
+						?>
+						<img src=" <?php echo esc_url( wp_get_attachment_url( get_theme_mod( 'designfly-service-2-icon' ) ) ); ?> "/>
+						<?php
+					}
+					?>
+					</a>
 				</div>
-				<a href = '#' class="service__2__content">
+				<a href = '#' class="service__content">
 				<h3><?php echo wp_kses_post( get_theme_mod( 'designfly-service-2-heading' ) ); ?></h3>
 					<p><?php echo wp_kses_post( get_theme_mod( 'designfly-service-2-content' ) ); ?></p>
 				</a>
 			</div>
-			<div class = "service__3">
-				<div class="service__3__icon">
-					<img src=" <?php echo esc_url( wp_get_attachment_url( get_theme_mod( 'designfly-service-3-icon' ) ) ); ?> "/>
+			<div class = "service">
+				<div class="service__icon">
+					<a href = '#'>
+					<?php
+					if ( wp_get_attachment_url( get_theme_mod( 'designfly-service-3-icon' ) ) === false ) {
+						echo wp_kses_post( '<img alt="Service Icon" src="' . get_template_directory_uri() . '/assets/src/img/service-icon-3.png" />' );
+					} else {
+						?>
+						<img src=" <?php echo esc_url( wp_get_attachment_url( get_theme_mod( 'designfly-service-3-icon' ) ) ); ?> "/>
+						<?php
+					}
+					?>
+					</a>
 				</div>
-				<a href = '#' class="service__3__content">
+				<a href = '#' class="service__content">
 				<h3><?php echo wp_kses_post( get_theme_mod( 'designfly-service-3-heading' ) ); ?></h3>
 					<p><?php echo wp_kses_post( get_theme_mod( 'designfly-service-3-content' ) ); ?></p>
 				</a>

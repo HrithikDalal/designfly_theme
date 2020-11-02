@@ -4,6 +4,7 @@
  */
 var slideIndex = 1;
 var homeURL = document.location.origin.concat ( '/' );
+var defaultLink = document.location.origin.concat ( '/#' );
 function showDivs( n ) {
 	var i;
 	var posts = document.getElementsByClassName( 'carousel__slides' );
@@ -19,7 +20,7 @@ function showDivs( n ) {
 	posts[slideIndex - 1].style.display = 'block';
 };
 
-if ( homeURL === document.location.href ) {
+if ( homeURL === document.location.href || defaultLink === document.location.href ) {
 	document.getElementById( 'carousel__button--left' ).addEventListener( 'click', function() {
 		slideIndex += 1;
 		showDivs( slideIndex );

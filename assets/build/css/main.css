@@ -1152,9 +1152,9 @@ object {
 
 /* Carousel */
 .header-img {
-  height: 34rem;
+  height: 56vh;
   grid-column: 1/14;
-  background-image: url(../../src/img/Slider-Image-2.png);
+  background-image: url(../../src/img/slider-image.png);
   width: 100%;
   background-size: cover;
   background-position: center; }
@@ -1166,7 +1166,7 @@ object {
   text-align: center;
   max-width: 55%;
   margin: auto;
-  margin-top: 13%; }
+  margin-top: 12%; }
 
 .carousel__slides__title {
   color: #ffffff;
@@ -1202,53 +1202,20 @@ object {
 .service-nav-container {
   grid-column: 4/11;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center; }
+  justify-content: space-around; }
 
-.service__1 {
+.service {
   max-width: 18.75rem;
   display: flex;
   align-items: center; }
-  .service__1 .service__1__icon {
+  .service .service__icon {
     margin-right: 0.625rem;
     min-width: 3.125rem; }
-  .service__1 .service__1__content h3 {
+  .service .service__content h3 {
     margin: 0.3125rem;
     font-size: 1.25rem;
     color: #ef4634; }
-  .service__1 .service__1__content p {
-    margin: 0.3125rem;
-    font-size: 0.8125rem;
-    line-height: 1.21875rem; }
-
-.service__2 {
-  max-width: 18.75rem;
-  display: flex;
-  align-items: center; }
-  .service__2 .service__2__icon {
-    margin-right: 0.625rem;
-    min-width: 3.125rem; }
-  .service__2 .service__2__content h3 {
-    margin: 0.3125rem;
-    font-size: 1.25rem;
-    color: #ef4634; }
-  .service__2 .service__2__content p {
-    margin: 0.3125rem;
-    font-size: 0.8125rem;
-    line-height: 1.21875rem; }
-
-.service__3 {
-  max-width: 18.75rem;
-  display: flex;
-  align-items: center; }
-  .service__3 .service__3__icon {
-    margin-right: 0.625rem;
-    min-width: 3.125rem; }
-  .service__3 .service__3__content h3 {
-    margin: 0.3125rem;
-    font-size: 1.25rem;
-    color: #ef4634; }
-  .service__3 .service__3__content p {
+  .service .service__content p {
     margin: 0.3125rem;
     font-size: 0.8125rem;
     line-height: 1.21875rem; }
@@ -1263,7 +1230,8 @@ object {
   grid-template-columns: repeat(8, 1fr);
   grid-gap: 1.875rem; }
   .footer-content .footer__post {
-    grid-column: 1/5; }
+    grid-column: 1/5;
+    text-align: justify; }
     .footer-content .footer__post .post__title {
       font-weight: 400;
       font-size: 1.5625rem;
@@ -1313,6 +1281,9 @@ object {
 /*Home Page*/
 .home-page-wrap {
   grid-column: 1/13; }
+
+.before-view-button {
+  display: none; }
 
 .portfolio__button {
   background-color: #222222;
@@ -1395,13 +1366,15 @@ article .entry-meta .comments {
   font-size: 0.875rem;
   font-weight: 400;
   color: #62585f;
-  line-height: 1.3125rem; }
+  line-height: 1.3125rem;
+  text-align: justify; }
 
 .entry-content p {
   font-size: 0.875rem;
   font-weight: 400;
   color: #62585f;
-  line-height: 1.3125rem; }
+  line-height: 1.3125rem;
+  text-align: justify; }
 
 .designfly-read-more {
   font-size: 0.875rem;
@@ -1464,16 +1437,35 @@ article .entry-meta .comments {
   text-shadow: 0.125rem 0 #ffffff;
   margin-bottom: 0; }
 
-.portfolio-content > div[class^="post-"] {
+.post-thumbnail img {
   cursor: pointer;
   position: relative;
   height: 13.125rem;
   width: 18.75rem;
   border-radius: 0.625rem;
-  overflow: hidden; }
+  margin: 0.3125rem; }
+
+.post-thumbnail .image-overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.6);
+  color: #ffffff;
+  margin: -0.3125rem 0 0 -0.625rem;
+  border-radius: 0.625rem;
+  height: 14.4375rem;
+  width: 20.625rem;
+  opacity: 0;
+  z-index: 3; }
+
+.post-thumbnail:hover .image-overlay {
+  opacity: 1; }
 
 .post-thumbnail:hover img {
-  transform: scale(1.1); }
+  transform: scale(1.1);
+  z-index: 2; }
 
 /** LIGHTBOX MARKUP **/
 .lightbox {
@@ -1495,13 +1487,17 @@ article .entry-meta .comments {
   align-items: center; }
 
 .lightbox__content {
-  /* Full width and height */
+  cursor: pointer;
+  display: block;
+  padding: 0.625rem;
+  background-color: #ffffff;
+  max-width: 80vw; }
+
+.lightbox__image {
   display: block;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
-  padding: 0.625rem;
-  background-color: #ffffff; }
+  background-size: contain; }
 
 .lightbox__content .exit {
   position: absolute;
@@ -1518,19 +1514,21 @@ article .entry-meta .comments {
   display: flex;
   justify-content: space-between;
   color: #62585f;
-  padding: 0.625rem 0.625rem 0 0.625rem; }
+  padding: 0 0.625rem; }
 
 .lightbox__content img {
-  border-radius: 0.3125rem; }
+  border-radius: 0.3125rem;
+  max-height: 80vh; }
 
 .lightbox__content .previous {
-  font-size: 1.25rem; }
+  font-size: 1.875rem; }
 
 .lightbox__content .post-title {
+  padding-top: 0.625rem;
   font-size: 1.25rem; }
 
 .lightbox__content .next {
-  font-size: 1.25rem; }
+  font-size: 1.875rem; }
 
 /* Single Page */
 .page-title {
@@ -1538,6 +1536,15 @@ article .entry-meta .comments {
   color: #62585f;
   text-shadow: 0.125rem 0 #ffffff;
   font-weight: 400; }
+
+.entry-content {
+  text-align: justify; }
+
+.wp-block-image.size-large.is-resized {
+  width: 100%; }
+
+.wp-block-image img {
+  width: 100%; }
 
 .entry-footer {
   font-size: 0.8125rem; }
@@ -1772,7 +1779,7 @@ label .required {
   border-radius: 0.3125rem; }
 
 .widget-post__img.wp-post-image {
-  float: left;
+  height: 2.8125rem;
   border-radius: 0.1875rem;
   margin: 0.3125rem 0.3125rem 0 0; }
 
@@ -1784,6 +1791,9 @@ label .required {
 
 .widget-post__title:hover {
   color: #ef4634; }
+
+.widget-post--custom {
+  display: flex; }
 
 .widget-post__author {
   font-size: 0.75rem;
@@ -1974,6 +1984,15 @@ label .required {
 @media print, screen and (min-width: 48em) and (max-width: 63.99875em) {
   .hide-for-medium-only {
     display: none !important; } }
+
+@media (max-width: 1060px) and (min-width: 768px) {
+  article .entry-meta .comments {
+    display: block;
+    float: none; } }
+
+@media (max-width: 962px) and (min-width: 768px) {
+  .posted-on {
+    display: none; } }
 
 @media print, screen and (min-width: 64em) {
       .row .row {
@@ -2350,10 +2369,33 @@ label .required {
 
 @media screen and (max-width: 1360px) {
   .site-primary {
+    grid-column: 2/9; }
+  .site-secondary {
+    grid-column: 9/13;
+    padding-top: 1.25rem; }
+  .site-header {
+    grid-column: 2/13;
+    padding: 0.9375rem; }
+  .service-nav-container {
+    grid-column: 2/13; }
+  .service .service__content p {
+    display: none; }
+  .carousel__slides__title {
+    font-size: 3.75rem; }
+  .site-footer {
+    grid-column: 2/13; }
+  .site-main {
+    margin-right: 0; }
+  .portfolio-content {
+    grid-column: 2/13; } }
+
+@media screen and (max-width: 768px) {
+  .site-primary {
     grid-column: 2/13; }
   .site-secondary {
-    grid-column: 2/11;
-    padding-top: 1.25rem; }
+    grid-column: 2/13; } }
+
+@media screen and (max-width: 950px) {
   .designfly-main-navigation {
     display: none; }
   .navigation--togller {
@@ -2368,15 +2410,51 @@ label .required {
     flex-direction: column;
     width: 100%;
     order: 1; }
-  .site-footer {
-    grid-column: 2/13; }
-  .site-secondary {
-    grid-column: 2/13;
-    padding-top: 1.25rem; }
-  .portfolio-content {
-    grid-column: 2/13; } }
+  .carousel__slides__title {
+    font-size: 3.125rem; } }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 667px) {
+  .carousel__slides__title {
+    font-size: 2.5rem; }
+  .service .service__content h3 {
+    display: none; }
+  .footer-content .footer__post {
+    grid-column: 1/9;
+    text-align: center; }
+  .footer-content .footer__contact {
+    grid-column: 1/9;
+    text-align: center; } }
+
+@media screen and (max-width: 568px) {
+  .navigation__form .navigation__form__box {
+    width: 88%; }
+  .carousel__content {
+    max-width: 65%;
+    margin: 35% auto; }
+  .carousel__slides__title {
+    font-size: 1.75rem;
+    line-height: 1.2; }
+  .carousel__slides__content {
+    font-size: 0.75rem; }
+  .service .service__content {
+    display: none; }
+  .portfolio-content .portfolio-content-top .title {
+    font-size: 2rem; }
+  .blog-content-top .title {
+    font-size: 2rem; }
   .blog__attachment {
-    width: 100%; } }
+    width: 100%; }
+  .before-view-button {
+    display: block; }
+  .after-view-button {
+    display: none; }
+  .portfolio__button {
+    margin: 0 0 0.625rem 0; }
+  .page-title {
+    font-size: 1.5rem; } }
+
+@media screen and (max-width: 680px) {
+  article .entry-meta .comments {
+    display: block;
+    float: none; } }
 

@@ -54,19 +54,59 @@
 					Email: <span class="contact__email"><?php echo wp_kses_post( get_theme_mod( 'designfly-footer-email' ) ); ?></span><br>
 					<div>
 						<a target="_blank" href="<?php echo esc_url( get_theme_mod( 'designfly-social-facebook-url' ) ); ?>">
+							<?php
+							if ( wp_get_attachment_url( get_theme_mod( 'designfly-social-facebook-icon' ) ) === false ) {
+								echo wp_kses_post( '<img alt="Facebook Icon" src="' . get_template_directory_uri() . '/assets/src/img/facebook.png" />' );
+							} else {
+								?>
 							<img src=" <?php echo esc_url( wp_get_attachment_url( get_theme_mod( 'designfly-social-facebook-icon' ) ) ); ?> "/>
+								<?php
+							}
+							?>
 						</a>
 						<a target="_blank" href="<?php echo esc_url( get_theme_mod( 'designfly-social-google-url' ) ); ?>">
+							<?php
+							if ( wp_get_attachment_url( get_theme_mod( 'designfly-social-google-icon' ) ) === false ) {
+								echo wp_kses_post( '<img alt="Google Icon" src="' . get_template_directory_uri() . '/assets/src/img/google.png" />' );
+							} else {
+								?>
 							<img src=" <?php echo esc_url( wp_get_attachment_url( get_theme_mod( 'designfly-social-google-icon' ) ) ); ?> "/>
+								<?php
+							}
+							?>
 						</a>
 						<a target="_blank" href="<?php echo esc_url( get_theme_mod( 'designfly-social-linkedin-url' ) ); ?>">
+							<?php
+							if ( wp_get_attachment_url( get_theme_mod( 'designfly-social-linkedin-icon' ) ) === false ) {
+								echo wp_kses_post( '<img alt="Google Icon" src="' . get_template_directory_uri() . '/assets/src/img/linkedin.png" />' );
+							} else {
+								?>
 							<img src=" <?php echo esc_url( wp_get_attachment_url( get_theme_mod( 'designfly-social-linkedin-icon' ) ) ); ?> "/>
+								<?php
+							}
+							?>
 						</a>
 						<a target="_blank" href="<?php echo esc_url( get_theme_mod( 'designfly-social-pinterest-url' ) ); ?>">
+							<?php
+							if ( wp_get_attachment_url( get_theme_mod( 'designfly-social-pinterest-icon' ) ) === false ) {
+								echo wp_kses_post( '<img alt="Google Icon" src="' . get_template_directory_uri() . '/assets/src/img/pinterest.png" />' );
+							} else {
+								?>
 							<img src=" <?php echo esc_url( wp_get_attachment_url( get_theme_mod( 'designfly-social-pinterest-icon' ) ) ); ?> "/>
+								<?php
+							}
+							?>
 						</a>
 						<a target="_blank" href="<?php echo esc_url( get_theme_mod( 'designfly-social-twitter-url' ) ); ?>">
+							<?php
+							if ( wp_get_attachment_url( get_theme_mod( 'designfly-social-twitter-icon' ) ) === false ) {
+								echo wp_kses_post( '<img alt="Google Icon" src="' . get_template_directory_uri() . '/assets/src/img/twitter.png" />' );
+							} else {
+								?>
 							<img src=" <?php echo esc_url( wp_get_attachment_url( get_theme_mod( 'designfly-social-twitter-icon' ) ) ); ?> "/>
+								<?php
+							}
+							?>
 						</a>
 					</div>
 				</p>

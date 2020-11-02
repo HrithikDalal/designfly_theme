@@ -28,11 +28,11 @@ get_header();
 				<!-- top bar -->
 				<div class="portfolio-content-top">
 					<p class="title"> D'SIGN IS THE SOUL </p>
+					<hr class= "before-view-button" />
 					<a class = "portfolio__button" href="<?php echo esc_url( get_permalink( get_page_by_path( 'portfollio' ) ) ); ?>">
 					view all
 					</a>
-
-					<hr />
+					<hr class= "after-view-button" />
 				</div>
 
 				<?php

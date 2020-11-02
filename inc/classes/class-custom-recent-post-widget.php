@@ -73,20 +73,22 @@ class Custom_Recent_Post_Widget extends WP_Widget {
 		echo wp_kses_post( $args['before_widget'] );
 		// This is where you run the code and display the output.
 		foreach ( $recent_posts as $post ) : ?>
-		<div class = " recent-post__custom">
+		<div class = "widget-post--custom">
 			<?php echo get_the_post_thumbnail( $post['ID'], array( 45, 45 ), array( 'class' => 'widget-post__img' ) ); ?>
-			<a href="<?php echo esc_url( get_permalink( $post['ID'] ) ); ?>">
-				<p class="widget-post__title"><?php echo esc_html( $post['post_title'] ); ?></p>
-			</a>
-			<p class="widget-post__author"><?php designfly_posted_by(); ?>
-			<span class="widget-post__date">
-			<?php
-			if ( $show_date ) :
-					designfly_posted_on();
-			endif;
-			?>
-			</span>
-			</p>
+			<div class = "widget-post__meta">
+				<a href="<?php echo esc_url( get_permalink( $post['ID'] ) ); ?>">
+					<p class="widget-post__title"><?php echo esc_html( $post['post_title'] ); ?></p>
+				</a>
+				<p class="widget-post__author"><?php designfly_posted_by(); ?>
+				<span class="widget-post__date">
+				<?php
+				if ( $show_date ) :
+						designfly_posted_on();
+				endif;
+				?>
+				</span>
+				</p>
+			</div>
 		</div>
 			<?php
 		endforeach;

@@ -52,9 +52,9 @@
 
 /* Carousel */
 .header-img{
-	height: 544px;
+	height: 56vh;
 	grid-column: 1/14;
-	background-image: url('../img/Slider-Image-2.png');
+	background-image: url('../img/slider-image.png');
 	width: 100%;
 	background-size: cover;
 	background-position: center;
@@ -69,8 +69,9 @@
 	text-align: center;
 	max-width: 55%;
 	margin: auto;
-	margin-top: 13%;
+	margin-top: 12%;
 }
+
 .carousel__slides__title {
 	color:$white;
 	font-size: 70px;
@@ -110,21 +111,20 @@
 .service-nav-container{
 	grid-column: 4/11;
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
+	justify-content: space-around;
 }
 
-.service__1{
+.service{
 	max-width: 300px;
 	display: flex;
 	align-items: center;
 
-	.service__1__icon{
+	.service__icon{
 		margin-right: 10px;
 		min-width: 50px;
 	}
 
-	.service__1__content{
+	.service__content{
 
 		h3{
 			margin: 5px ;
@@ -134,58 +134,6 @@
 
 		p{
 			margin: 5px ;
-			font-size: 13px;
-			line-height: 19.5px;
-		}
-	}
-}
-
-.service__2{
-	max-width: 300px;
-	display: flex;
-	align-items: center;
-
-	.service__2__icon{
-		margin-right: 10px;
-		min-width: 50px;
-	}
-
-	.service__2__content{
-
-		h3{
-			margin: 5px ;
-			font-size: 20px;
-			color: $red-100;
-		}
-
-		p{
-			margin: 5px ;
-			font-size: 13px;
-			line-height: 19.5px;
-		}
-	}
-}
-
-.service__3{
-	max-width: 300px;
-	display: flex;
-	align-items: center;
-
-	.service__3__icon{
-		margin-right: 10px;
-		min-width: 50px;
-	}
-
-	.service__3__content{
-
-		h3{
-			margin: 5px ;
-			font-size: 20px;
-			color: $red-100;
-		}
-
-		p{
-			margin: 5px;
 			font-size: 13px;
 			line-height: 19.5px;
 		}
@@ -194,25 +142,95 @@
 
 /* Media Queries for Responsive Navbar */
 @media screen and (max-width: 1360px) {
+	.site-header{
+		grid-column: 2/13;
+		padding: 15px;
+	}
+	.service-nav-container{
+		grid-column: 2/13;
+	}
+	.service{
+		.service__content{
+			p{
+				display: none;
+			}
+		}
+	}
+
+}
+
+@media screen and (max-width: 1360px) {
+	.carousel__slides__title {
+		font-size: 60px;
+	}
+}
+
+@media screen and (max-width: 950px) {
+
 	.designfly-main-navigation{
 		display: none;
 	}
+
 	.navigation--togller {
 		float: right;
 		display: block;
 		background: inherit;
 	}
+
 	.primary-menu{
 		display: flex;
 		flex-direction: column;
 	}
-}
 
-@media screen and (max-width: 1360px) {
 	.designfly-main-navigation.responsive{
 		display: flex;
 		flex-direction: column;
 		width: 100%;
 		order: 1;
 	}
+
+	.carousel__slides__title {
+		font-size: 50px;
+	}
+}
+
+@media screen and (max-width: 667px) {
+
+	.carousel__slides__title {
+		font-size: 40px;
+	}
+
+	.service{
+		.service__content{
+			h3{
+				display: none;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 568px) {
+	.navigation__form .navigation__form__box {
+		width: 88%;
+	}
+	.carousel__content{
+		max-width: 65%;
+		margin: 35% auto;
+	}
+
+	.carousel__slides__title {
+		font-size: 28px;
+		line-height: 1.2;
+	}
+
+	.carousel__slides__content {
+		font-size: 12px;
+	}
+
+	.service{
+		.service__content{
+			display: none;
+		}
+	}
+
 }
